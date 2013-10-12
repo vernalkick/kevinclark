@@ -1,0 +1,277 @@
+/*
+========================================================================================
+
+PAGES
+
+----------------------------------------------------------------------------------------
+
+Contents:
+
+	01. Homepage
+
+======================================================================================== */
+
+/* - Homepage -------------------------------------------------------------------------- */
+
+#hello {
+
+	header {
+		@include clearfix;
+
+		h2 {
+			margin-top: 0;
+			float: left;
+		}
+
+		a {
+			font-weight: normal;
+			color: $subtext;
+			float: right;
+		}
+	}
+
+	p {
+		color: $subtext;
+		margin-top: .5em;
+		margin-bottom: 0;
+	}
+
+	em { font-style: normal; }
+}
+
+#latest-articles {
+
+	header {
+		@include clearfix;
+
+		h2 {
+			margin-top: 0;
+			float: left;
+		}
+
+		a {
+			font-weight: normal;
+			color: $subtext;
+			float: right;
+		}
+	}
+
+	li { margin-left: 0; margin-bottom: 4em;
+		header {
+			width: auto;
+			margin: 0;
+			float: none;
+			margin-bottom: 1em;
+
+			a {
+				color: $accent;
+				float: none;
+				font-weight: 500;
+			}
+
+			time {
+				font-size: .875em;
+			}
+		}
+	}
+
+	img { margin: 1em 0; display: none; }
+
+}
+
+/* Media-Queries */
+
+@include mq(small) {
+
+	#hello {
+		em { display: block; }
+	}
+
+	#latest-articles li {
+		@include column(2.666666667);
+		&:last-child { margin-right: 0; }
+	}
+
+} // End of small
+
+@include mq(large) {
+
+	#hello {
+		header {
+			@include column(3);
+
+			h2 { float: none; margin-bottom: 0em; }
+			a { float: none; }
+		}
+		#hello-inner {
+			@include column(9, last);
+		}
+	}
+
+	#latest-articles {
+
+		header {
+			@include column(3);
+
+			h2{ float: none; margin-bottom: 0em; }
+			a { float: none; }
+		}
+
+		li {
+			@include column(3);
+		}
+	}
+
+} // End of medium
+
+/* - Article list ---------------------------------------------------------------------- */
+
+#intro-quote {}
+
+	#intro-quote h1 {
+		text-indent: -.40em;
+	}
+
+	#intro-quote p {
+		margin-bottom: 0;
+	}
+
+	#intro-quote a {
+		color: #777;
+		margin-top: 1em;
+		display: block;
+	}
+
+/* Lists */
+
+.list {
+	header {
+		@include clearfix;
+
+		h2 { float: left; margin-top: 0; }
+		a { float: right; color: #999; }
+	}
+	li {
+		padding: 0;
+		margin: 0 0 1em 0;
+
+		header a { float: none; color: $accent; }
+	}
+}
+
+/* Latest articles archive */
+
+#archives-latest-articles {
+
+	li {
+		margin: 0 0 3em 0;
+	}
+
+	img { margin: 1em 0; }
+}
+
+/* Link Archive */
+
+#link-archive li {
+	list-style-type: none;
+}
+
+	#link-archive li h3 {
+		font-size: 1em;
+		margin-bottom: 0;
+	}
+
+/* Media Queries */
+
+@include mq(small) {
+	#link-archive li {
+		@include column(4);
+		&:nth-child(2n) { margin-right: 0; }
+		&:nth-child(2n+1) { clear: left; }
+	}
+
+	// Latest articles
+
+	#archives-full {
+		li {
+			@include column(4);
+			&:nth-child(2n) { margin-right: 0; }
+			&:nth-child(2n+1) { clear: left; }
+		}
+	}
+}
+
+@include mq(medium) {
+
+	#intro-quote h1 {
+		@include column(5);
+		float: none;
+	}
+
+	// Latest articles
+
+	#archives-full {
+		li {
+			@include column(2.666666667);
+			&:nth-child(2n) { margin-right: 3%; }
+			&:nth-child(2n+1) { clear: none; }
+			&:nth-child(3n) { margin-right: 0; }
+			&:nth-child(3n+1) { clear: left; }
+		}
+	}
+
+	// Links
+
+	#link-archive li {
+		@include column(2);
+
+		&:nth-child(2n) { margin-right: 3%; }
+		&:nth-child(2n+1) { clear: none; }
+
+		&:nth-child(4n) { margin-right: 0; }
+		&:nth-child(4n+1) { clear: left; }
+	}
+}
+
+@include mq(large) {
+
+	.list {
+		header {
+			margin-bottom: 1.5em;
+		}
+	}
+
+	#archives-latest-articles li {
+		margin-bottom: 0;
+		@include column(4);
+
+		&:nth-child(3n) { margin-right: 0; }
+	}
+
+	#archives-latest-articles li, #archives-full li {
+		@include column(4);
+
+		&:nth-child(3n) { margin-right: 0; }
+	}
+
+	#archives-full li {
+		&:nth-child(2n) { margin-right: 2%; }
+		&:nth-child(3n) { margin-right: 0; }
+	}
+
+	/* Link Archive */
+
+	#link-archive li {
+		@include column(2);
+
+		&:nth-child(4n),
+		&:nth-child(2n) { margin-right: 2%; }
+		&:nth-child(4n+1) { clear: none; }
+
+		&:nth-child(6n) { margin-right: 0; }
+		&:nth-child(6n+1) { clear: left; }
+	}
+		#link-archive li h3 {
+			font-size: 1.15em;
+		}
+}

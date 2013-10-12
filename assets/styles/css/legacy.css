@@ -1,0 +1,59 @@
+/*
+========================================================================================
+
+BASE
+
+----------------------------------------------------------------------------------------
+
+Contents:
+
+	01. General
+	02. Viewport Fixes
+	03. Wrapper
+
+======================================================================================== */
+/* - 01. General ----------------------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  background-color: #fff;
+  border: 4px solid #1990c6;
+  background-size: 1379px 32px; }
+  @media screen and (min-width: 600px) {
+    body {
+      border: 6px solid #1990c6; } }
+  @media screen and (min-width: 800px) {
+    body {
+      border: 8px solid #1990c6; } }
+  @media screen and (min-width: 1000px) {
+    body {
+      border: 10px solid #1990c6; } }
+
+/* - 02. Viewport Fixes ---------------------------------------------------------------- */
+@-webkit-viewport {
+  width: device-width; }
+
+@-moz-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+/* - 03. Wrapper ----------------------------------------------------------------------- */
+.wrap {
+  margin: 0 auto;
+  width: 84%;
+  *zoom: 1;
+  max-width: 1200px; }
+  .wrap:before, .wrap:after {
+    content: " ";
+    display: table; }
+  .wrap:after {
+    clear: both; }

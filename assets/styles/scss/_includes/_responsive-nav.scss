@@ -1,0 +1,34 @@
+/*! responsive-nav.js v1.0.20 by @viljamis */
+
+nav[role='navigation'] ul {
+
+}
+
+nav[role='navigation'] li {
+
+}
+
+.js nav[role='navigation'] {
+
+}
+
+nav[role='navigation'] ul {  }
+
+nav[role='navigation'].opened {
+}
+
+@media screen and (min-width: 600px) {
+  .js nav[role='navigation'] {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  .js #nav {
+    position: relative;
+  }
+  .js #nav.closed {
+    max-height: none;
+  }
+  #nav-toggle {
+    display: none;
+  }
+}

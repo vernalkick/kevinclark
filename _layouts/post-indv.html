@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article id="indv">
+	<div class="wrap">
+		<header>
+			<h1>{{ page.title }}</h1>
+			<time datetime="{{ page.date | date_to_xmlschema }}" pubdate><strong>Published</strong> {{ page.date | date_to_long_string }}</time>
+			<ul class="upnext">
+				{% if page.previous.url %}<li><a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a></li>{% endif %}
+				{% if page.next.url %}<li><a href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">Next</a></li>{% endif %}
+			</ul>
+		</header>
+		<div id="article-body">
+			{{ content }}
+		</div>
+	</div>
+</article>

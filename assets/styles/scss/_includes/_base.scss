@@ -22,9 +22,6 @@ html {
 body {
 	background-color: #fff;
 	border: 4px solid $accent;
-	// background: #fff url('baseline-28px.png') repeat 0 6px;
-	//background: #fff url('baseline-grid.png') repeat-y center 6px;
-	background-size: 1379px 32px;
 
 	@include mq(small) {
 		border: 6px solid $accent;

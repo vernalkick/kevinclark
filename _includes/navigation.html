@@ -1,0 +1,11 @@
+<nav role="navigation" id="nav">
+  <ul>
+    {% for link in site.navigation %}
+        {% assign current = nil %}
+        {% assign page-url = page.url | remove:'index.html' %}
+		<li{% if page-url == link.url %} class="current" {% endif %}>
+			<a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+		</li>
+    {% endfor %}
+  </ul>
+</nav>

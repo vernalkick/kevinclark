@@ -275,3 +275,54 @@ Contents:
 			font-size: 1.15em;
 		}
 }
+
+/* - Article Indv ---------------------------------------------------------------------- */
+
+#indv {
+	padding-bottom: 0;
+}
+
+	#indv header {
+		margin-bottom: 1.75em;
+	}
+
+	// Body
+
+	#article-body {
+
+	}
+
+		#article-body > p:last-child:after {
+			content: "¶";
+			color: $accent;
+			margin-left: .25em;
+		}
+
+		#article-body p.lead {
+			font-size: 1.325em;
+			color: #333;
+			line-height: 1.5em;
+		}
+
+	// Up next
+
+	.upnext {
+		margin-top: 1em;
+		@include icon;
+		@include clearfix;
+	}
+
+		.upnext li {
+			float: left;
+			list-style-type: none;
+			margin: 0;
+
+			+ li { margin-left: .5em; }
+			a { color: #ccc; font-size: 1.25em; }
+			a:hover { color: $subtext; }
+			a:active { color: $accent; }
+		}
+
+@include mq(small) {
+
+} // End of small

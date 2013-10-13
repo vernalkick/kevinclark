@@ -3,4 +3,13 @@ markdown: redcarpet
 pygments: true
 permalink: /articles/:title/
 jekyll_models: [tests]
-site_base: http://localhost:4000/
+site_base: /
+navigation:
+- text: Home
+  url: /
+- text: Articles
+  url: /articles/
+- text: Portfolio
+  url: /portfolio/
+- text: About
+  url: /about/

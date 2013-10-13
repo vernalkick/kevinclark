@@ -61,7 +61,7 @@ Contents:
 /* - 01. General ----------------------------------------------------------------------- */
 html { -webkit-text-size-adjust: 100%; }
 
-body { background-color: #fff; border: 4px solid #1990c6; background-size: 1379px 32px; }
+body { background-color: #fff; border: 4px solid #1990c6; }
 @media screen and (min-width: 600px) { body { border: 6px solid #1990c6; } }
 @media screen and (min-width: 800px) { body { border: 8px solid #1990c6; } }
 @media screen and (min-width: 1000px) { body { border: 10px solid #1990c6; } }
@@ -196,6 +196,185 @@ Contents:
 /* Text */
 /* Submit */
 /* - 02. Textareas --------------------------------------------------------------------- */
+.highlight { background: #ffffff; }
+
+.highlight .c { color: #999988; font-style: italic; }
+
+/* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2; }
+
+/* Error */
+.highlight .k { font-weight: bold; }
+
+/* Keyword */
+.highlight .o { font-weight: bold; }
+
+/* Operator */
+.highlight .cm { color: #999988; font-style: italic; }
+
+/* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold; }
+
+/* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic; }
+
+/* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic; }
+
+/* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd; }
+
+/* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa; }
+
+/* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic; }
+
+/* Generic.Emph */
+.highlight .gr { color: #aa0000; }
+
+/* Generic.Error */
+.highlight .gh { color: #999999; }
+
+/* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd; }
+
+/* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa; }
+
+/* Generic.Inserted.Specific */
+.highlight .go { color: #888888; }
+
+/* Generic.Output */
+.highlight .gp { color: #555555; }
+
+/* Generic.Prompt */
+.highlight .gs { font-weight: bold; }
+
+/* Generic.Strong */
+.highlight .gu { color: #aaaaaa; }
+
+/* Generic.Subheading */
+.highlight .gt { color: #aa0000; }
+
+/* Generic.Traceback */
+.highlight .kc { font-weight: bold; }
+
+/* Keyword.Constant */
+.highlight .kd { font-weight: bold; }
+
+/* Keyword.Declaration */
+.highlight .kp { font-weight: bold; }
+
+/* Keyword.Pseudo */
+.highlight .kr { font-weight: bold; }
+
+/* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold; }
+
+/* Keyword.Type */
+.highlight .m { color: #009999; }
+
+/* Literal.Number */
+.highlight .s { color: #dd1144; }
+
+/* Literal.String */
+.highlight .na { color: teal; }
+
+/* Name.Attribute */
+.highlight .nb { color: #0086b3; }
+
+/* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold; }
+
+/* Name.Class */
+.highlight .no { color: teal; }
+
+/* Name.Constant */
+.highlight .ni { color: purple; }
+
+/* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold; }
+
+/* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold; }
+
+/* Name.Function */
+.highlight .nn { color: #555555; }
+
+/* Name.Namespace */
+.highlight .nt { color: navy; }
+
+/* Name.Tag */
+.highlight .nv { color: teal; }
+
+/* Name.Variable */
+.highlight .ow { font-weight: bold; }
+
+/* Operator.Word */
+.highlight .w { color: #bbbbbb; }
+
+/* Text.Whitespace */
+.highlight .mf { color: #009999; }
+
+/* Literal.Number.Float */
+.highlight .mh { color: #009999; }
+
+/* Literal.Number.Hex */
+.highlight .mi { color: #009999; }
+
+/* Literal.Number.Integer */
+.highlight .mo { color: #009999; }
+
+/* Literal.Number.Oct */
+.highlight .sb { color: #dd1144; }
+
+/* Literal.String.Backtick */
+.highlight .sc { color: #dd1144; }
+
+/* Literal.String.Char */
+.highlight .sd { color: #dd1144; }
+
+/* Literal.String.Doc */
+.highlight .s2 { color: #dd1144; }
+
+/* Literal.String.Double */
+.highlight .se { color: #dd1144; }
+
+/* Literal.String.Escape */
+.highlight .sh { color: #dd1144; }
+
+/* Literal.String.Heredoc */
+.highlight .si { color: #dd1144; }
+
+/* Literal.String.Interpol */
+.highlight .sx { color: #dd1144; }
+
+/* Literal.String.Other */
+.highlight .sr { color: #009926; }
+
+/* Literal.String.Regex */
+.highlight .s1 { color: #dd1144; }
+
+/* Literal.String.Single */
+.highlight .ss { color: #990073; }
+
+/* Literal.String.Symbol */
+.highlight .bp { color: #999999; }
+
+/* Name.Builtin.Pseudo */
+.highlight .vc { color: teal; }
+
+/* Name.Variable.Class */
+.highlight .vg { color: teal; }
+
+/* Name.Variable.Global */
+.highlight .vi { color: teal; }
+
+/* Name.Variable.Instance */
+.highlight .il { color: #009999; }
+
+/* Literal.Number.Integer.Long */
 /*
 ========================================================================================
 
@@ -241,68 +420,6 @@ Contents:
   .indv aside li:last-child { margin-right: 0; }
   .indv aside h2 { margin-top: 0; } }
 /* - Article --------------------------------------------------------------------------- */
-#article-indv { padding-bottom: 0; }
-#article-indv header { margin-bottom: 1.75rem; }
-#article-indv h1 { margin-bottom: 1rem; }
-#article-indv #article-body > p:last-child:after { content: "¶"; color: #1990c6; margin-left: .25em; }
-#article-indv #article-body p.lead { font-size: 1.325em; color: #333; line-height: 1.5em; }
-#article-indv #post-illo { width: 100%; margin: 0px 0px 1.75rem 0; }
-#article-indv .upnext { margin-top: 1em; font-family: 'KevinClarkIconsRegular'; font-style: normal; font-weight: normal; text-decoration: none; text-rendering: optimizeLegibility; white-space: nowrap; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga=1"; -moz-font-feature-settings: "liga"; -ms-font-feature-settings: "liga" 1; -o-font-feature-settings: "liga"; font-feature-settings: "liga"; -webkit-font-smoothing: antialiased; *zoom: 1; }
-#article-indv .upnext:before, #article-indv .upnext:after { content: " "; display: table; }
-#article-indv .upnext:after { clear: both; }
-#article-indv .upnext li { float: left; list-style-type: none; margin: 0; }
-#article-indv .upnext li + li { margin-left: .5em; }
-#article-indv .upnext li a { color: #ccc; font-size: 1.25em; }
-#article-indv .upnext li a:hover { color: #999999; }
-#article-indv .upnext li a:active { color: #1990c6; }
-#article-indv aside { border-top: 1px solid #e5e5e5; margin-top: 2.5em; }
-@media screen and (min-width: 600px) { #article-indv header, #article-indv #article-body, #article-indv aside { width: 74.25%; float: left; margin-right: 3%; margin-left: 25.75%; float: none; }
-  #article-indv header { margin-bottom: 2rem; position: relative; }
-  #article-indv #article-body figure { width: 134.75%; margin: 0 0 1.75rem -34.75%; }
-  #article-indv #article-body figcaption { margin-right: 0; margin-left: 25.75%; }
-  #article-indv #article-body figure.left { float: left; width: 75%; margin-right: 4%; margin-bottom: 1em; }
-  #article-indv #article-body figure.left figcaption { margin-left: 0; margin-top: 1.5em; line-height: 1.5em; }
-  #article-indv aside { border: none; margin-top: 4em; }
-  #article-indv aside h2 { margin-top: 0; }
-  #article-indv .upnext { width: 30.63973%; float: left; float: none; position: absolute; top: 0; left: -34.5%; margin-top: .5em; } }
-@media screen and (min-width: 800px) { #article-indv { padding-bottom: 2em; }
-  #article-indv header, #article-indv #article-body { width: 61.375%; float: left; margin-right: 3%; float: none; margin-left: 25.75%; }
-  #article-indv header { margin-bottom: 3rem; position: relative; }
-  #article-indv header time { position: absolute; top: .65rem; left: -42.25%; font-size: .875em; }
-  #article-indv .upnext { width: 16.08961%; float: left; float: none; left: auto; right: -26%; }
-  #article-indv #article-body figure { width: 121.25%; margin: 0 0 1.75rem 0%; position: relative; }
-  #article-indv #article-body figure figcaption { margin: 0; width: 30.63973%; float: left; margin-right: 4.0404%; float: none; position: absolute; left: -34.5%; top: 0; }
-  #article-indv #article-body figure.left { width: 79.0224%; float: left; margin-right: 4.88798%; margin-left: -42%; }
-  #article-indv aside { margin-top: 3em; margin-right: 0; width: 74.25%; float: left; margin-left: 25.75%; }
-  #article-indv aside ul { *zoom: 1; }
-  #article-indv aside ul:before, #article-indv aside ul:after { content: " "; display: table; }
-  #article-indv aside ul:after { clear: both; }
-  #article-indv aside li { width: 30.63973%; float: left; margin-right: 4.0404%; }
-  #article-indv aside li:last-child { margin-right: 0; }
-  #article-indv aside h2 { margin-top: 0; } }
-@media screen and (min-width: 1000px) { #article-indv { padding-bottom: 3em; /*
-	#article-body {
-		@include column(7);
-		@include push(left, 2);
-	}
-
-	#article-indv aside {
-		@include column(3);
-		margin-right: 0;
-	}*/ }
-  #article-indv header, #article-indv #article-body { width: 49%; float: left; margin-right: 2%; margin-left: 34%; }
-  #article-indv header { position: relative; }
-  #article-indv header time { position: absolute; top: .65rem; left: -70%; }
-  #article-indv .upnext { width: 30.61224%; float: left; right: -34.5%; }
-  #article-indv #article-body figure.left { float: left; margin-left: -70%; width: 110%; margin-right: 5%; }
-  #article-indv #article-body h2 { font-size: 1.25rem; }
-  #article-indv #article-body figure { margin: 0 0 1.75rem -35%; width: 135.5%; position: relative; }
-  #article-indv #article-body figure figcaption { position: absolute; top: 0; left: -26%; margin: 0; width: 22.75%; }
-  #article-indv aside { width: 15%; float: left; margin: 0; }
-  #article-indv aside h2 { font-size: 1.25rem; }
-  #article-indv aside li { width: auto; margin: auto; float: none; } }
-@media screen and (min-width: 1200px) { #article-indv { font-size: 18px; line-height: 1.75em; } }
-
 /* - Article List ---------------------------------------------------------------------- */
 .article-lst { list-style-type: none; }
 
@@ -363,8 +480,8 @@ nav[role='navigation'] li:last-child a { padding-right: 0; }
   nav[role='navigation'] li:first-child { display: block !important; }
   nav[role='navigation'] li a { padding: 5.25rem 2.5rem .125rem 1rem; line-height: 1.5em; } }
 /* - 02. Footer ------------------------------------------------------------------------ */
-footer[role="contentinfo"] { background: #fafafa url("../img/backdrop.png") no-repeat center center; border-top: 1px solid #e5e5e5; padding: 2em 0; }
-.svg footer[role="contentinfo"] { background: rgba(0, 0, 0, 0.02) url("../img/backdrop.svg") no-repeat center center; }
+footer[role="contentinfo"] { background: #fafafa url("../../images/logos/backdrop.png") no-repeat center center; border-top: 1px solid #e5e5e5; padding: 2em 0; }
+.svg footer[role="contentinfo"] { background: rgba(0, 0, 0, 0.02) url("../../images/logos/backdrop.svg") no-repeat center center; }
 footer[role="contentinfo"] #tagline span { text-transform: uppercase; color: #888; letter-spacing: .1em; display: block; margin-bottom: .5em; margin-top: .25em; font-size: .875em; }
 footer[role="contentinfo"] #copyright p { color: #a6a6a6; font-size: .875em; margin-top: .5em; margin-bottom: 0; line-height: 1.5em; }
 .rgba footer[role="contentinfo"] #copyright p { color: rgba(0, 0, 0, 0.35); }
@@ -514,3 +631,21 @@ Contents:
   #link-archive li:nth-child(6n) { margin-right: 0; }
   #link-archive li:nth-child(6n+1) { clear: left; }
   #link-archive li h3 { font-size: 1.15em; } }
+/* - Article Indv ---------------------------------------------------------------------- */
+#indv { padding-bottom: 0; }
+
+#indv header { margin-bottom: 1.75em; }
+
+#article-body > p:last-child:after { content: "¶"; color: #1990c6; margin-left: .25em; }
+
+#article-body p.lead { font-size: 1.325em; color: #333; line-height: 1.5em; }
+
+.upnext { margin-top: 1em; font-family: 'KevinClarkIconsRegular'; font-style: normal; font-weight: normal; text-decoration: none; text-rendering: optimizeLegibility; white-space: nowrap; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga=1"; -moz-font-feature-settings: "liga"; -ms-font-feature-settings: "liga" 1; -o-font-feature-settings: "liga"; font-feature-settings: "liga"; -webkit-font-smoothing: antialiased; *zoom: 1; }
+.upnext:before, .upnext:after { content: " "; display: table; }
+.upnext:after { clear: both; }
+
+.upnext li { float: left; list-style-type: none; margin: 0; }
+.upnext li + li { margin-left: .5em; }
+.upnext li a { color: #ccc; font-size: 1.25em; }
+.upnext li a:hover { color: #999999; }
+.upnext li a:active { color: #1990c6; }

@@ -192,10 +192,10 @@ nav[role='navigation'] {
 
 footer[role="contentinfo"] {
 
-	background: #fafafa url('../img/backdrop.png') no-repeat center center;
+	background: #fafafa url('../../images/logos/backdrop.png') no-repeat center center;
 	border-top: 1px solid #e5e5e5;
 	padding: 2em 0;
-	@include supported(svg) { background: rgba(0,0,0,.02) url('../img/backdrop.svg') no-repeat center center; }
+	@include supported(svg) { background: rgba(0,0,0,.02) url('../../images/logos/backdrop.svg') no-repeat center center; }
 
 	#tagline span {
 		text-transform: uppercase;

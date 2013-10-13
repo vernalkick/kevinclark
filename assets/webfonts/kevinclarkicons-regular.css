@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'KevinClarkIconsRegular';
+    src: url('kevinclarkicons-regular.eot');
+    src: url('kevinclarkicons-regular.eot') format('embedded-opentype'),
+         url('kevinclarkicons-regular.woff') format('woff'),
+         url('kevinclarkicons-regular.ttf') format('truetype'),
+         url('kevinclarkicons-regular.svg#KevinClarkIconsRegular') format('svg');
+}

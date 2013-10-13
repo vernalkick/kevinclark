@@ -1,5 +1,5 @@
 ---
-title: Looking at Progressive Enhancements the Wrong Way
+title: "Looking at Progressive Enhancements the Wrong Way"
 status: live
 categories:
 	- Development

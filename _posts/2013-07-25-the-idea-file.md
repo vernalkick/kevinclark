@@ -1,8 +1,7 @@
 ---
 title: The Idea File
 status: live
-categories:
-	- Writing
+categories: Writing
 ---
 
 <figure>

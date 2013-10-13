@@ -145,7 +145,7 @@ module JekyllModels
             new_mdl["url"] = self.config["site_base"]
             new_mdl["url"] += case self.config['jekyll_models_urls']
             when "rest-like"
-              "#{new_mdl["mdl_type"]}/#{new_mdl["mdl_name"]}"
+              "#{new_mdl["mdl_type"]}/#{new_mdl["mdl_name"]}/"
             when "models"
               "#{new_mdl["mdl_type"]}/#{new_mdl["mdl_name"]}.html"
             when "base"

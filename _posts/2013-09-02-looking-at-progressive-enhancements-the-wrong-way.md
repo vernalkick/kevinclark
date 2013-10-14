@@ -1,9 +1,8 @@
 ---
 title: "Looking at Progressive Enhancements the Wrong Way"
 status: live
-categories:
-	- Development
-	- Opinion
+excerpt: I love video games. I’m terrible at most of them. But I’m a sucker for a game with a good story.
+categories: Development Opinion
 ---
 
 <figure>

@@ -6,22 +6,27 @@
  |  \_/|__/ \/  |_/  |  |_/   \___/|__/\_/|_/   |_/| \_/
                                                             */
 
-// Tools
-@import "_includes/bourbon/bourbon";
-@import "_includes/variables";
-@import "_includes/mixins";
-@import "_includes/animations";
 
-// Materials
-@import "_includes/reset";
-@import "_includes/base";
-@import "_includes/typography";
-@import "_includes/media";
-@import "_includes/forms";
-@import "_includes/syntax";
+// Vendor
+@import "_vendor/bourbon/bourbon";
+@import "_vendor/syntax";
+@import "_vendor/responsive-nav";
 
-// Blueprints
-@import "_includes/content";
-@import "_includes/layout";
-@import "_includes/responsive-nav";
-@import "_includes/pages";
+// Modules
+@import "_modules/variables";
+@import "_modules/mixins";
+@import "_modules/animations";
+
+// Partials
+@import "_partials/reset";
+@import "_partials/typography";
+@import "_partials/logo";
+@import "_partials/header";
+@import "_partials/footer";
+
+// Pages
+@import "_pages/base";
+@import "_pages/home";
+@import "_pages/article-indv";
+@import "_pages/article-lst";
+@import "_pages/library";

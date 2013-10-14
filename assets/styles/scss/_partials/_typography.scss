@@ -1,0 +1,181 @@
+/*
+========================================================================================
+
+TYPOGRAPHY
+
+----------------------------------------------------------------------------------------
+
+Contents:
+
+	01. Headings
+	02. Paragraphs
+	03. Lists
+		- Unordered lists
+		- Ordered lists
+	04. Blockquotes
+	05. Links
+	06. Horizontal rules
+	07. Text selection
+
+======================================================================================== */
+
+/* - 01. General ---------------------------------------------------------------------- */
+
+body {
+	color: $text;
+	font-family: $ratio;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.75rem;
+}
+
+/* - 02. Headings ---------------------------------------------------------------------- */
+
+h1 {
+	color: $accent;
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+}
+
+h2 {
+	color: $title;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	margin-top: 2.5rem;
+	font-weight: 500;
+}
+
+h3 {
+	color: $title;
+	font-size: 1.375em;
+	font-weight: normal;
+}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+@include mq(xlarge) {
+	h1 { font-size: 2.25em; }
+}
+
+/* - 03. Paragraphs -------------------------------------------------------------------- */
+
+p {
+	margin-bottom: 1.75rem;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+/* - 04. Links ------------------------------------------------------------------------- */
+
+a {
+	color: $accent;
+	font-weight: 500;
+	text-decoration: none;
+	@include transition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+	&:hover { color: darken($accent, 10%); }
+	&:active { color: darken($accent, 20%); }
+}
+
+/* Buttons */
+
+.btn {
+	background-color: $accent;
+	line-height: 1em;
+	padding: 1em 1em .75em 1em;
+	border-radius: 4px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: .875em;
+	display: inline-block;
+
+	&:hover {
+		color: #fff;
+		background-color: darken($accent, 10%);
+	}
+
+	&:active { background-color: darken($accent, 20%); }
+}
+
+/* - 05. Lists ------------------------------------------------------------------------- */
+
+li {
+	margin-bottom: 1.75rem;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	margin-left: 1em;
+}
+
+/* Unordered lists */
+
+ul {
+	li {}
+}
+
+/* Ordered lists */
+
+ol {
+	li {}
+}
+
+/* Media-Queries */
+
+@include mq(small) {
+
+	li { margin-left: 0; }
+
+} // End small
+
+/* - 06. Blockquotes ------------------------------------------------------------------- */
+
+blockquote {
+	border-left: .25em solid #E5E5E5;
+	padding-left: 1.5em;
+
+	p {
+		color: #777;
+		text-indent: -0.4em;
+
+		&:before { content: "“"; }
+		&:after { content: "”"; }
+	}
+}
+
+/* - 07. Horizontal rules -------------------------------------------------------------- */
+
+hr {
+	border: none;
+	display: block;
+	height: 1px;
+	margin: 2em 40% 2em;
+	width: 20%;
+	@include background-color(#e5e5e5, #000, .1);
+	@include max-width(3em);
+}
+
+/* - 08. Text selection ---------------------------------------------------------------- */
+
+::-moz-selection {
+	background: $accent;
+	color: #fff;
+}
+
+::selection {
+	background: $accent;
+	color: #fff;
+}
+
+/* - 09. Time -------------------------------------------------------------------------- */
+
+time {
+	color: $subtext;
+
+	strong { color: $subtext-accent; font-weight: 500; }
+}

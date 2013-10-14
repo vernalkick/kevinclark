@@ -1,6 +1,7 @@
 ---
 title:  "Welcome to Jekyll!"
 date: 2013-10-07 22:19:22
+excerpt: Every designer is wired differently. Some people are idea people, some people are artists. I’m an optimizer.
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

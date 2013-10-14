@@ -1,0 +1,175 @@
+/* - Article Indv ---------------------------------------------------------------------- */
+
+#indv {
+	padding-bottom: 0;
+}
+
+	#indv header {
+		margin-bottom: 1.75em;
+	}
+
+	// Body
+
+	#article-body {
+
+	}
+
+		#article-body > p:last-child:after {
+			content: "¶";
+			color: $accent;
+			margin-left: .25em;
+		}
+
+		#article-body p.lead {
+			font-size: 1.325em;
+			color: #333;
+			line-height: 1.5em;
+		}
+
+		#article-body figure {
+			margin: 0 0 1.75rem -9.5%;
+			width: 119%;
+		}
+
+			#article-body figcaption {
+				margin: 1.75rem 8% 0;
+			}
+
+	// Up next
+
+	.upnext {
+		display: none;
+		margin-top: 1em;
+		@include icon;
+		@include clearfix;
+	}
+
+		.upnext li {
+			float: left;
+			list-style-type: none;
+			margin: 0;
+
+			+ li { margin-left: .5em; }
+			a { color: #ccc; font-size: 1.5em; }
+			a:hover { color: $subtext; }
+			a:active { color: $accent; }
+		}
+
+	// Related posts
+
+	#article-related {
+	}
+
+		#article-related h2 {
+			margin-top: 0;
+		}
+
+		#article-related ul {
+			list-style-type: none;
+		}
+
+		#article-related h3 {
+			font-size: 1em;
+			line-height: 1.25em;
+		}
+
+		#article-related p {
+			font-size: .875em;
+			color: $subtext;
+			line-height: 1.75em;
+		}
+
+@include mq(small) {
+
+	#article-body {
+		font-size: 1.125em;
+	}
+
+		#article-body p {
+			line-height: 1.75em;
+		}
+
+	#article-body figure {
+		margin: 0 0 1.75rem -16.75%;
+		width: 116.75%;
+	}
+
+		#article-body figcaption {
+			margin: 1.75rem 0 0 14.25%;
+		}
+
+	#indv header {
+		margin-top: 1em;
+		margin-bottom: 3.5em;
+	}
+
+} // End of small
+
+@include media-query(700px) {
+	#article-body {
+		font-size: 1.25em;
+	}
+}
+
+@include mq(large) {
+
+	#indv header {
+		overflow: hidden;
+		position: relative;
+	}
+
+		#indv header time {
+			@include column(3);
+			float: none;
+			position: absolute; left: 0;
+		}
+
+		#indv header h1 {
+			@include column(6);
+			@include push(left, 3);
+			@include push(right, 1);
+		}
+
+		.upnext {
+			display: block;
+			@include column(2, last);
+		}
+
+	#article-body {
+		font-size: 1em;
+		@include column(6, last);
+		@include push(left, 3);
+	}
+
+		#article-body figure {
+			margin: 0 0 1.75rem -51.75%;
+			width: 151.75%;
+		}
+
+			#article-body figcaption {
+				margin: 1.75rem 0 0 34.25%;
+			}
+
+		#article-body figure.left {
+			float: left;
+			margin-left: -52%;
+			width: 90%;
+			margin-right: 5%;
+		}
+
+	// Related posts
+
+	#article-related {
+		@include column(2, last);
+		@include push(left, 1);
+	}
+
+} // End of large
+
+@include mq(xlarge) {
+
+	#article-body {
+		font-size: 1.125em;
+	}
+
+} // End of x-large

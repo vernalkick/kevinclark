@@ -1,0 +1,77 @@
+/* - Homepage -------------------------------------------------------------------------- */
+
+
+/* Hello - Short bio */
+
+#hello {
+
+}
+
+	#hello p {
+		color: $subtext;
+		margin-top: .5em;
+		margin-bottom: 0;
+	}
+
+	#hello em {
+		font-style: normal;
+	}
+
+
+/* Latest articles */
+
+#latest-articles {
+
+}
+
+	#latest-articles li {
+		margin-left: 0; margin-bottom: 4em;
+	}
+
+		#latest-articles li header {
+			width: auto;
+			margin: 0; margin-bottom: 1em;
+			float: none;
+		}
+
+		#latest-articles li time {
+			font-size: .875em;
+		}
+
+
+/* Media Queries */
+
+
+@include mq(small) { // Media-Query: SMALL
+
+	#hello em {
+		display: block;
+	}
+
+	#latest-articles li {
+		@include column(2.666666667);
+		&:last-child { margin-right: 0; }
+	}
+
+} // End of small
+
+
+@include mq(large) { // Media-Query: LARGE
+
+	#hello-inner {
+		@include column(9, last);
+	}
+
+	#latest-articles header {
+		@include column(3);
+	}
+
+		#latest-articles header h2 {
+			margin-bottom: 0;
+		}
+
+	#latest-articles li {
+		@include column(3);
+	}
+
+} // End of large

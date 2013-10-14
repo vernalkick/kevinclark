@@ -1,0 +1,78 @@
+#library-lst {
+	@include clearfix;
+	list-style-type: none;
+	padding-top: 1.5em;
+}
+
+	#library-lst li {
+		margin-left: 0;
+	}
+
+	#library-lst figure {
+		display: block;
+		padding-top: 150%;
+		margin-bottom: 1em;
+		position: relative;
+	}
+
+	#library-lst img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	#library-lst a {
+		display: block;
+		&:hover h3 { color: $accent; }
+	}
+
+	#library-lst h3 {
+		font-size: 1em;
+		line-height: 1.2em;
+		@include transition(color .3s ease-in-out);
+		@include ellipsis;
+	}
+
+	#library-lst p {
+		font-size: .875em;
+		color: $subtext;
+		font-weight: normal;
+		line-height: 1.2em;
+		@include ellipsis;
+	}
+
+
+
+@include mq(xsmall) {
+
+	#library-lst li {
+		@include column(2);
+	}
+
+	#library-lst li:nth-child(2n+2) {
+		margin-right: 0;
+	}
+
+} // End of small
+
+@include mq(small) {
+	#library-lst li,
+	#library-lst li:nth-child(2n+2) {
+		@include column(2);
+	}
+
+	#library-lst li:nth-child(4n+4) {
+		margin-right: 0;
+	}
+}
+
+@include mq(large) {
+	#library-lst li,
+	#library-lst li:nth-child(2n+2) {
+		@include column(2);
+	}
+
+	#library-lst li:nth-child(6n+6) {
+		margin-right: 0;
+	}
+}

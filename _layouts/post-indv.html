@@ -15,7 +15,7 @@ layout: default
 			{{ content }}
 		</div>
 
-		<aside id="article-related">
+		<aside id="article-related" class="fixedsticky">
 			<h2>Related posts</h2>
 			<ul class="article-lst secondary">
 			{% for related_post in site.related_posts limit:3 %}

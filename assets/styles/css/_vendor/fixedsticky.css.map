@@ -1,0 +1,6 @@
+{
+"version": "3",
+"mappings": "AAAA,YAAa,GACZ,QAAQ,EAAE,cAAc,EACxB,QAAQ,EAAE,WAAW,EACrB,QAAQ,EAAE,UAAU,EACpB,QAAQ,EAAE,SAAS,EACnB,QAAQ,EAAE,MAAM,EAChB,GAAG,EAAE,CAAC,EACN,KAAK,EAAE,CAAC;;AAET,gFACiC,GAChC,QAAQ,EAAE,KAAK;;AAEhB,kBAAmB,GAClB,OAAO,EAAE,IAAI;;AAEd,oCAAqC,GACpC,OAAO,EAAE,KAAK",
+"sources": ["../../scss/_vendor/fixedsticky.scss"],
+"file": "fixedsticky.css"
+}

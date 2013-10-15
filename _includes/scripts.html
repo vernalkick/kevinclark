@@ -1,6 +1,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="/assets/javascript/modernizr.js"></script>
 <script src="/assets/javascript/responsive-nav.js"></script>
+<script src="/assets/javascript/fixedsticky.js"></script>
 <script type="text/javascript">
   var navigation = responsiveNav("#nav", { // Selector: The ID of the wrapper
     animate: true, // Boolean: Use CSS3 transitions, true or false
@@ -13,6 +14,10 @@
     init: function(){}, // Function: Init callback
     open: function(){}, // Function: Open callback
     close: function(){} // Function: Close callback
+  });
+
+  $(function(){
+    $('.fixedsticky').fixedsticky();
   });
 </script>
 {% if page.title == "Home" %}

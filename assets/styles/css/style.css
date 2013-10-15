@@ -456,10 +456,10 @@ section .wrap > :first-child { margin-top: 0; }
 @media screen and (min-width: 600px) { #hello em { display: block; }
   #latest-articles li { width: 31.33333%; float: left; margin-right: 3%; }
   #latest-articles li:last-child { margin-right: 0; } }
-@media screen and (min-width: 1000px) { #hello-inner { width: 74.5%; float: left; }
-  #latest-articles header { width: 23.5%; float: left; margin-right: 2%; }
+@media screen and (min-width: 1000px) { #hello-inner { width: 36.17021%; float: left; }
+  #latest-articles header { width: 10.6383%; float: left; margin-right: 2.12766%; }
   #latest-articles header h2 { margin-bottom: 0; }
-  #latest-articles li { width: 23.5%; float: left; margin-right: 2%; } }
+  #latest-articles li { width: 10.6383%; float: left; margin-right: 2.12766%; } }
 /* - Article Indv ---------------------------------------------------------------------- */
 #indv { padding-bottom: 0; }
 
@@ -498,14 +498,14 @@ section .wrap > :first-child { margin-top: 0; }
   #indv header { margin-top: 1em; margin-bottom: 3.5em; } }
 @media screen and (min-width: 700px) { #article-body { font-size: 1.25em; } }
 @media screen and (min-width: 1000px) { #indv header { overflow: hidden; position: relative; }
-  #indv header time { width: 23.5%; float: left; margin-right: 2%; float: none; position: absolute; left: 0; }
-  #indv header h1 { width: 49%; float: left; margin-right: 2%; margin-left: 25.5%; margin-right: 8.5%; }
-  .upnext { display: block; width: 15%; float: left; }
-  #article-body { font-size: 1em; width: 49%; float: left; margin-left: 25.5%; }
+  #indv header time { width: 21.2766%; position: absolute; left: 0; }
+  #indv header h1 { width: 53.19149%; float: left; margin-left: 25.53191%; margin-right: 4.25532%; }
+  .upnext { display: block; width: 17.02128%; float: left; }
+  #article-body { font-size: 1em; width: 53.19149%; margin-left: 25.53191%; float: left; }
   #article-body figure { margin: 0 0 1.75rem -51.75%; width: 151.75%; }
   #article-body figcaption { margin: 1.75rem 0 0 34.25%; }
   #article-body figure.left { float: left; margin-left: -52%; width: 90%; margin-right: 5%; }
-  #article-related { width: 15%; float: left; margin-left: 8.5%; } }
+  #article-related { width: 17.02128%; margin-left: 4.25532%; float: left; } }
 @media screen and (min-width: 1200px) { #article-body { font-size: 1.125em; } }
 /* - Article list ---------------------------------------------------------------------- */
 #intro-quote h1 { text-indent: -.40em; }
@@ -551,14 +551,14 @@ section .wrap > :first-child { margin-top: 0; }
   #link-archive li:nth-child(4n) { margin-right: 0; }
   #link-archive li:nth-child(4n+1) { clear: left; } }
 @media screen and (min-width: 1000px) { .list header { margin-bottom: 1.5em; }
-  #archives-latest-articles li { margin-bottom: 0; width: 32%; float: left; margin-right: 2%; }
+  #archives-latest-articles li { margin-bottom: 0; width: 14.89362%; float: left; margin-right: 2.12766%; }
   #archives-latest-articles li:nth-child(3n) { margin-right: 0; }
-  #archives-latest-articles li, #archives-full li { width: 32%; float: left; margin-right: 2%; }
+  #archives-latest-articles li, #archives-full li { width: 14.89362%; float: left; margin-right: 2.12766%; }
   #archives-latest-articles li:nth-child(3n), #archives-full li:nth-child(3n) { margin-right: 0; }
   #archives-full li:nth-child(2n) { margin-right: 2%; }
   #archives-full li:nth-child(3n) { margin-right: 0; }
   /* Link Archive */
-  #link-archive li { width: 15%; float: left; margin-right: 2%; }
+  #link-archive li { width: 6.38298%; float: left; margin-right: 2.12766%; }
   #link-archive li:nth-child(4n), #link-archive li:nth-child(2n) { margin-right: 2%; }
   #link-archive li:nth-child(4n+1) { clear: none; }
   #link-archive li:nth-child(6n) { margin-right: 0; }
@@ -585,7 +585,7 @@ section .wrap > :first-child { margin-top: 0; }
   #library-lst li:nth-child(2n+2) { margin-right: 0; } }
 @media screen and (min-width: 600px) { #library-lst li, #library-lst li:nth-child(2n+2) { width: 22.75%; float: left; margin-right: 3%; }
   #library-lst li:nth-child(4n+4) { margin-right: 0; } }
-@media screen and (min-width: 1000px) { #library-lst li, #library-lst li:nth-child(2n+2) { width: 15%; float: left; margin-right: 2%; }
+@media screen and (min-width: 1000px) { #library-lst li, #library-lst li:nth-child(2n+2) { width: 6.38298%; float: left; margin-right: 2.12766%; }
   #library-lst li:nth-child(6n+6) { margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */

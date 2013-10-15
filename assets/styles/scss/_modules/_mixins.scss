@@ -179,7 +179,7 @@ $column_width: 30;
 
 // Media-Queries
 
-$grid-breakpoints: "xsmall" 19% 8% 4, "small" 9.875% 3% 8, "medium" 9.875% 3% 8, "large" 6.5% 2% 12;
+$grid-breakpoints: "xsmall" 19% 8% 4, "small" 9.875% 3% 8, "medium" 9.875% 3% 8, "large" 2.127659574% 2.127659574% 24;
 $breakpoints: 'xsmall' 400px, 'small' 600px, 'medium' 800px, 'large' 1000px, 'xlarge' 1200px;
 
 $current-breakpoint: nth(nth($grid-breakpoints, 1), 1);
@@ -302,4 +302,8 @@ $current-breakpoint: $context;
   @media #{$query} and (#{$operator}: #{$value}) {
     @content;
   }
+}
+
+@function width($n) {
+	@return $n * 2.127659574%;
 }

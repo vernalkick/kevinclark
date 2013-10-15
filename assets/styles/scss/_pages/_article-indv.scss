@@ -119,26 +119,28 @@
 	}
 
 		#indv header time {
-			@include column(3);
-			float: none;
+			width: width(10);
 			position: absolute; left: 0;
 		}
 
 		#indv header h1 {
-			@include column(6);
-			@include push(left, 3);
-			@include push(right, 1);
+			width: width(25);
+			float: left;
+			margin-left: width(12);
+			margin-right: width(2);
 		}
 
 		.upnext {
 			display: block;
-			@include column(2, last);
+			width: width(8);
+			float: left;
 		}
 
 	#article-body {
 		font-size: 1em;
-		@include column(6, last);
-		@include push(left, 3);
+		width: width(25);
+		margin-left: width(12);
+		float: left;
 	}
 
 		#article-body figure {
@@ -160,8 +162,9 @@
 	// Related posts
 
 	#article-related {
-		@include column(2, last);
-		@include push(left, 1);
+		width: width(8);
+		margin-left: width(2);
+		float: left;
 	}
 
 } // End of large

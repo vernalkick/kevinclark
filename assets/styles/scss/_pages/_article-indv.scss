@@ -53,12 +53,10 @@
 			a { color: #ccc; font-size: 1.5em; }
 			a:hover { color: $subtext; }
 			a:active { color: $accent; }
+			span { color: #e5e5e5; font-size: 1.5em; }
 		}
 
 	// Related posts
-
-	#article-related {
-	}
 
 		#article-related h2 {
 			margin-top: 0;
@@ -67,6 +65,10 @@
 		#article-related ul {
 			list-style-type: none;
 		}
+
+			#article-related li {
+				margin-left: 0;
+			}
 
 		#article-related h3 {
 			font-size: 1em;
@@ -113,9 +115,13 @@
 
 @include mq(large) {
 
+	#indv {
+		padding-bottom: 4em;
+	}
+
 	#indv header {
-		overflow: hidden;
 		position: relative;
+		@include clearfix;
 	}
 
 		#indv header time {
@@ -127,23 +133,22 @@
 		#indv header h1 {
 			@include column(6);
 			@include push(left, 3);
-			@include push(right, 1);
 		}
 
 		.upnext {
 			display: block;
-			@include column(2, last);
+			@include column(3, last);
 		}
 
 	#article-body {
 		font-size: 1em;
-		@include column(6, last);
+		@include column(6);
 		@include push(left, 3);
 	}
 
 		#article-body figure {
-			margin: 0 0 1.75rem -51.75%;
-			width: 151.75%;
+			margin: 0 0 1.75rem -54%;
+			width: 154%;
 		}
 
 			#article-body figcaption {
@@ -160,8 +165,7 @@
 	// Related posts
 
 	#article-related {
-		@include column(2, last);
-		@include push(left, 1);
+		@include column(3, last);
 	}
 
 } // End of large
@@ -169,7 +173,7 @@
 @include mq(xlarge) {
 
 	#article-body {
-		font-size: 1.125em;
+		//font-size: 1.125em;
 	}
 
 } // End of x-large

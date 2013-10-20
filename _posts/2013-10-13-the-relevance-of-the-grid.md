@@ -3,10 +3,10 @@ title: The Relevance of the Grid
 excerpt: "Many of you will have heard of Codex: the journal of typography and the good news is that pre-orders for #1 are opening later today"
 ---
 
-<!--<figure>
+<figure>
 	<img src="http://media.wilsonminer.com/images/posts/2008/oct/20/typesize_comparison.jpg" alt="">
 	<figcaption>Last year we changed our website every month. It was fun, educational and just a little bit exhausting. Mostly it was fun though. In order to give ourselves a broader platform this year, we’ve created this section, for experiments, ideas and projects.</figcaption>
-</figure> -->
+</figure>
 
 <p>Many of you will have heard of <a href="#">Codex: the journal of typography</a>, the forthcoming publication from iLT’s John Boardley, and the good news is that pre-orders for #1 are opening later today. This thing is going to sell like hot cakes.</p>
 

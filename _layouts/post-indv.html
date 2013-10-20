@@ -7,8 +7,20 @@ layout: default
 			<h1>{{ page.title | widont }}</h1>
 			<time datetime="{{ page.date | date_to_xmlschema }}" pubdate><strong>Published</strong> {{ page.date | date_to_long_string }}</time>
 			<ul class="upnext">
-				{% if page.previous.url %}<li><a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a></li>{% endif %}
-				{% if page.next.url %}<li><a href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">Next</a></li>{% endif %}
+				<li>
+					{% if page.previous.url %}
+						<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a>
+					{% else %}
+						<span>Previous</span>
+					{% endif %}
+				</li>
+				<li>
+					{% if page.next.url %}
+						<a href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">Next</a>
+					{% else %}
+						<span>Next</span>
+					{% endif %}
+				</li>
 			</ul>
 		</header>
 		<div id="article-body">

@@ -957,7 +957,9 @@ section .wrap > :first-child {
     margin-right: 4%;
     float: none;
     position: absolute;
-    left: 0; }
+    left: 0;
+    line-height: 1;
+    margin-top: 1em; }
 
   #indv header h1 {
     width: 48.0%;

@@ -58,10 +58,6 @@
 
 @include mq(large) { // Media-Query: LARGE
 
-	#hello-inner {
-		@include column(9, last);
-	}
-
 	#latest-articles header {
 		@include column(3);
 	}
@@ -71,7 +67,8 @@
 		}
 
 	#latest-articles li {
-		@include column(3);
+		width: width(12);
+		margin-right: width(2);
 	}
 
 } // End of large

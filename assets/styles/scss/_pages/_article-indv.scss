@@ -114,8 +114,8 @@
 @include mq(large) {
 
 	#indv header {
-		overflow: hidden;
 		position: relative;
+		@include clearfix;
 	}
 
 		#indv header time {

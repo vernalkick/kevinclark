@@ -1,9 +1,7 @@
 ---
 title: Relative Readability
+excerpt: "My answer got long, so I figured I’d use it as an excuse to post again (twice in the same month, I know, shocking). The short answer is “so the body text could be big.”"
 ---
-
-
-
 <p>My answer got long, so I figured I’d use it as an excuse to post again (twice in the same month, I know, shocking). The short answer is “so the body text could be big.”</p>
 
 <p>After years of wondering why browsers defaulted to 16pt text sizes I’m starting to be convinced that long text really <em>is</em> significantly more readable on screen at precisely that size.</p>

@@ -272,7 +272,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 @-moz-keyframes twist {
   0% {
     -webkit-transform: rotate(0deg); }
@@ -285,7 +284,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 @-ms-keyframes twist {
   0% {
     -webkit-transform: rotate(0deg); }
@@ -298,7 +296,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 @keyframes twist {
   0% {
     -webkit-transform: rotate(0deg); }
@@ -311,7 +308,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 /*
 ========================================================================================
 
@@ -393,7 +389,6 @@ body {
 /* - 02. Headings ---------------------------------------------------------------------- */
 h1 {
   color: #1990c6;
-  color: orange;
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.5rem; }
@@ -437,7 +432,8 @@ p {
 
 .note {
   color: #999;
-  font-size: .875em; }
+  font-size: .875em;
+  line-height: 1.75em; }
 
 /* - 04. Links ------------------------------------------------------------------------- */
 a {
@@ -797,19 +793,14 @@ body {
 /* - 02. Viewport Fixes ---------------------------------------------------------------- */
 @-webkit-viewport {
   width: device-width; }
-
 @-moz-viewport {
   width: device-width; }
-
 @-ms-viewport {
   width: device-width; }
-
 @-o-viewport {
   width: device-width; }
-
 @viewport {
   width: device-width; }
-
 /* - 03. Wrapper ----------------------------------------------------------------------- */
 .wrap {
   margin: 0 auto;
@@ -1221,3 +1212,5 @@ section .wrap > :first-child {
 
   #latest-articles li:nth-child(4n+4) {
     margin-right: 0; } }
+
+/*# sourceMappingURL=legacy.css.map */

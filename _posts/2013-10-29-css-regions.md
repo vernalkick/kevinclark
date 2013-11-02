@@ -1,5 +1,6 @@
 ---
 title: CSS Regions and Edge Reflowy
+excerpt: Since joining the ranks of Adobe, I’ve been lucky enough to get sneak peeks at early betas and access to the folks building some of these exciting new tools.
 ---
 <figure>
 	<img src="http://elliotjaystocks.com/assets/52456837c0d7cd34fe000336/article_regions_reflow.png" alt="Article illustration for CSS Regions and Edge Reflow">

@@ -31,7 +31,7 @@ body {
 /* - 02. Headings ---------------------------------------------------------------------- */
 
 h1 {
-	color: $accent; color: orange;
+	color: $accent;
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 2.5rem;
@@ -86,6 +86,7 @@ p {
 .note {
 	color: #999;
 	font-size: .875em;
+	line-height: 1.75em;
 }
 
 /* - 04. Links ------------------------------------------------------------------------- */

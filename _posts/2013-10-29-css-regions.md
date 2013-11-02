@@ -1,5 +1,5 @@
 ---
-title: CSS Regions and Edge Reflow
+title: CSS Regions and Edge Reflowy
 ---
 <figure>
 	<img src="http://elliotjaystocks.com/assets/52456837c0d7cd34fe000336/article_regions_reflow.png" alt="Article illustration for CSS Regions and Edge Reflow">

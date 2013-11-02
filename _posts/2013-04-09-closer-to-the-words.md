@@ -1,9 +1,7 @@
 ---
 title: Closer to the Words
 status: live
-categories:
-	- Writing
-	- CMS
+categories: Writing CMS
 ---
 
 <figure>

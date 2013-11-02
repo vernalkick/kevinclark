@@ -1,10 +1,7 @@
 ---
 title: Sketch as a web design tool?
 status: live
-categories:
-	- Design
-	- App
-	- Workflow
+categories: Design App Workflow
 ---
 
 <figure>

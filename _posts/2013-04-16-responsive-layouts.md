@@ -1,10 +1,7 @@
 ---
 title: Responsive Layouts
 status: live
-categories:
-	- Responsive
-	- Design
-	- Layout
+categories: Responsive Design Layout
 ---
 
 <figure>

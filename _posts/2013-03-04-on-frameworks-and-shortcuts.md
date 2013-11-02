@@ -1,9 +1,7 @@
 ---
 title: On Frameworks and Shortcuts
 status: hidden
-categories:
-	- Design
-	- Process
+categories: Design Process
 ---
 
 <small><span>Disclamer:</span> You should take this article with a grain of salt. I am very aware that not all developers are like this.</small>

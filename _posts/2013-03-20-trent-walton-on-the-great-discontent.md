@@ -1,8 +1,7 @@
 ---
 title: Trent Walton on The Great Discontent
 status: draft
-categories:
-	- Design
+categories: Design
 ---
 
 <figure>

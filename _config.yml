@@ -2,7 +2,7 @@ name: Kevin Clark
 markdown: redcarpet
 pygments: true
 permalink: /articles/:title/
-jekyll_models: [tests, library]
+jekyll_models: [library]
 site_base: /
 navigation:
 - text: Home

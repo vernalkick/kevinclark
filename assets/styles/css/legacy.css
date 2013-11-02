@@ -272,7 +272,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 @-moz-keyframes twist {
   0% {
     -webkit-transform: rotate(0deg); }
@@ -285,7 +284,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 @-ms-keyframes twist {
   0% {
     -webkit-transform: rotate(0deg); }
@@ -298,7 +296,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 @keyframes twist {
   0% {
     -webkit-transform: rotate(0deg); }
@@ -311,7 +308,6 @@
 
   100% {
     -webkit-transform: rotate(0deg); } }
-
 /*
 ========================================================================================
 
@@ -435,13 +431,8 @@ p {
   hyphens: auto; }
 
 .note {
-  float: left;
-  margin-left: -54%;
-  width: 47%;
   color: #999;
-  font-size: .875em;
-  margin-right: 2em;
-  margin-top: .25em; }
+  font-size: .875em; }
 
 /* - 04. Links ------------------------------------------------------------------------- */
 a {
@@ -801,19 +792,14 @@ body {
 /* - 02. Viewport Fixes ---------------------------------------------------------------- */
 @-webkit-viewport {
   width: device-width; }
-
 @-moz-viewport {
   width: device-width; }
-
 @-ms-viewport {
   width: device-width; }
-
 @-o-viewport {
   width: device-width; }
-
 @viewport {
   width: device-width; }
-
 /* - 03. Wrapper ----------------------------------------------------------------------- */
 .wrap {
   margin: 0 auto;
@@ -1012,6 +998,13 @@ section .wrap > :first-child {
 
   #article-body figcaption {
     margin: 1.75rem 0 0 35%; }
+
+  #article-body .note.left {
+    float: left;
+    margin-left: -54%;
+    width: 47%;
+    margin-right: 2em;
+    margin-top: .25em; }
 
   #article-body figure.left {
     float: left;

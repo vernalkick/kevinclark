@@ -1,8 +1,7 @@
 ---
 title: Tasks, Not Apps
 status: live
-categories:
-	- Software
+categories: Software
 ---
 
 <figure>

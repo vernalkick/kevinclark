@@ -1,9 +1,7 @@
 ---
 title: Multi-Column Grids in the Responsive World
 status: hidden
-categories:
-	- Responsive
-	- Design
+categories: Responsive Design
 ---
 
 <figure>

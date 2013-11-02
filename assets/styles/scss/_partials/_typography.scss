@@ -51,9 +51,22 @@ h3 {
 	font-weight: normal;
 }
 
-h4 {}
+h4 {
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: .1em;
+	margin-bottom: .5em;
+	font-weight: 500;
+}
 
-h5 {}
+h5 {
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: .1em;
+	margin-bottom: .5em;
+	color: #777;
+	font-weight: 400;
+}
 
 h6 {}
 
@@ -68,6 +81,16 @@ p {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+}
+
+.note {
+	float: left;
+	margin-left: -54%;
+	width: 47%;
+	color: #999;
+	font-size: .875em;
+	margin-right: 2em;
+	margin-top: .25em;
 }
 
 /* - 04. Links ------------------------------------------------------------------------- */
@@ -136,12 +159,16 @@ ol {
 /* - 06. Blockquotes ------------------------------------------------------------------- */
 
 blockquote {
-	border-left: .25em solid #E5E5E5;
+	border-left: .5em solid #E5E5E5;
 	padding-left: 1.5em;
 
 	p {
 		color: #777;
 		text-indent: -0.4em;
+
+		font-size: 1.5em;
+		line-height: 1.5em !important;
+		color: #333;
 
 		&:before { content: "“"; }
 		&:after { content: "”"; }

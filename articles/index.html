@@ -1,0 +1,41 @@
+---
+layout: default
+title: Articles
+---
+<section id="latest-articles">
+	<div class="wrap">
+	<ul class="article-lst">
+		{% for post in site.posts limit:4 %}
+		<li>
+			<article>
+				<header>
+					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					<time datetime="{{ post.date | date_to_xmlschema }}" pubdate><strong>Published</strong> {{ post.date | date_to_long_string }}</time>
+				</header>
+				<p>{{ post.excerpt }}</p>
+				<a href="{{ post.url }}" class="btn">Continue</a>
+			</article>
+		</li>
+		{% endfor %}
+	</ul>
+	</div>
+</section>
+
+<section>
+	<div class="wrap">
+		<ul class="article-lst">
+			{% for post in site.posts offset:4 %}
+			<li>
+				<article>
+					<header>
+						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+						<time datetime="{{ post.date | date_to_xmlschema }}" pubdate><strong>Published</strong> {{ post.date | date_to_long_string }}</time>
+					</header>
+					<p>{{ post.excerpt }}</p>
+					<a href="{{ post.url }}" class="btn">Continue</a>
+				</article>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

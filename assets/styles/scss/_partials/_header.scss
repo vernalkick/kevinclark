@@ -124,3 +124,15 @@ nav[role='navigation'] {
 	}
 
 } // End medium
+
+@include mq(large) {
+	header[role='banner'] {
+		padding-bottom: 3rem;
+	}
+}
+
+@include mq(xlarge) {
+	header[role='banner'] {
+		padding-bottom: 5.25rem;
+	}
+}

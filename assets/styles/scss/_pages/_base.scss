@@ -61,6 +61,11 @@ body {
 	.wrap { width: 84%; }
 }
 
+main {
+	display: block;
+	overflow: hidden;
+}
+
 /* - Containers ------------------------------------------------------------------------ */
 
 main > section:first-child {
@@ -77,6 +82,11 @@ section + section {
 
 section .wrap > :first-child {
 	margin-top: 0;
+}
+
+section .wrap > header h2 {
+	margin-top: 0;
+	margin-bottom: 2em;
 }
 
 @include mq(medium) {

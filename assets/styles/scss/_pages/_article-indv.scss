@@ -115,6 +115,34 @@
 
 @include mq(large) {
 
+	#indv header {
+		position: relative;
+		@include clearfix;
+	}
+
+	#indv header h1, #indv header time {
+		@include column(9);
+	}
+
+	#article-body {
+		@include column(9);
+	}
+
+	.upnext {
+		display: block;
+		@include column(3, last);
+		float: none;
+		position: absolute; right: 0; top: 0;
+	}
+
+} // End of large
+
+@include mq(xlarge) {
+
+	#article-body {
+		//font-size: 1.125em;
+	}
+
 	#indv {
 		padding-bottom: 4em;
 	}
@@ -176,14 +204,6 @@
 
 	#article-related {
 		@include column(3, last);
-	}
-
-} // End of large
-
-@include mq(xlarge) {
-
-	#article-body {
-		//font-size: 1.125em;
 	}
 
 } // End of x-large

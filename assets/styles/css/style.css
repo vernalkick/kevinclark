@@ -678,6 +678,12 @@ nav[role='navigation'] a {
     nav[role='navigation'] li a {
       padding: 5.25rem 2.5rem .125rem 1rem;
       line-height: 1.5em; } }
+@media screen and (min-width: 1000px) {
+  header[role='banner'] {
+    padding-bottom: 3rem; } }
+@media screen and (min-width: 1200px) {
+  header[role='banner'] {
+    padding-bottom: 5.25rem; } }
 /* - 02. Footer ------------------------------------------------------------------------ */
 footer[role="contentinfo"] {
   background: #fafafa url("../../images/logos/backdrop.png") no-repeat center center;
@@ -833,6 +839,10 @@ body {
 @media screen and (min-width: 1000px) {
   .wrap {
     width: 84%; } }
+main {
+  display: block;
+  overflow: hidden; }
+
 /* - Containers ------------------------------------------------------------------------ */
 main > section:first-child {
   padding-top: 0; }
@@ -845,6 +855,10 @@ section + section {
 
 section .wrap > :first-child {
   margin-top: 0; }
+
+section .wrap > header h2 {
+  margin-top: 0;
+  margin-bottom: 2em; }
 
 @media screen and (min-width: 800px) {
   section {
@@ -1025,6 +1039,34 @@ section .wrap > :first-child {
   #article-body {
     font-size: 1.25em; } }
 @media screen and (min-width: 1000px) {
+  #indv header {
+    position: relative;
+    *zoom: 1; }
+    #indv header:before, #indv header:after {
+      content: " ";
+      display: table; }
+    #indv header:after {
+      clear: both; }
+
+  #indv header h1, #indv header time {
+    width: 74.0%;
+    float: left;
+    margin-right: 4%; }
+
+  #article-body {
+    width: 74.0%;
+    float: left;
+    margin-right: 4%; }
+
+  .upnext {
+    display: block;
+    width: 22.0%;
+    float: left;
+    float: none;
+    position: absolute;
+    right: 0;
+    top: 0; } }
+@media screen and (min-width: 1200px) {
   #indv {
     padding-bottom: 4em; }
 
@@ -1128,22 +1170,30 @@ section .wrap > :first-child {
   margin: 1em 0; }
 
 /* Link Archive */
-#link-archive li {
-  list-style-type: none; }
+#full-archive li {
+  list-style-type: none;
+  margin-left: 0; }
 
-#link-archive li h3 {
+#full-archive li h3 {
   font-size: 1em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  line-height: 1.25em;
+  margin-bottom: .5em; }
+
+#full-archive li p {
+  font-size: .875em;
+  color: #999;
+  line-height: 1.75em; }
 
 /* Media Queries */
 @media screen and (min-width: 600px) {
-  #link-archive li {
+  #full-archive li {
     width: 48.5%;
     float: left;
     margin-right: 3%; }
-    #link-archive li:nth-child(2n) {
+    #full-archive li:nth-child(2n) {
       margin-right: 0; }
-    #link-archive li:nth-child(2n+1) {
+    #full-archive li:nth-child(2n+1) {
       clear: left; }
 
   #archives-full li {
@@ -1172,19 +1222,6 @@ section .wrap > :first-child {
     #archives-full li:nth-child(3n) {
       margin-right: 0; }
     #archives-full li:nth-child(3n+1) {
-      clear: left; }
-
-  #link-archive li {
-    width: 22.75%;
-    float: left;
-    margin-right: 3%; }
-    #link-archive li:nth-child(2n) {
-      margin-right: 3%; }
-    #link-archive li:nth-child(2n+1) {
-      clear: none; }
-    #link-archive li:nth-child(4n) {
-      margin-right: 0; }
-    #link-archive li:nth-child(4n+1) {
       clear: left; } }
 @media screen and (min-width: 1000px) {
   .list header {
@@ -1210,22 +1247,21 @@ section .wrap > :first-child {
   #archives-full li:nth-child(3n) {
     margin-right: 0; }
 
-  /* Link Archive */
-  #link-archive li {
-    width: 13.33333%;
+  #full-archive li h3 {
+    font-size: 1.15em; }
+
+  #full-archive li {
+    width: 22.0%;
     float: left;
     margin-right: 4%; }
-    #link-archive li:nth-child(4n), #link-archive li:nth-child(2n) {
-      margin-right: 2%; }
-    #link-archive li:nth-child(4n+1) {
+    #full-archive li:nth-child(2n) {
+      margin-right: 3%; }
+    #full-archive li:nth-child(2n+1) {
       clear: none; }
-    #link-archive li:nth-child(6n) {
+    #full-archive li:nth-child(4n) {
       margin-right: 0; }
-    #link-archive li:nth-child(6n+1) {
-      clear: left; }
-
-  #link-archive li h3 {
-    font-size: 1.15em; } }
+    #full-archive li:nth-child(4n+1) {
+      clear: left; } }
 #library-lst {
   *zoom: 1;
   list-style-type: none;

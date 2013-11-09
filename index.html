@@ -23,6 +23,7 @@ title: Home
 					<time datetime="{{ post.date | date_to_xmlschema }}" pubdate><strong>Published</strong> {{ post.date | date_to_long_string }}</time>
 				</header>
 				<p>{{ post.excerpt }}</p>
+				{% if post.exerpt == ''%}<p>{{ post.content | strip_html | truncatewords:30}}</p>{% endif %}
 				<a href="{{ post.url }}" class="btn">Continue</a>
 			</article>
 		</li>

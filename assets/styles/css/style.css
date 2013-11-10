@@ -407,6 +407,32 @@
     -webkit-transform: rotate(0deg);
   }
 }
+@font-face {
+  font-family: "kevinclark-icon-font";
+  src: url("/assets/webfonts/kevinclark-icon-font.eot");
+  src: url("/assets/webfonts/kevinclark-icon-font.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/kevinclark-icon-font.woff") format("woff"), url("/assets/webfonts/kevinclark-icon-font.ttf") format("truetype"), url("/assets/webfonts/kevinclark-icon-font.svg?#kevinclark-icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+.ligature-icons {
+  font-family: "kevinclark-icon-font";
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hamburger:before {
+  content: "hamburger";
+}
+
 /*
 ========================================================================================
 

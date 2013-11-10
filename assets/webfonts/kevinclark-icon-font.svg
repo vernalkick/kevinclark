@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Sun Nov 10 10:44:00 2013
+ By Kevin Clark
+Created by Kevin Clark with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="kevinclark-icon-font" horiz-adv-x="512" >
+  <font-face 
+    font-family="kevinclark-icon-font"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 0 512 448"
+    underline-thickness="25"
+    underline-position="-52"
+    unicode-range="U+0061-F100"
+  />
+<missing-glyph 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name="hamburger" unicode="hamburger" 
+d="M0 155h512v-73h-512v73zM512 302v-73h-512v73h512zM512 448v-73h-512v73h512z" />
+    <glyph glyph-name=".notdef" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" 
+ />
+    <glyph glyph-name="a" unicode="a" 
+d="M0 0z" />
+    <glyph glyph-name="b" unicode="b" 
+d="M0 0z" />
+    <glyph glyph-name="e" unicode="e" 
+d="M0 0z" />
+    <glyph glyph-name="g" unicode="g" 
+d="M0 0z" />
+    <glyph glyph-name="h" unicode="h" 
+d="M0 0z" />
+    <glyph glyph-name="m" unicode="m" 
+d="M0 0z" />
+    <glyph glyph-name="r" unicode="r" 
+d="M0 0z" />
+    <glyph glyph-name="u" unicode="u" 
+d="M0 0z" />
+  </font>
+</defs></svg>

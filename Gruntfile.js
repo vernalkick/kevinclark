@@ -19,7 +19,8 @@ module.exports = function(grunt) {
 		jekyll: {
 			dist: {
 				options: {
-					serve: true
+					serve: true,
+					watch: true
 				}
 			}
 		},
@@ -70,5 +71,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-webfont');
 
 	// Setup workflow
-	grunt.registerTask('default', ['webfont', 'sass', 'watch']);
+	grunt.registerTask('default', ['webfont', 'sass', 'concurrent:target']);
 };

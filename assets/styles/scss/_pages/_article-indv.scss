@@ -68,6 +68,14 @@
 
 			#article-related li {
 				margin-left: 0;
+				&:after {
+					content: "";
+					display: block; width: 2em; height: 1px;
+					background-color: #e5e5e5;
+				}
+				&:last-child:after {
+					display: none;
+				}
 			}
 
 		#article-related h3 {

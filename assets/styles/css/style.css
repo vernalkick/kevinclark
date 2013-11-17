@@ -1287,6 +1287,16 @@ section .wrap > header h2 {
 #article-related li {
   margin-left: 0;
 }
+#article-related li:after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+#article-related li:last-child:after {
+  display: none;
+}
 
 #article-related h3 {
   font-size: 1em;

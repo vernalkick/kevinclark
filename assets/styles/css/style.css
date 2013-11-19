@@ -687,6 +687,11 @@ time strong {
   font-weight: 500;
 }
 
+mark {
+  background-color: #F4F6B2;
+  color: #555;
+}
+
 /* - Logo ------------------------------------------------------------------------------ */
 .logo {
   color: #333;
@@ -1227,8 +1232,22 @@ section .wrap > header h2 {
   margin: 1.75rem 8% 0;
 }
 
+#indv time {
+  display: block;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+#indv time:before {
+  content: "";
+  display: inline-block;
+  width: .4375em;
+  height: .4375em;
+  border-radius: 50%;
+  border: 2px solid #1990c6;
+  margin-right: .5em;
+}
+
 .upnext {
-  display: none;
   margin-top: 1em;
   font-family: 'KevinClarkIconsRegular';
   font-style: normal;
@@ -1276,7 +1295,16 @@ section .wrap > header h2 {
   font-size: 1.5em;
 }
 
+#article-related {
+  position: relative;
+}
+
+#article-related .fixed {
+  margin-bottom: 2.5em;
+}
+
 #article-related h2 {
+  margin-bottom: 1.5em;
   margin-top: 0;
 }
 
@@ -1284,17 +1312,19 @@ section .wrap > header h2 {
   list-style-type: none;
 }
 
-#article-related li {
+#article-related .article-lst li {
   margin-left: 0;
 }
-#article-related li:after {
+#article-related .article-lst li:after {
   content: "";
   display: block;
   width: 2em;
+  width: 50em;
   height: 1px;
   background-color: #e5e5e5;
+  background-color: rgba(0, 0, 0, 0.1);
 }
-#article-related li:last-child:after {
+#article-related .article-lst li:last-child:after {
   display: none;
 }
 
@@ -1307,6 +1337,11 @@ section .wrap > header h2 {
   font-size: .875em;
   color: #999999;
   line-height: 1.75em;
+}
+
+.upnext {
+  display: block;
+  margin-top: 3em;
 }
 
 @media screen and (min-width: 600px) {
@@ -1362,14 +1397,12 @@ section .wrap > header h2 {
     margin-right: 4%;
   }
 
-  .upnext {
-    display: block;
-    width: 22.0%;
-    float: left;
-    float: none;
-    position: absolute;
-    right: 0;
-    top: 0;
+  #article-related {
+    margin-top: -1.5em;
+  }
+
+  #article-related .fixed {
+    margin-top: 1.5em;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1405,12 +1438,6 @@ section .wrap > header h2 {
     float: left;
     margin-right: 4%;
     margin-left: 26.0%;
-  }
-
-  .upnext {
-    display: block;
-    width: 22.0%;
-    float: left;
   }
 
   #article-body {

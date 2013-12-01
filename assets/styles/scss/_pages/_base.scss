@@ -50,7 +50,7 @@ body {
 	margin: 0 auto;
 	width: 84%;
 	@include clearfix;
-	@include max-width(1200px);
+	@include max-width(1100px);
 }
 
 @include mq(small) {

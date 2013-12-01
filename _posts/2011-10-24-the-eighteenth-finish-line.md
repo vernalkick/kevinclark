@@ -12,6 +12,6 @@ Thirty minutes. I asked people what I should do with my last hours before turnin
 
 You turn eighteen, but the world doesn’t stop. There is always more things to see. You never have enough. I am desperate to see things, to learn, to make.
 
-## I want to use what I have, make something memorable. I am now part of something bigger. I’m now part of what people call society, and it’s great. I haven’t changed much—and I never will—but now adults view me as I am.
+I want to use what I have, make something memorable. I am now part of something bigger. I’m now part of what people call society, and it’s great. I haven’t changed much—and I never will—but now adults view me as I am.
 
 I might have passed the finish line, but I’m already thinking of the next race as I walk my way home. I’m still moving. And I will never stop.

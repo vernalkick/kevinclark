@@ -14,6 +14,12 @@
 
 	}
 
+	#article-body > p:first-child {
+		font-size: 1.25em;
+		line-height: 1.6em;
+		color: #333;
+	}
+
 		#article-body > p:last-child:after {
 			content: "¶";
 			color: $accent;
@@ -35,10 +41,22 @@
 				margin: 1.75rem 8% 0;
 			}
 
+	#indv time {
+		display: block;
+		margin-top: 2.5em;
+		margin-bottom: 2.5em;
+		&:before {
+			content: "";
+			display: inline-block; width: .4375em; height: .4375em;
+			border-radius: 50%;
+			border: 2px solid $accent;
+			margin-right: .5em;
+		}
+	}
+
 	// Up next
 
 	.upnext {
-		display: none;
 		margin-top: 1em;
 		@include icon;
 		@include clearfix;
@@ -58,7 +76,16 @@
 
 	// Related posts
 
+		#article-related {
+			position: relative;
+		}
+
+		#article-related .fixed {
+			margin-bottom: 2.5em;
+		}
+
 		#article-related h2 {
+			margin-bottom: 1.5em;
 			margin-top: 0;
 		}
 
@@ -66,12 +93,12 @@
 			list-style-type: none;
 		}
 
-			#article-related li {
+			#article-related .article-lst li {
 				margin-left: 0;
 				&:after {
 					content: "";
-					display: block; width: 2em; height: 1px;
-					background-color: #e5e5e5;
+					display: block; width: 2em; width: 50em; height: 1px;
+					background-color: #e5e5e5; background-color: rgba(#000, .1);
 				}
 				&:last-child:after {
 					display: none;
@@ -87,6 +114,11 @@
 			font-size: .875em;
 			color: $subtext;
 			line-height: 1.75em;
+		}
+
+		.upnext {
+			display: block;
+			margin-top: 3em;
 		}
 
 @include mq(small) {
@@ -136,11 +168,12 @@
 		@include column(9);
 	}
 
-	.upnext {
-		display: block;
-		@include column(3, last);
-		float: none;
-		position: absolute; right: 0; top: 0;
+	#article-related {
+		margin-top: -1.5em;
+	}
+
+	#article-related .fixed {
+		margin-top: 1.5em;
 	}
 
 } // End of large
@@ -171,11 +204,6 @@
 		#indv header h1 {
 			@include column(6);
 			@include push(left, 3);
-		}
-
-		.upnext {
-			display: block;
-			@include column(3, last);
 		}
 
 	#article-body {

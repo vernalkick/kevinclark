@@ -5,41 +5,42 @@ layout: default
 	<div class="wrap">
 		<header>
 			<h1>{{ page.title | widont }}</h1>
-			<time datetime="{{ page.date | date_to_xmlschema }}" pubdate><strong>Published</strong> {{ page.date | date_to_long_string }}</time>
-			<ul class="upnext">
-				<li>
-					{% if page.previous.url %}
-						<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a>
-					{% else %}
-						<span>Previous</span>
-					{% endif %}
-				</li>
-				<li>
-					{% if page.next.url %}
-						<a href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">Next</a>
-					{% else %}
-						<span>Next</span>
-					{% endif %}
-				</li>
-			</ul>
 		</header>
 		<div id="article-body">
 			{{ content }}
+			<time datetime="{{ page.date | date_to_xmlschema }}" pubdate><strong>Published</strong> {{ page.date | date_to_long_string }}</time>
 		</div>
 
 		<aside id="article-related">
-			<h2>Related posts</h2>
-			<ul class="article-lst secondary">
-			{% for related_post in site.related_posts limit:3 %}
-				<li>
-					<article>
-						<h3><a href="{{ related_post.url }}">{{ related_post.title }}</a></h3>
-						<p>{{ related_post.excerpt }}</p>
-					</article>
-				</li>
-			{% endfor %}
-			</ul>
+			<div class="fixed">
+				<h2>Related posts</h2>
+				<ul class="article-lst secondary">
+				{% for related_post in site.related_posts limit:3 %}
+					<li>
+						<article>
+							<h3><a href="{{ related_post.url }}">{{ related_post.title }}</a></h3>
+							<p>{{ related_post.excerpt }}</p>
+						</article>
+					</li>
+				{% endfor %}
+				</ul>
+				<ul class="upnext">
+					<li>
+						{% if page.previous.url %}
+							<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a>
+						{% else %}
+							<span>Previous</span>
+						{% endif %}
+					</li>
+					<li>
+						{% if page.next.url %}
+							<a href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">Next</a>
+						{% else %}
+							<span>Next</span>
+						{% endif %}
+					</li>
+				</ul>
+			</div>
 		</aside>
-
 	</div>
 </article>

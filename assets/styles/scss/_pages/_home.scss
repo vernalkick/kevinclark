@@ -4,7 +4,6 @@
 /* Hello - Short bio */
 
 #hello {
-
 }
 
 	#hello p {
@@ -22,22 +21,41 @@
 
 #latest-articles {
 
-}
-
-	#latest-articles li {
-		list-style-type: none;
-		margin-left: 0; margin-bottom: 4em;
+	header {
+		@include clearfix;
+		& > h2 {
+			float: left;
+		}
+		& > a {
+			float: right;
+			color: #777;
+		}
 	}
 
-		#latest-articles li header {
+	li {
+		list-style-type: none;
+		margin-left: 0; margin-bottom: 4em;
+		@include transition(-webkit-transform .2s ease-in-out);
+
+		&:hover  {
+			-webkit-transform: scale(1.05);
+		}
+
+		header {
 			width: auto;
 			margin: 0; margin-bottom: 1em;
 			float: none;
 		}
 
-		#latest-articles li time {
-			font-size: .875em;
+		h3 {
+			font-size: 1em; line-height: 1.2em;
 		}
+
+		p {
+			font-size: .875em; color: $subtext; line-height: 1.75em;
+		}
+	}
+}
 
 
 /* Media Queries */
@@ -66,16 +84,18 @@
 
 @include mq(large) { // Media-Query: LARGE
 
+	#hello {
+		padding: 4em 0; padding-bottom: 8em;
+	}
+
 	#hello-inner {
 		@include column(9, last);
 	}
 
 	#latest-articles header {
-		@include column(3);
 	}
 
 		#latest-articles header h2 {
-			margin-bottom: 0;
 		}
 
 	#latest-articles li,

@@ -1505,179 +1505,109 @@ section .wrap > header h2 {
     float: left;
   }
 }
-/* - Article list ---------------------------------------------------------------------- */
-#intro-quote h1 {
-  text-indent: -.40em;
+.article-year-lst {
+  list-style-type: none;
+}
+.article-year-lst li {
+  margin: 0;
+  padding: 0;
+}
+.article-year-lst li h1 {
+  margin-bottom: .5em;
+  font-family: "Tungsten A", "Tungsten B", "Tungsten", sans-serif;
+  font-size: 2.5em;
+}
+.article-year-lst > li + li {
+  margin-top: 2em;
 }
 
-#intro-quote p {
+.article-post-lst {
+  list-style-type: none;
+}
+.article-post-lst li {
+  margin: 0;
+  padding: 0;
+  padding: 1.5em 0;
+}
+.article-post-lst li header h3 {
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+}
+.article-post-lst li .excerpt {
+  font-size: .875em;
+  line-height: 1.5em;
+}
+.article-post-lst li .excerpt p {
+  color: #999;
   margin-bottom: 0;
 }
-
-#intro-quote a {
-  color: #777;
+.article-post-lst li time {
+  font-size: .875em;
+  color: #ccc;
   margin-top: 1em;
   display: block;
 }
 
-/* Lists */
-.list header {
-  *zoom: 1;
-}
-.list header:before, .list header:after {
-  content: " ";
-  display: table;
-}
-.list header:after {
-  clear: both;
-}
-.list header h2 {
-  float: left;
-  margin-top: 0;
-}
-.list header a {
-  float: right;
-  color: #999;
-}
-.list li {
-  padding: 0;
-  margin: 0 0 1em 0;
-}
-.list li header a {
-  float: none;
-  color: #1990c6;
-}
-
-/* Latest articles archive */
-#archives-latest-articles li {
-  margin: 0 0 3em 0;
-}
-#archives-latest-articles img {
-  margin: 1em 0;
-}
-
-/* Link Archive */
-#full-archive li {
-  list-style-type: none;
-  margin-left: 0;
-}
-
-#full-archive li h3 {
-  font-size: 1em;
-  margin-bottom: 0;
-  line-height: 1.25em;
-  margin-bottom: .5em;
-}
-
-#full-archive li p {
-  font-size: .875em;
-  color: #999;
-  line-height: 1.75em;
-}
-
-/* Media Queries */
-@media screen and (min-width: 600px) {
-  #full-archive li {
-    width: 48.5%;
-    float: left;
-    margin-right: 3%;
-  }
-  #full-archive li:nth-child(2n) {
-    margin-right: 0;
-  }
-  #full-archive li:nth-child(2n+1) {
-    clear: left;
-  }
-
-  #archives-full li {
-    width: 48.5%;
-    float: left;
-    margin-right: 3%;
-  }
-  #archives-full li:nth-child(2n) {
-    margin-right: 0;
-  }
-  #archives-full li:nth-child(2n+1) {
-    clear: left;
-  }
-}
 @media screen and (min-width: 800px) {
-  #intro-quote h1 {
+  .article-post-lst li {
+    border: none;
+    *zoom: 1;
+    padding: 0;
+    margin-bottom: 1em;
+  }
+  .article-post-lst li:before, .article-post-lst li:after {
+    content: " ";
+    display: table;
+  }
+  .article-post-lst li:after {
+    clear: both;
+  }
+  .article-post-lst li header {
+    width: 35.625%;
+    float: left;
+    margin-right: 3%;
+    padding: 1.5em 0;
+  }
+  .article-post-lst li .excerpt {
     width: 61.375%;
     float: left;
-    margin-right: 3%;
-    float: none;
+    padding: 1.5em 0;
   }
-
-  #archives-full li {
-    width: 31.33333%;
-    float: left;
-    margin-right: 3%;
-  }
-  #archives-full li:nth-child(2n) {
-    margin-right: 3%;
-  }
-  #archives-full li:nth-child(2n+1) {
-    clear: none;
-  }
-  #archives-full li:nth-child(3n) {
-    margin-right: 0;
-  }
-  #archives-full li:nth-child(3n+1) {
-    clear: left;
+  .article-post-lst li time {
+    display: none;
   }
 }
 @media screen and (min-width: 1000px) {
-  .list header {
-    margin-bottom: 1.5em;
+  .article-year-lst h1 {
+    margin-left: 26%;
+  }
+  .article-year-lst > li + li {
+    margin-top: 4em;
   }
 
-  #archives-latest-articles li {
-    margin-bottom: 0;
-    width: 30.66667%;
-    float: left;
-    margin-right: 4%;
+  .article-post-lst li {
+    position: relative;
   }
-  #archives-latest-articles li:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  #archives-latest-articles li, #archives-full li {
-    width: 30.66667%;
-    float: left;
-    margin-right: 4%;
-  }
-  #archives-latest-articles li:nth-child(3n), #archives-full li:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  #archives-full li:nth-child(2n) {
-    margin-right: 2%;
-  }
-  #archives-full li:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  #full-archive li h3 {
-    font-size: 1.15em;
-  }
-
-  #full-archive li {
+  .article-post-lst li header {
     width: 22.0%;
     float: left;
     margin-right: 4%;
   }
-  #full-archive li:nth-child(2n) {
-    margin-right: 3%;
+  .article-post-lst li .excerpt {
+    width: 74.0%;
+    float: left;
   }
-  #full-archive li:nth-child(2n+1) {
-    clear: none;
+  .article-post-lst li .excerpt p {
+    width: 64.86486%;
+    float: left;
+    margin-right: 5.40541%;
   }
-  #full-archive li:nth-child(4n) {
-    margin-right: 0;
-  }
-  #full-archive li:nth-child(4n+1) {
-    clear: left;
+  .article-post-lst li time {
+    position: absolute;
+    right: 0;
+    top: .25em;
+    display: block;
   }
 }
 #library-lst {

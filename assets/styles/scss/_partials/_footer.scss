@@ -1,76 +1,36 @@
-/* - 02. Footer ------------------------------------------------------------------------ */
-
-footer[role="contentinfo"] {
-	background: #fafafa url('../../images/logos/backdrop.png') no-repeat center center;
-	@include supported(svg) { background: rgba(0,0,0,.02) url('../../images/logos/backdrop.svg') no-repeat center center; }
-	border-top: 1px solid #e5e5e5;
+#footer {
+	background-color: #f5f7f7;
+	text-align: center;
 	padding: 2em 0;
+	p {
+		font-size: 1.25em;
+		font-weight: 300;
+		color: #768b94;
+		margin: 0 auto;
+		max-width: 38em;
+	}
+	br {
+		display: none;
+	}
+	.btn {
+		margin-top: 2em;
+		font-size: .875em;
+	}
 }
-
-	#tagline span {
-		display: block;
-		margin-bottom: .5em; margin-top: .25em;
-		color: #888; font-size: .875em; text-transform: uppercase; letter-spacing: .1em;
-	}
-
-	#copyright p {
-		@include color(#a6a6a6, #000, .35); font-size: .875em; line-height: 1.5em;
-		margin-top: .5em; margin-bottom: 0;
-		a { color: #888; text-decoration: none; }
-		a:hover { color: $accent; }
-	}
-
-	#social {
-		@include clearfix();
-		margin-top: 1em; margin-bottom: 0;
-	}
-
-		#social li {
-			float: left;
-			margin: 0; margin-right: .5em; margin-bottom: 0;
-			list-style-type: none;
-			display: block;
-		}
-
-		#social a {
-			font-weight: bold; font-size: 1.35em; @include color(#bfbfbf, #000, .2);
-			display: block;
-
-			&:hover { color: $accent; @include animation(twist .3s ease-in-out); }
-			&[href*="twitter"]:hover { color: #00acee; }
-			&[href*="dribbble"]:hover { color: #ea4c89; }
-			&[href*="rss"]:hover { color: #ee802f; }
-			&[href*="instagram"]:hover { color: #3f729b; }
-		}
-
-
 
 @include mq(medium) {
-
-	footer[role="contentinfo"] {
-		padding: 3.75em 0 3em;
-	}
-
-	#tagline {
-		float: left;
-		span { margin-bottom: 0; }
-	}
-
-	#social {
-		margin-top: 0;
-	}
-
-		#social li {
-			float: right;
-			margin-right: 0;
-			margin-left: .5em;
+	#footer {
+		padding: 3em;
+		p {
+			font-size: 1.4375em;
+			line-height: 1.2em;
 		}
-
-	#copyright {
-		float: right;
+		br {
+			display: block;
+		}
+		.btn {
+			margin-top: 3em;
+			font-size: 1em;
+		}
 	}
-
-		#copyright br { display: none; }
-		#copyright p { margin-top: .75em; }
-
-}
+} // End of medium

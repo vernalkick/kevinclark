@@ -1,0 +1,16 @@
+.btn {
+  &.light {
+    background-color: transparent;
+    color: $accent;
+    border: 1px solid $accent;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-size: 1em;
+    padding: .75em 1em;
+    padding-top: .7em;
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}

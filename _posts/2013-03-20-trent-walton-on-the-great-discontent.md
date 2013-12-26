@@ -4,11 +4,6 @@ status: draft
 categories: Design
 ---
 
-<figure>
-	<img src="http://thegreatdiscontent.com/-/2013/img/walton/trent-walton.jpg" alt="Trent Walton">
-	<figcaption>Copyright 2013, <a href="http://thegreatdiscontent.com">The Great Discontent</a></figcaption>
-</figure>
-
 [The Great Discontent](http://thegreatdiscontent.com), one of my favorite websites recently [interviewed Trent Walton](http://thegreatdiscontent.com/trent-walton), a big inspiration for me. The whole thing is chock-full of great advice and great insight into Trent's carrer.
 
 He has an interesting take on formal design education:

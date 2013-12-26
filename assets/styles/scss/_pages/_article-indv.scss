@@ -1,240 +1,164 @@
 /* - Article Indv ---------------------------------------------------------------------- */
 
-#indv {
+#article-indv {
 	padding-bottom: 0;
 }
 
-	#indv header {
+	/* Header */
+
+	#article-indv-header {
 		margin-bottom: 1.75em;
 	}
 
-	// Body
+	/* Body */
 
-	#article-body {
+	#article-indv-body {
 
-	}
+		// Paragraph
 
-	#article-body > p:first-child {
-		font-size: 1.25em;
-		line-height: 1.6em;
-		color: #333;
-	}
+		& > p:first-child, & .lead { // Make the first paragraph slightly larger
+			font-size: 1.25em; line-height: 1.6em;
+			color: #333;
+		}
 
-		#article-body > p:last-child:after {
+		& > p:last-child:after { // End the paragraph with a closing glyph
 			content: "¶";
 			color: $accent;
 			margin-left: .25em;
 		}
 
-		#article-body p.lead {
-			font-size: 1.325em;
-			color: #333;
-			line-height: 1.5em;
-		}
+		// Figure
 
-		#article-body figure {
+		figure {
 			margin: 0 0 1.75rem -9.5%;
 			width: 119%;
 		}
 
-			#article-body figcaption {
-				margin: 1.5rem 8% 0;
-			}
+		figcaption {
+			margin: 1.5rem 8% 0;
+		}
 
-	#indv time {
-		display: block;
-		margin-top: 2.5em;
-		margin-bottom: 2.5em;
-		color: #ccc;
-	}
+		// Timestamp
 
-	// Up next
+		time {
+			display: block;
+			margin: 2.5em 0;
+			color: #ccc;
+		}
 
-	.upnext {
-		margin-top: 1em;
-		@include icon;
-		@include clearfix;
-	}
+		// Up Next
 
-		.upnext li {
+		.up-next {
 			float: left;
 			list-style-type: none;
-			margin: 0;
+			margin: 1em 0 0 0;
+			@include icon;
+			@include clearfix;
 
-			+ li { margin-left: .5em; }
-			a { color: #ccc; font-size: 1.5em; }
-			a:hover { color: $subtext; }
-			a:active { color: $accent; }
-			span { color: #e5e5e5; font-size: 1.5em; }
-		}
+			& + li { margin-left: .5em; }
 
-	// Related posts
-
-		#article-related {
-			position: relative;
-		}
-
-		#article-related .fixed {
-			margin-bottom: 2.5em;
-		}
-
-		#article-related h2 {
-			margin-bottom: 1.5em;
-			margin-top: 0;
-		}
-
-		#article-related ul {
-			list-style-type: none;
-		}
-
-			#article-related .article-lst li {
-				margin-left: 0;
-				&:after {
-					content: "";
-					display: block; width: 2em; width: 50em; height: 1px;
-					background-color: #e5e5e5; background-color: rgba(#000, .1);
-				}
-				&:last-child:after {
-					display: none;
-				}
+			a {
+				color: #ccc; font-size: 1.5em;
+				&:hover { color: $subtext; }
+				&:active { color: $accent; }
 			}
 
-		#article-related h3 {
-			font-size: 1em;
-			line-height: 1.25em;
+			span {
+				color: #e5e5e5; font-size: 1.5em;
+			}
 		}
+	}
 
-		#article-related p {
-			font-size: .875em;
-			color: $subtext;
-			line-height: 1.75em;
-		}
-
-		.upnext {
-			display: block;
-			margin-top: 3em;
-		}
 
 @include mq(small) {
 
-	#article-body {
-		font-size: 1.125em;
-	}
+	/* Header */
 
-		#article-body p {
-			line-height: 1.75em;
-		}
-
-	#article-body figure {
-		margin: 0 0 1.75rem -16.75%;
-		width: 116.75%;
-	}
-
-		#article-body figcaption {
-			margin: 1.75rem 0 0 14.25%;
-		}
-
-	#indv header {
+	#article-indv-header {
 		margin-top: 1em;
 		margin-bottom: 3.5em;
 	}
 
-} // End of small
+	/* Body */
 
-@include media-query(700px) {
-	#article-body {
-		font-size: 1.25em;
+	#article-indv-body {
+		font-size: 1.125em;
+
+		// Figure
+
+		figure {
+			margin: 0 0 1.75rem -16.75%;
+			width: 116.75%;
+		}
+
+		figcaption {
+			margin: 1.75rem 0 0 14.25%;
+		}
+
 	}
-}
+
+} // End of small
 
 @include mq(large) {
 
-	#indv header {
+	#article-indv-header {
 		position: relative;
 		@include clearfix;
+
+		h1 {
+			@include column(9);
+		}
 	}
 
-	#indv header h1, #indv header time {
+	#article-indv-body {
 		@include column(9);
-	}
-
-	#article-body {
-		@include column(9);
-	}
-
-	#article-related {
-		margin-top: -1.5em;
-	}
-
-	#article-related .fixed {
-		margin-top: 1.5em;
 	}
 
 } // End of large
 
 @include mq(xlarge) {
 
-	#article-body {
-		//font-size: 1.125em;
-	}
-
-	#indv {
+	#article-indv {
 		padding-bottom: 4em;
 	}
 
-	#indv header {
+	/* Header */
+
+	#article-indv-header {
 		position: relative;
 		@include clearfix;
-	}
 
-		#indv header time {
-			@include column(3);
-			float: none;
-			position: absolute; left: 0;
-			line-height: 1;
-			margin-top: 1em;
-		}
-
-		#indv header h1 {
+		h1 {
 			@include column(6);
 			@include push(left, 3);
 		}
+	}
 
-	#article-body {
+	/* Body */
+
+	#article-indv-body {
 		font-size: 1em;
 		@include column(6);
 		@include push(left, 3);
-	}
 
-				#article-body {
-					figure {
-						margin-left: -54.25%;
-						width: 208.5%;
-					}
-					figcaption {
-						margin: 2em 26%;
-					}
-				}
+		// Paragraph
 
-		#article-body .note.left {
-			float: left;
-			margin-left: -54%;
+		.note {
 			width: 47%;
-			margin-right: 2em;
-			margin-top: .25em;
+			&.left { float: left; margin: .25em -54% 0 2em; }
 		}
 
-		#article-body figure.left {
-			float: left;
-			margin-left: -52%;
-			width: 90%;
-			margin-right: 5%;
+		// Figure
+
+		figure {
+			margin-left: -54.25%;
+			width: 208.5%;
+			&.left { float: left; margin-left: -52%; width: 90%; margin-right: 5%; }
 		}
 
-	// Related posts
-
-	#article-related {
-		@include column(3, last);
+		figcaption {
+			margin: 2em 26%;
+		}
 	}
 
 } // End of x-large

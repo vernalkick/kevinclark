@@ -593,6 +593,7 @@ p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+  line-height: 1.75em;
 }
 
 /*
@@ -1176,50 +1177,42 @@ section .wrap > header h2 {
   }
 }
 /* - Article Indv ---------------------------------------------------------------------- */
-#indv {
+#article-indv {
   padding-bottom: 0;
 }
 
-#indv header {
+/* Header */
+#article-indv-header {
   margin-bottom: 1.75em;
 }
 
-#article-body > p:first-child {
+/* Body */
+#article-indv-body > p:first-child, #article-indv-body .lead {
   font-size: 1.25em;
   line-height: 1.6em;
   color: #333;
 }
-
-#article-body > p:last-child:after {
+#article-indv-body > p:last-child:after {
   content: "¶";
   color: #1990c6;
   margin-left: .25em;
 }
-
-#article-body p.lead {
-  font-size: 1.325em;
-  color: #333;
-  line-height: 1.5em;
-}
-
-#article-body figure {
+#article-indv-body figure {
   margin: 0 0 1.75rem -9.5%;
   width: 119%;
 }
-
-#article-body figcaption {
+#article-indv-body figcaption {
   margin: 1.5rem 8% 0;
 }
-
-#indv time {
+#article-indv-body time {
   display: block;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
+  margin: 2.5em 0;
   color: #ccc;
 }
-
-.upnext {
-  margin-top: 1em;
+#article-indv-body .up-next {
+  float: left;
+  list-style-type: none;
+  margin: 1em 0 0 0;
   font-family: 'KevinClarkIconsRegular';
   font-style: normal;
   font-weight: normal;
@@ -1235,216 +1228,125 @@ section .wrap > header h2 {
   -webkit-font-smoothing: antialiased;
   *zoom: 1;
 }
-.upnext:before, .upnext:after {
+#article-indv-body .up-next:before, #article-indv-body .up-next:after {
   content: " ";
   display: table;
 }
-.upnext:after {
+#article-indv-body .up-next:after {
   clear: both;
 }
-
-.upnext li {
-  float: left;
-  list-style-type: none;
-  margin: 0;
-}
-.upnext li + li {
+#article-indv-body .up-next + li {
   margin-left: .5em;
 }
-.upnext li a {
+#article-indv-body .up-next a {
   color: #ccc;
   font-size: 1.5em;
 }
-.upnext li a:hover {
+#article-indv-body .up-next a:hover {
   color: #999999;
 }
-.upnext li a:active {
+#article-indv-body .up-next a:active {
   color: #1990c6;
 }
-.upnext li span {
+#article-indv-body .up-next span {
   color: #e5e5e5;
   font-size: 1.5em;
 }
 
-#article-related {
-  position: relative;
-}
-
-#article-related .fixed {
-  margin-bottom: 2.5em;
-}
-
-#article-related h2 {
-  margin-bottom: 1.5em;
-  margin-top: 0;
-}
-
-#article-related ul {
-  list-style-type: none;
-}
-
-#article-related .article-lst li {
-  margin-left: 0;
-}
-#article-related .article-lst li:after {
-  content: "";
-  display: block;
-  width: 2em;
-  width: 50em;
-  height: 1px;
-  background-color: #e5e5e5;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-#article-related .article-lst li:last-child:after {
-  display: none;
-}
-
-#article-related h3 {
-  font-size: 1em;
-  line-height: 1.25em;
-}
-
-#article-related p {
-  font-size: .875em;
-  color: #999999;
-  line-height: 1.75em;
-}
-
-.upnext {
-  display: block;
-  margin-top: 3em;
-}
-
 @media screen and (min-width: 600px) {
-  #article-body {
-    font-size: 1.125em;
-  }
-
-  #article-body p {
-    line-height: 1.75em;
-  }
-
-  #article-body figure {
-    margin: 0 0 1.75rem -16.75%;
-    width: 116.75%;
-  }
-
-  #article-body figcaption {
-    margin: 1.75rem 0 0 14.25%;
-  }
-
-  #indv header {
+  /* Header */
+  #article-indv-header {
     margin-top: 1em;
     margin-bottom: 3.5em;
   }
-}
-@media screen and (min-width: 700px) {
-  #article-body {
-    font-size: 1.25em;
+
+  /* Body */
+  #article-indv-body {
+    font-size: 1.125em;
+  }
+  #article-indv-body figure {
+    margin: 0 0 1.75rem -16.75%;
+    width: 116.75%;
+  }
+  #article-indv-body figcaption {
+    margin: 1.75rem 0 0 14.25%;
   }
 }
 @media screen and (min-width: 1000px) {
-  #indv header {
+  #article-indv-header {
     position: relative;
     *zoom: 1;
   }
-  #indv header:before, #indv header:after {
+  #article-indv-header:before, #article-indv-header:after {
     content: " ";
     display: table;
   }
-  #indv header:after {
+  #article-indv-header:after {
     clear: both;
   }
-
-  #indv header h1, #indv header time {
+  #article-indv-header h1 {
     width: 74.0%;
     float: left;
     margin-right: 4%;
   }
 
-  #article-body {
+  #article-indv-body {
     width: 74.0%;
     float: left;
     margin-right: 4%;
-  }
-
-  #article-related {
-    margin-top: -1.5em;
-  }
-
-  #article-related .fixed {
-    margin-top: 1.5em;
   }
 }
 @media screen and (min-width: 1200px) {
-  #indv {
+  #article-indv {
     padding-bottom: 4em;
   }
 
-  #indv header {
+  /* Header */
+  #article-indv-header {
     position: relative;
     *zoom: 1;
   }
-  #indv header:before, #indv header:after {
+  #article-indv-header:before, #article-indv-header:after {
     content: " ";
     display: table;
   }
-  #indv header:after {
+  #article-indv-header:after {
     clear: both;
   }
-
-  #indv header time {
-    width: 22.0%;
-    float: left;
-    margin-right: 4%;
-    float: none;
-    position: absolute;
-    left: 0;
-    line-height: 1;
-    margin-top: 1em;
-  }
-
-  #indv header h1 {
+  #article-indv-header h1 {
     width: 48.0%;
     float: left;
     margin-right: 4%;
     margin-left: 26.0%;
   }
 
-  #article-body {
+  /* Body */
+  #article-indv-body {
     font-size: 1em;
     width: 48.0%;
     float: left;
     margin-right: 4%;
     margin-left: 26.0%;
   }
-
-  #article-body figure {
+  #article-indv-body .note {
+    width: 47%;
+  }
+  #article-indv-body .note.left {
+    float: left;
+    margin: .25em -54% 0 2em;
+  }
+  #article-indv-body figure {
     margin-left: -54.25%;
     width: 208.5%;
   }
-  #article-body figcaption {
-    margin: 2em 26%;
-  }
-
-  #article-body .note.left {
-    float: left;
-    margin-left: -54%;
-    width: 47%;
-    margin-right: 2em;
-    margin-top: .25em;
-  }
-
-  #article-body figure.left {
+  #article-indv-body figure.left {
     float: left;
     margin-left: -52%;
     width: 90%;
     margin-right: 5%;
   }
-
-  #article-related {
-    width: 22.0%;
-    float: left;
+  #article-indv-body figcaption {
+    margin: 2em 26%;
   }
 }
 .article-post-lst {

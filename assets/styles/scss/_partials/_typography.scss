@@ -25,23 +25,23 @@ body {
 	color: $text;
 	font-family: $ratio;
 	-webkit-font-smoothing: antialiased;
-	line-height: 1.75rem;
+	line-height: 1.75em;
 }
 
 /* - 02. Headings ---------------------------------------------------------------------- */
 
 h1 {
 	color: $accent;
-	font-size: 1.625rem;
+	font-size: 1.625em;
 	font-weight: 400;
 	line-height: 1.25em;
 }
 
 h2 {
 	color: $title;
-	font-size: 1.25rem;
-	margin-bottom: 1rem;
-	margin-top: 2.5rem;
+	font-size: 1.25em;
+	margin-bottom: 1em;
+	margin-top: 2.5em;
 	font-weight: 500;
 }
 
@@ -72,13 +72,13 @@ h6 {}
 
 @include mq(small) {
 	h1 {
-		font-size: 1.75rem;
+		font-size: 1.75em;
 	}
 }
 
 @include mq(medium) {
 	h1 {
-		font-size: 2rem;
+		font-size: 2em;
 	}
 }
 
@@ -89,7 +89,7 @@ h6 {}
 /* - 03. Paragraphs -------------------------------------------------------------------- */
 
 p {
-	margin-bottom: 1.75rem;
+	margin-bottom: 1.75em;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
@@ -98,7 +98,7 @@ p {
 
 /*
 p + p {
-	margin-top: -1.75rem;
+	margin-top: -1.75em;
 	text-indent: 2em;
 } */
 
@@ -148,7 +148,7 @@ a {
 /* - 05. Lists ------------------------------------------------------------------------- */
 
 li {
-	margin-bottom: 1.75rem;
+	margin-bottom: 1.75em;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;

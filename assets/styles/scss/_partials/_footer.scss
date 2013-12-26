@@ -20,7 +20,7 @@
 
 @include mq(medium) {
 	#footer {
-		padding: 3em;
+		padding: 3em 0;
 		p {
 			font-size: 1.4375em;
 			line-height: 1.2em;
@@ -34,3 +34,9 @@
 		}
 	}
 } // End of medium
+
+@include mq(large) {
+	#footer {
+		padding: 4em 0;
+	}
+} // End of large

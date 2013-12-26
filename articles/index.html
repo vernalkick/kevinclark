@@ -5,26 +5,8 @@ title: Articles
 
 <section id="article-archive">
 	<div class="wrap">
-		<ul class="article-year-lst">
-		  {% for post in site.posts %}
-
-		    {% unless post.next %}
-		    <li>
-		      <h1>{{ post.date | date: '%Y' }}</h1>
-		     	<ul class="article-post-lst">
-		    {% else %}
-		      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-		      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-		      {% if year != nyear %}
-		      	</ul>
-		      </li>
-		      <li>
-		        <h1>{{ post.date | date: '%Y' }}</h1>
-		        <ul class="article-post-lst">
-		      {% endif %}
-		    {% endunless %}
-
-
+		{% for post in site.posts %}
+		  <ul class="article-post-lst">
 			    <li>
 			    	<header>
 			    		<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
@@ -34,10 +16,7 @@ title: Articles
 			    	</div>
 			    	<time>{{ post.date | date: '%B %d' }}</time>
 			    </li>
-
-		  {% endfor %}
 		  </ul>
-		  </li>
-		</ul>
+		{% endfor %}
 	</div>
 </section>

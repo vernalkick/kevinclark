@@ -1,14 +1,3 @@
-.article-year-lst {
-	list-style-type: none;
-	li {
-		margin: 0; padding: 0;
-		h1 { margin-bottom: .5em; font-family: $tungsten; font-size: 2.5em; }
-	}
-	> li + li {
-		margin-top: 2em;
-	}
-}
-
 .article-post-lst {
 	list-style-type: none;
 	li {
@@ -76,12 +65,16 @@
 		li {
 			position: relative;
 			header {
-				@include column(3);
+				@include column(4);
+				h3 {
+					font-size: 1.5em;
+					a { font-weight: normal; }
+				}
 			}
 			.excerpt {
-				@include column(9, last);
+				@include column(8, last);
 				p {
-					@include column(6, $container:9);
+					@include column(6, $container:8);
 				}
 			}
 			time {

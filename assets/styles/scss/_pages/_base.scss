@@ -48,10 +48,14 @@ body {
 
 .wrap {
 	margin: 0 auto;
-	width: 84%;
+	width: 86%;
 	@include clearfix;
 	@include max-width(1100px);
 }
+
+@include mq(xsmall) {
+	width: 84%;
+} // End of xsmall
 
 @include mq(small) {
 	.wrap { width: 75%; }

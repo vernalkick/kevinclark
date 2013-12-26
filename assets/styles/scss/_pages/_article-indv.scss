@@ -38,20 +38,14 @@
 		}
 
 			#article-body figcaption {
-				margin: 1.75rem 8% 0;
+				margin: 1.5rem 8% 0;
 			}
 
 	#indv time {
 		display: block;
 		margin-top: 2.5em;
 		margin-bottom: 2.5em;
-		&:before {
-			content: "";
-			display: inline-block; width: .4375em; height: .4375em;
-			border-radius: 50%;
-			border: 2px solid $accent;
-			margin-right: .5em;
-		}
+		color: #ccc;
 	}
 
 	// Up next
@@ -212,14 +206,15 @@
 		@include push(left, 3);
 	}
 
-		#article-body figure {
-			margin: 0 0 1.75rem -54%;
-			width: 154%;
-		}
-
-			#article-body figcaption {
-				margin: 1.75rem 0 0 35%;
-			}
+				#article-body {
+					figure {
+						margin-left: -54.25%;
+						width: 208.5%;
+					}
+					figcaption {
+						margin: 2em 26%;
+					}
+				}
 
 		#article-body .note.left {
 			float: left;

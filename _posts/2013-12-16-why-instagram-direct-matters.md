@@ -4,7 +4,7 @@ excerpt: "Last week, Kevin Systrom introduced a new key feature in Instagram tha
 ---
 
 <figure>
-	<img src="http://cl.ly/image/122v1m2o2J3u/1" />
+	<img src="/assets/images/articles/instagram-direct/instagram-direct.jpg" />
     <figcaption>Instagram Direct’s introduction in New-York.</figcaption>
 </figure>
 

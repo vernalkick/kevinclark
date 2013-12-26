@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<article id="article-indv">
-	<div class="wrap">
+
+<div class="wrap">
+	<article id="article-indv">
 		<header id="article-indv-header">
 			<h1>{{ page.title | widont }}</h1>
 		</header>
@@ -10,8 +11,8 @@ layout: default
 			{{ content }}
 			<time datetime="{{ page.date | date_to_xmlschema }}" pubdate>&mdash; Published {{ page.date | date_to_long_string }}</time>
 		</div>
-	</div>
-</article>
+	</article>
+</div>
 
 <footer id="footer" role="contentinfo">
 	<div class="wrap">

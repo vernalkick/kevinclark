@@ -62,7 +62,7 @@ body {
  } // End of small
 
 @include mq(large) {
-	.wrap { width: 84%; }
+	.wrap { width: 80%; }
 }
 
 main {
@@ -125,3 +125,46 @@ section .wrap > header h2 {
 		}
 
 }
+
+body:before {
+        content: 'Mobile';
+        position: fixed;
+        display: inline-block;
+        background: rgba(#333, .9);
+        padding: .5em 1em;
+        bottom: 0;
+        right: 0;
+        color: #fff;
+        z-index: 9999999999999;
+}
+
+
+@include mq(xsmall) {
+        body:before {
+                content: 'X-Small';
+        }
+} // End of small
+
+@include mq(small) {
+        body:before {
+                content: 'Small';
+        }
+} // End of small
+
+@include mq(medium) {
+        body:before {
+                content: 'Medium';
+        }
+} // End of medium
+
+@include mq(large) {
+        body:before {
+                content: 'Large';
+        }
+} // End of medium
+
+@include mq(xlarge) {
+        body:before {
+                content: 'X-Large';
+        }
+} // End of medium

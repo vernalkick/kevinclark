@@ -70,6 +70,12 @@ h5 {
 
 h6 {}
 
+@include mq(small) {
+	h1 {
+		font-size: 1.75rem;
+	}
+}
+
 @include mq(medium) {
 	h1 {
 		font-size: 2rem;

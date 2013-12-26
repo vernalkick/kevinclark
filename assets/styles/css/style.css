@@ -577,6 +577,11 @@ h5 {
   font-weight: 400;
 }
 
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 2rem;
@@ -836,7 +841,7 @@ nav[role='navigation'] a:hover {
 /* Media-Queries */
 @media screen and (min-width: 600px) {
   header[role='banner'] {
-    padding: 3.25rem 0;
+    padding: 3rem 0;
   }
 
   nav[role='navigation'] {
@@ -844,7 +849,7 @@ nav[role='navigation'] a:hover {
     width: auto;
     display: block;
     float: right;
-    margin-top: -5.25rem;
+    margin-top: -5rem;
   }
   nav[role='navigation'] ul {
     background-color: transparent;
@@ -865,7 +870,7 @@ nav[role='navigation'] a:hover {
   nav[role='navigation'] li a {
     border: none;
     border-left: 1px solid #e5e5e5;
-    padding: 4rem 2.5rem .25rem 1rem;
+    padding: 3.25rem 1.5rem .5rem 1rem;
     line-height: 1em;
     display: block;
   }
@@ -878,6 +883,7 @@ nav[role='navigation'] a:hover {
 @media screen and (min-width: 800px) {
   header[role='banner'] {
     padding: 5.25rem 0;
+    padding-bottom: 4.5em;
   }
 
   nav[role='navigation'] {
@@ -1025,7 +1031,7 @@ body {
 }
 @media screen and (min-width: 1000px) {
   .wrap {
-    width: 84%;
+    width: 80%;
   }
 }
 main {
@@ -1078,6 +1084,43 @@ section .wrap > header h2 {
   .call-to-action h3 {
     display: inline;
     margin-right: .75em;
+  }
+}
+body:before {
+  content: 'Mobile';
+  position: fixed;
+  display: inline-block;
+  background: rgba(51, 51, 51, 0.9);
+  padding: .5em 1em;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  z-index: 9999999999999;
+}
+
+@media screen and (min-width: 400px) {
+  body:before {
+    content: 'X-Small';
+  }
+}
+@media screen and (min-width: 600px) {
+  body:before {
+    content: 'Small';
+  }
+}
+@media screen and (min-width: 800px) {
+  body:before {
+    content: 'Medium';
+  }
+}
+@media screen and (min-width: 1000px) {
+  body:before {
+    content: 'Large';
+  }
+}
+@media screen and (min-width: 1200px) {
+  body:before {
+    content: 'X-Large';
   }
 }
 /* - Homepage -------------------------------------------------------------------------- */
@@ -1188,7 +1231,7 @@ section .wrap > header h2 {
 
 /* Body */
 #article-indv-body > p:first-child, #article-indv-body .lead {
-  font-size: 1.25em;
+  font-size: 1.125em;
   line-height: 1.6em;
   color: #333;
 }
@@ -1198,11 +1241,15 @@ section .wrap > header h2 {
   margin-left: .25em;
 }
 #article-indv-body figure {
-  margin: 0 0 1.75rem -9.5%;
-  width: 119%;
+  margin: 0 0 1.75rem 0;
 }
-#article-indv-body figcaption {
-  margin: 1.5rem 8% 0;
+#article-indv-body figure img {
+  margin-left: -9.5%;
+  width: 119%;
+  max-width: none;
+}
+#article-indv-body figure figcaption {
+  margin: 1.5rem 0 0 0;
 }
 #article-indv-body time {
   display: block;
@@ -1256,25 +1303,51 @@ section .wrap > header h2 {
 @media screen and (min-width: 600px) {
   /* Header */
   #article-indv-header {
-    margin-top: 1em;
+    margin-bottom: 2.5em;
+  }
+
+  /* Body */
+  #article-indv-body > p:first-child, #article-indv-body .lead {
+    font-size: 1.25em;
+    line-height: 1.6em;
+    color: #333;
+  }
+  #article-indv-body figure img {
+    margin-left: -16.75%;
+    width: 133.75%;
+  }
+}
+@media screen and (min-width: 800px) {
+  #article-indv {
+    width: 74.25%;
+    float: left;
+    margin-right: 3%;
+    margin-left: 12.875%;
+  }
+
+  /* Header */
+  #article-indv-header {
     margin-bottom: 3.5em;
   }
 
   /* Body */
-  #article-indv-body {
-    font-size: 1.125em;
-  }
-  #article-indv-body figure {
-    margin: 0 0 1.75rem -16.75%;
-    width: 116.75%;
-  }
-  #article-indv-body figcaption {
-    margin: 1.75rem 0 0 14.25%;
+  #article-indv-body figure img {
+    margin-left: -17.275%;
+    width: 135%;
   }
 }
 @media screen and (min-width: 1000px) {
+  #article-indv {
+    width: 65.33333%;
+    float: left;
+    margin-right: 4%;
+    margin-left: 17.33333%;
+  }
+
+  /* Header */
   #article-indv-header {
     position: relative;
+    margin-top: 1em;
     *zoom: 1;
   }
   #article-indv-header:before, #article-indv-header:after {
@@ -1284,21 +1357,20 @@ section .wrap > header h2 {
   #article-indv-header:after {
     clear: both;
   }
-  #article-indv-header h1 {
-    width: 74.0%;
-    float: left;
-    margin-right: 4%;
-  }
 
-  #article-indv-body {
-    width: 74.0%;
-    float: left;
-    margin-right: 4%;
+  /* Body */
+  #article-indv-body figure img {
+    margin-left: -26.5%;
+    width: 153.25%;
   }
 }
 @media screen and (min-width: 1200px) {
   #article-indv {
     padding-bottom: 4em;
+    width: 48.0%;
+    float: left;
+    margin-right: 4%;
+    margin-left: 26.0%;
   }
 
   /* Header */
@@ -1313,20 +1385,10 @@ section .wrap > header h2 {
   #article-indv-header:after {
     clear: both;
   }
-  #article-indv-header h1 {
-    width: 48.0%;
-    float: left;
-    margin-right: 4%;
-    margin-left: 26.0%;
-  }
 
   /* Body */
   #article-indv-body {
     font-size: 1em;
-    width: 48.0%;
-    float: left;
-    margin-right: 4%;
-    margin-left: 26.0%;
   }
   #article-indv-body .note {
     width: 47%;
@@ -1335,18 +1397,12 @@ section .wrap > header h2 {
     float: left;
     margin: .25em -54% 0 2em;
   }
-  #article-indv-body figure {
+  #article-indv-body figure img {
     margin-left: -54.25%;
     width: 208.5%;
   }
-  #article-indv-body figure.left {
-    float: left;
-    margin-left: -52%;
-    width: 90%;
-    margin-right: 5%;
-  }
-  #article-indv-body figcaption {
-    margin: 2em 26%;
+  #article-indv-body figure figcaption {
+    margin-top: 2em;
   }
 }
 .article-post-lst {

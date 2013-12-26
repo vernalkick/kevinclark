@@ -17,7 +17,7 @@
 		// Paragraph
 
 		& > p:first-child, & .lead { // Make the first paragraph slightly larger
-			font-size: 1.25em; line-height: 1.6em;
+			font-size: 1.125em; line-height: 1.6em;
 			color: #333;
 		}
 
@@ -30,12 +30,15 @@
 		// Figure
 
 		figure {
-			margin: 0 0 1.75rem -9.5%;
-			width: 119%;
-		}
-
-		figcaption {
-			margin: 1.5rem 8% 0;
+			margin: 0 0 1.75rem 0;
+			img {
+				margin-left: -9.5%;
+				width: 119%;
+				max-width: none;
+			}
+			figcaption {
+				margin: 1.5rem 0 0 0;
+			}
 		}
 
 		// Timestamp
@@ -75,43 +78,83 @@
 	/* Header */
 
 	#article-indv-header {
-		margin-top: 1em;
-		margin-bottom: 3.5em;
+		margin-bottom: 2.5em;
 	}
 
 	/* Body */
 
 	#article-indv-body {
-		font-size: 1.125em;
+
+		// Paragraph
+
+		& > p:first-child, & .lead { // Make the first paragraph slightly larger
+			font-size: 1.25em; line-height: 1.6em;
+			color: #333;
+		}
 
 		// Figure
 
 		figure {
-			margin: 0 0 1.75rem -16.75%;
-			width: 116.75%;
-		}
-
-		figcaption {
-			margin: 1.75rem 0 0 14.25%;
+			img {
+				margin-left: -16.75%;
+				width: 133.75%;
+			}
 		}
 
 	}
 
 } // End of small
 
-@include mq(large) {
+@include mq(medium) {
+
+	#article-indv {
+		@include column(6);
+		@include push(left, 1);
+	}
+
+	/* Header */
 
 	#article-indv-header {
-		position: relative;
-		@include clearfix;
+		margin-bottom: 3.5em;
+	}
 
-		h1 {
-			@include column(9);
+	/* Body */
+
+	#article-indv-body {
+		figure {
+			img {
+				margin-left: -17.275%;
+				width: 135%;
+			}
 		}
 	}
 
+} // End of medium
+
+@include mq(large) {
+
+	#article-indv {
+		@include column(8);
+		@include push(left, 2);
+	}
+
+	/* Header */
+
+	#article-indv-header {
+		position: relative;
+		margin-top: 1em;
+		@include clearfix;
+	}
+
+	/* Body */
+
 	#article-indv-body {
-		@include column(9);
+		figure {
+			img {
+				margin-left: -26.5%;
+				width: 153.25%;
+			}
+		}
 	}
 
 } // End of large
@@ -120,6 +163,8 @@
 
 	#article-indv {
 		padding-bottom: 4em;
+		@include column(6);
+		@include push(left, 3);
 	}
 
 	/* Header */
@@ -127,19 +172,12 @@
 	#article-indv-header {
 		position: relative;
 		@include clearfix;
-
-		h1 {
-			@include column(6);
-			@include push(left, 3);
-		}
 	}
 
 	/* Body */
 
 	#article-indv-body {
 		font-size: 1em;
-		@include column(6);
-		@include push(left, 3);
 
 		// Paragraph
 
@@ -151,14 +189,15 @@
 		// Figure
 
 		figure {
-			margin-left: -54.25%;
-			width: 208.5%;
-			&.left { float: left; margin-left: -52%; width: 90%; margin-right: 5%; }
+			img {
+				margin-left: -54.25%;
+				width: 208.5%;
+			}
+			figcaption {
+				margin-top: 2em;
+			}
 		}
 
-		figcaption {
-			margin: 2em 26%;
-		}
 	}
 
 } // End of x-large

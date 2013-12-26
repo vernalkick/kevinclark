@@ -59,7 +59,7 @@ nav[role='navigation'] {
 @include mq(small) { // Media Query: SMALL
 
 	header[role='banner'] {
-		padding: 3.25rem 0;
+		padding: 3rem 0;
 	}
 
 	nav[role='navigation'] {
@@ -67,7 +67,7 @@ nav[role='navigation'] {
 		width: auto;
 		display: block;
 		float: right;
-		margin-top: -5.25rem;
+		margin-top: -5rem;
 
 		ul {
 			background-color: transparent;
@@ -88,7 +88,7 @@ nav[role='navigation'] {
 		li a {
 			border: none;
 			border-left: 1px solid #e5e5e5;
-			padding: 4rem 2.5rem .25rem 1rem;
+			padding: 3.25rem 1.5rem .5rem 1rem;
 			line-height: 1em;
 			display: block;
 		}
@@ -107,6 +107,7 @@ nav[role='navigation'] {
 
 	header[role='banner'] {
 		padding: 5.25rem 0;
+		padding-bottom: 4.5em;
 	}
 
 	nav[role='navigation'] {

@@ -45,8 +45,9 @@
 
 		time {
 			display: block;
-			margin: 2.5em 0;
+			margin: -.5em 0 2.5em 0;
 			color: #ccc;
+			font-size: .875em;
 		}
 
 		// Up Next
@@ -75,6 +76,10 @@
 
 @include mq(small) {
 
+	#article-indv {
+		padding-bottom: 2em;
+	}
+
 	/* Header */
 
 	#article-indv-header {
@@ -99,6 +104,13 @@
 				margin-left: -16.75%;
 				width: 133.75%;
 			}
+		}
+
+		// Time
+
+		time {
+			font-size: 1em;
+			margin: 2.5em 0;
 		}
 
 	}

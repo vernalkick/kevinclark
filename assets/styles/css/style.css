@@ -926,6 +926,7 @@ nav[role='navigation'] a:hover {
   color: #768b94;
   margin: 0 auto;
   max-width: 38em;
+  line-height: 1.2em;
 }
 #footer br {
   display: none;
@@ -941,7 +942,6 @@ nav[role='navigation'] a:hover {
   }
   #footer p {
     font-size: 1.4375em;
-    line-height: 1.2em;
   }
   #footer br {
     display: block;
@@ -1258,8 +1258,9 @@ body:before {
 }
 #article-indv-body time {
   display: block;
-  margin: 2.5em 0;
+  margin: -.5em 0 2.5em 0;
   color: #ccc;
+  font-size: .875em;
 }
 #article-indv-body .up-next {
   float: left;
@@ -1306,6 +1307,10 @@ body:before {
 }
 
 @media screen and (min-width: 600px) {
+  #article-indv {
+    padding-bottom: 2em;
+  }
+
   /* Header */
   #article-indv-header {
     margin-bottom: 2.5em;
@@ -1320,6 +1325,10 @@ body:before {
   #article-indv-body figure img {
     margin-left: -16.75%;
     width: 133.75%;
+  }
+  #article-indv-body time {
+    font-size: 1em;
+    margin: 2.5em 0;
   }
 }
 @media screen and (min-width: 800px) {

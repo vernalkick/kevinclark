@@ -39,10 +39,11 @@ h1 {
 
 h2 {
 	color: $title;
-	font-size: 1.25em;
+	font-size: 1.125em;
 	margin-bottom: 1em;
 	margin-top: 2.5em;
 	font-weight: 500;
+	line-height: 1.2em;
 }
 
 h3 {
@@ -69,6 +70,12 @@ h5 {
 }
 
 h6 {}
+
+@include mq(xsmall) {
+	h2 {
+		font-size: 1.25em;
+	}
+} // End of xsmall
 
 @include mq(small) {
 	h1 {

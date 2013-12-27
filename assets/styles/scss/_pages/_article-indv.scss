@@ -27,6 +27,17 @@
 			margin-left: .25em;
 		}
 
+		// Headings
+
+		h3 {
+			font-size: .875em;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			margin-bottom: 1em;
+			margin-top: 2.5em;
+		}
+
 		// Figure
 
 		figure {
@@ -207,6 +218,10 @@
 			}
 			figcaption {
 				margin-top: 2em;
+			}
+			&.peek-out img {
+				margin-left: -27%;
+				width: 154.25%;
 			}
 		}
 

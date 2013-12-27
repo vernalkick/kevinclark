@@ -16,7 +16,7 @@
 
 		// Paragraph
 
-		& > p:first-child, & .lead { // Make the first paragraph slightly larger
+		& > p:first-child, & figure:first-child + p, & .lead { // Make the first paragraph slightly larger
 			font-size: 1.125em; line-height: 1.6em;
 			color: #333;
 		}
@@ -87,7 +87,7 @@
 
 		// Paragraph
 
-		& > p:first-child, & .lead { // Make the first paragraph slightly larger
+		& > p:first-child, & figure:first-child + p, & .lead { // Make the first paragraph slightly larger
 			font-size: 1.25em; line-height: 1.6em;
 			color: #333;
 		}

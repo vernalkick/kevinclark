@@ -1235,7 +1235,7 @@ body:before {
 }
 
 /* Body */
-#article-indv-body > p:first-child, #article-indv-body .lead {
+#article-indv-body > p:first-child, #article-indv-body figure:first-child + p, #article-indv-body .lead {
   font-size: 1.125em;
   line-height: 1.6em;
   color: #333;
@@ -1312,7 +1312,7 @@ body:before {
   }
 
   /* Body */
-  #article-indv-body > p:first-child, #article-indv-body .lead {
+  #article-indv-body > p:first-child, #article-indv-body figure:first-child + p, #article-indv-body .lead {
     font-size: 1.25em;
     line-height: 1.6em;
     color: #333;

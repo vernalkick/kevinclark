@@ -147,24 +147,16 @@ a {
 
 /* - 05. Lists ------------------------------------------------------------------------- */
 
-li {
+ul, ol {
 	margin-bottom: 1.75em;
+}
+
+li {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
-	margin-left: 1em;
-}
-
-/* Unordered lists */
-
-ul {
-	li {}
-}
-
-/* Ordered lists */
-
-ol {
-	li {}
+	margin-left: 1.5em;
+	margin-bottom: .75em;
 }
 
 /* Media-Queries */

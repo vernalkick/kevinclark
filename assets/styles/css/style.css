@@ -653,16 +653,18 @@ a:active {
 }
 
 /* - 05. Lists ------------------------------------------------------------------------- */
-li {
+ul, ol {
   margin-bottom: 1.75em;
+}
+
+li {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-  margin-left: 1em;
+  margin-left: 1.5em;
+  margin-bottom: .75em;
 }
 
-/* Unordered lists */
-/* Ordered lists */
 /* Media-Queries */
 @media screen and (min-width: 600px) {
   li {

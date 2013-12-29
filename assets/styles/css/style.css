@@ -1381,6 +1381,13 @@ body:before {
   }
 
   /* Body */
+  #article-indv-body .note.right {
+    float: right;
+    width: 40%;
+    margin-left: 1.75em;
+    margin-right: -17%;
+    margin-top: .25em;
+  }
   #article-indv-body figure img {
     margin-left: -17.275%;
     width: 135%;
@@ -1417,6 +1424,9 @@ body:before {
   }
 
   /* Body */
+  #article-indv-body .note.right {
+    margin-right: -27%;
+  }
   #article-indv-body figure img {
     margin-left: -26.5%;
     width: 153.25%;

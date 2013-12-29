@@ -165,6 +165,15 @@
 	/* Body */
 
 	#article-indv-body {
+		.note {
+			&.right {
+				float: right;
+				width: 40%;
+				margin-left: 1.75em;
+				margin-right: -17%;
+				margin-top: .25em;
+			}
+		}
 		figure {
 			img {
 				margin-left: -17.275%;
@@ -203,6 +212,11 @@
 	/* Body */
 
 	#article-indv-body {
+		.note {
+			&.right {
+				margin-right: -27%;
+			}
+		}
 		figure {
 			img {
 				margin-left: -26.5%;

@@ -854,7 +854,8 @@ nav[role='navigation'] a:hover {
 /* Media-Queries */
 @media screen and (min-width: 600px) {
   header[role='banner'] {
-    padding: 3em 0;
+    padding: 4em 0;
+    padding-bottom: 3em;
   }
 
   nav[role='navigation'] {
@@ -862,7 +863,7 @@ nav[role='navigation'] a:hover {
     width: auto;
     display: block;
     float: right;
-    margin-top: -5em;
+    margin-top: -6em;
   }
   nav[role='navigation'] ul {
     background-color: transparent;
@@ -883,7 +884,7 @@ nav[role='navigation'] a:hover {
   nav[role='navigation'] li a {
     border: none;
     border-left: 1px solid #e5e5e5;
-    padding: 3.25em 1.5em .5em 1em;
+    padding: 4.25em 1.5em .5em 1em;
     line-height: 1em;
     display: block;
   }

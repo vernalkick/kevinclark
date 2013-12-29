@@ -16,7 +16,7 @@
 
 		// Paragraph
 
-		& > p:first-child, & figure:first-child + p, & .lead { // Make the first paragraph slightly larger
+		& > p:first-child, & .lead { // Make the first paragraph slightly larger
 			font-size: 1.125em; line-height: 1.6em;
 			color: #333;
 		}
@@ -25,6 +25,13 @@
 			content: "¶";
 			color: $accent;
 			margin-left: .25em;
+		}
+
+		p small {
+			font-size: .875em;
+			color: #999;
+			line-height: 1.75em;
+			display: inline-block;
 		}
 
 		// Headings
@@ -49,6 +56,10 @@
 			}
 			figcaption {
 				margin: 1.5em 0 0 0;
+			}
+			&.flush img {
+				margin-left: 0;
+				width: 100%;
 			}
 		}
 
@@ -103,7 +114,7 @@
 
 		// Paragraph
 
-		& > p:first-child, & figure:first-child + p, & .lead { // Make the first paragraph slightly larger
+		& > p:first-child, & .lead { // Make the first paragraph slightly larger
 			font-size: 1.25em; line-height: 1.6em;
 			color: #333;
 		}
@@ -114,6 +125,16 @@
 			img {
 				margin-left: -16.75%;
 				width: 133.75%;
+			}
+			&.left {
+				width: 46%;
+				float: left;
+				margin-right: 1.75em;
+				margin-top: .5em;
+				img {
+					margin-left: -34%;
+					width: 134%;
+				}
 			}
 		}
 
@@ -149,6 +170,16 @@
 				margin-left: -17.275%;
 				width: 135%;
 			}
+			&.left {
+				img {
+					margin-left: -80%;
+					width: 180%;
+				}
+			}
+			&.full img {
+				margin-left: -40%;
+				width: 180%;
+			}
 		}
 	}
 
@@ -176,6 +207,16 @@
 			img {
 				margin-left: -26.5%;
 				width: 153.25%;
+			}
+			&.left {
+				img {
+					margin-left: -108%;
+					width: 208%;
+				}
+			}
+			&.full img {
+				margin-left: -46%;
+				width: 192%;
 			}
 		}
 	}
@@ -207,6 +248,7 @@
 		.note {
 			width: 47%;
 			&.left { float: left; margin: .25em -54% 0 2em; }
+			&.right { float: right; margin: .25em -54% 0 2em; }
 		}
 
 		// Figure
@@ -222,6 +264,10 @@
 			&.peek-out img {
 				margin-left: -27%;
 				width: 154.25%;
+			}
+			&.full img {
+				margin-left: -85%;
+				width: 270%;
 			}
 		}
 

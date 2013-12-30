@@ -36,8 +36,11 @@ nav[role='navigation'] {
 			display: block; width: 100%;
 			background-color: #fafafa;
 			margin: 0;
-			&.current a { font-weight: 500; color: $subtext-accent; }
-			&:last-child a {padding-right: 0; }
+			&.current a {
+				font-weight: 500; color: $subtext-accent;
+				&:hover { color: darken(#1990c6, 10%); }
+			}
+			&:last-child a { padding-right: 0; }
 		}
 
 		nav[role='navigation'] a {

@@ -814,6 +814,9 @@ nav[role='navigation'] li.current a {
   font-weight: 500;
   color: #777777;
 }
+nav[role='navigation'] li.current a:hover {
+  color: #136f99;
+}
 nav[role='navigation'] li:last-child a {
   padding-right: 0;
 }

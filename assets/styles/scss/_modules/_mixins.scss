@@ -188,7 +188,7 @@ $column-total-number: 4;
 $container: 1;
 $container-width: false;
 
-@mixin column($column-number, $position:false, $container:false) {
+@mixin column($column-number, $position:false, $container:false, $side:left) {
 	@each $gbkpt in $grid-breakpoints {
 		@if $current-breakpoint == nth($gbkpt, 1) {
 			$column-width: nth($gbkpt, 2);
@@ -199,23 +199,31 @@ $container-width: false;
 			} @else {
 				$container-width: ($column-width * $container) + ($gutter-width * ($container - 1));
 			}
-			@include column-generator($column-width, $gutter-width, $column-number, $column-total-number, $position, $container-width);
+			@include column-generator($column-width, $gutter-width, $column-number, $column-total-number, $position, $container-width, $side);
 		}
 	}
 }
 
-@mixin column-generator($column-width, $gutter-width, $column-number, $column-total-number, $position, $container-width) {
+@mixin column-generator($column-width, $gutter-width, $column-number, $column-total-number, $position, $container-width, $side) {
 	@if $container-width == 1 {
 		width: ($column-width * $column-number) + ($gutter-width * ($column-number - 1));
 	} @else {
 		width: percentage((($column-width * $column-number) + ($gutter-width * ($column-number - 1))) / $container-width);
 	}
 	@if $column-number < $column-total-number {
-		float: left;
-		@if $position != 'last' {
-			@if $container-width == 1 { margin-right: $gutter-width; }
-			@else { margin-right: percentage($gutter-width / $container-width); }
-		}
+    @if $side == 'right' {
+      float: right;
+      @if $position != 'last' {
+        @if $container-width == 1 { margin-left: $gutter-width; }
+        @else { margin-left: percentage($gutter-width / $container-width); }
+      }
+    } @else {
+      float: left;
+      @if $position != 'last' {
+        @if $container-width == 1 { margin-right: $gutter-width; }
+        @else { margin-right: percentage($gutter-width / $container-width); }
+      }
+    }
 	}
 }
 

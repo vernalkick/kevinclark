@@ -1056,6 +1056,40 @@ main {
   overflow: hidden;
 }
 
+/* - Page ----------------------------------------------------------------------- */
+.page h3 {
+  font-size: 1.25em;
+  margin-bottom: .5em;
+}
+.page > .wrap header {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1em;
+}
+.page > .wrap header h1 {
+  color: #555;
+  font-weight: 300;
+  font-size: 2.25em;
+  margin-bottom: .5em;
+}
+.page > .wrap header h2 {
+  color: #1990c6;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.25em;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .page > .wrap header {
+    padding-left: 26%;
+  }
+  .page > .wrap header h1 {
+    font-size: 3.75em;
+  }
+  .page > .wrap header h2 {
+    font-size: 1.625em;
+  }
+}
 /* - Containers ------------------------------------------------------------------------ */
 main > section:first-child {
   padding-top: 0;
@@ -1686,6 +1720,110 @@ body:before {
   }
 
   #library-lst li:nth-child(6n+6) {
+    margin-right: 0;
+  }
+}
+#about-aside {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1em;
+}
+#about-aside ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#about-aside ul li {
+  margin: 0;
+  padding: 0;
+}
+#about-aside > ul > li {
+  padding: 1em 0;
+  position: relative;
+}
+#about-aside > ul > li + li:before {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#about-aside .elsewhere-links {
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125em;
+}
+#about-aside .elsewhere-links li {
+  float: left;
+  margin-right: .5em;
+}
+#about-aside .elsewhere-links li a {
+  font-weight: bold;
+}
+
+#about-bio {
+  padding-bottom: .5em;
+}
+
+@media screen and (min-width: 800px) {
+  #about-aside {
+    width: 35.625%;
+    float: left;
+    margin-right: 3%;
+    padding-top: 0;
+    border: none;
+  }
+  #about-aside li:first-child {
+    padding-top: 0;
+  }
+
+  #about-bio {
+    width: 61.375%;
+    float: right;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #about-aside {
+    width: 30.66667%;
+    float: left;
+    margin-right: 4%;
+  }
+
+  #about-bio {
+    width: 65.33333%;
+    float: right;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #about-aside {
+    width: 22.0%;
+    float: left;
+    margin-right: 4%;
+  }
+
+  #about-bio {
+    width: 74.0%;
+    float: right;
+  }
+  #about-bio .half {
+    width: 47.2973%;
+    float: left;
+    margin-right: 5.40541%;
+  }
+  #about-bio .half:nth-child(2n+2) {
     margin-right: 0;
   }
 }

@@ -1,0 +1,84 @@
+#about-aside {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1em;
+  ul {
+    padding: 0; margin: 0;
+    list-style-type: none;
+    li {
+      margin: 0; padding: 0;
+    }
+  }
+  > ul > li {
+    padding: 1em 0;
+    position: relative;
+  }
+  > ul > li + li:before {
+    content: "";
+    display: block;
+    width: 2em; height: 1px;
+    background-color: #e5e5e5;
+    position: absolute; top: 0; left: 0;
+  }
+  .elsewhere-links {
+    font-family: "SSSocial";
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.125em;
+    li {
+      float: left;
+      margin-right: .5em;
+      a { font-weight: bold; }
+    }
+  }
+}
+#about-bio {
+  padding-bottom: .5em;
+}
+
+@include mq(medium) {
+  #about-aside {
+    @include column(3);
+    padding-top: 0;
+    border: none;
+    li:first-child {
+      padding-top: 0;
+    }
+  }
+  #about-bio {
+    @include column(5, last, $side: right);
+  }
+} // End of medium
+
+@include mq(large) {
+  #about-aside {
+    @include column(4);
+  }
+  #about-bio {
+    @include column(8, last, $side: right);
+  }
+} // End of large
+
+@include mq(xlarge) {
+  #about-aside {
+    @include column(3);
+  }
+  #about-bio {
+    @include column(9, last, $side: right);
+    .half {
+      @include column(4.5, $container:9);
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+  }
+} // End of xlarge

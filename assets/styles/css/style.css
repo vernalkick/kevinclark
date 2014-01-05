@@ -1025,6 +1025,11 @@ body {
   width: device-width;
 }
 /* - 03. Wrapper ----------------------------------------------------------------------- */
+#container {
+  overflow: hidden;
+  display: block;
+}
+
 .wrap {
   margin: 0 auto;
   width: 86%;
@@ -1054,7 +1059,6 @@ body {
 }
 main {
   display: block;
-  overflow: hidden;
 }
 
 /* - Page ----------------------------------------------------------------------- */
@@ -1833,6 +1837,8 @@ body:before {
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 34.75%;
+    margin-top: -5%;
+    margin-bottom: -2%;
   }
 
   #about-aside {
@@ -1885,6 +1891,8 @@ body:before {
     right: 78%;
     width: 360px;
     margin-top: -180px;
+    width: 340px;
+    margin-top: -170px;
   }
 }
 

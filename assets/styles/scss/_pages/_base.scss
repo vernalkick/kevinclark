@@ -47,6 +47,11 @@ body {
 
 /* - 03. Wrapper ----------------------------------------------------------------------- */
 
+#container {
+  overflow: hidden;
+  display: block;
+}
+
 .wrap {
 	margin: 0 auto;
 	width: 86%;
@@ -68,7 +73,6 @@ body {
 
 main {
 	display: block;
-	overflow: hidden;
 }
 
 /* - Page ----------------------------------------------------------------------- */

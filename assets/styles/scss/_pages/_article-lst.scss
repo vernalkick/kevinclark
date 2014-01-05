@@ -1,3 +1,6 @@
+#article-lst #main {
+	padding-top: 0;
+}
 .article-category {
 	list-style-type: none;
 	border-top: 1px solid #e5e5e5;
@@ -5,7 +8,7 @@
 	padding-right: 14%;
 	width: 100%;
 	h3 {
-		padding-bottom: .5em;
+		margin-bottom: 1.25em;
 	}
 	li {
 		list-style-type: none;

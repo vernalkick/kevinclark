@@ -1544,6 +1544,10 @@ body:before {
     width: 270%;
   }
 }
+#article-lst #main {
+  padding-top: 0;
+}
+
 .article-category {
   list-style-type: none;
   border-top: 1px solid #e5e5e5;
@@ -1552,7 +1556,7 @@ body:before {
   width: 100%;
 }
 .article-category h3 {
-  padding-bottom: .5em;
+  margin-bottom: 1.25em;
 }
 .article-category li {
   list-style-type: none;

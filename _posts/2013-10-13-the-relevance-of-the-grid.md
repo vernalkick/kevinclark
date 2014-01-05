@@ -1,6 +1,7 @@
 ---
 title: The Relevance of the Grid
 excerpt: "Many of you will have heard of Codex: the journal of typography and the good news is that pre-orders for #1 are opening later today"
+categories: Design
 ---
 
 <figure>

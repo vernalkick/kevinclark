@@ -1,6 +1,7 @@
 ---
 title: Why Instagram Direct Matters
 excerpt: "Last week, Kevin Systrom introduced a new key feature in Instagram that lets you send pictures directly to other users: Instagram Direct."
+category: Technology
 ---
 
 Last week, [Kevin Systrom](http://instagram.com/kevin) introduced a new key feature in [Instagram][1] that lets you send pictures directly to specific users of the service, adding a layer of privacy that's completely new to the service.

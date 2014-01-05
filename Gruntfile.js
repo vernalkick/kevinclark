@@ -71,5 +71,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-webfont');
 
 	// Setup workflow
-	grunt.registerTask('default', ['webfont', 'sass', 'concurrent:target']);
+	grunt.registerTask('default', ['sass', 'concurrent:target']);
 };

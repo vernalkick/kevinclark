@@ -1,6 +1,6 @@
 ---
 title: The Screen
-categories: Web Publishing
+categories: Design
 ---
 <figure>
 	<img src="http://www.math.toronto.edu/drorbn/Gallery/Symmetry/Tilings/So/DSC-S70Pixels.jpg">

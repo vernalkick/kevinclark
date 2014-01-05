@@ -1,6 +1,7 @@
 #about-aside {
   border-top: 1px solid #e5e5e5;
   padding-top: 1em;
+  padding-bottom: 1em;
   ul {
     padding: 0; margin: 0;
     list-style-type: none;
@@ -18,6 +19,12 @@
     width: 2em; height: 1px;
     background-color: #e5e5e5;
     position: absolute; top: 0; left: 0;
+  }
+  p {
+    font-size: .875em;
+    color: #999;
+    line-height: 1.6em;
+    margin-bottom: 10px;
   }
   .elsewhere-links {
     font-family: "SSSocial";
@@ -45,6 +52,8 @@
   padding-bottom: .5em;
 }
 
+#profile-picture { display: none; }
+
 @include mq(medium) {
   #about-aside {
     @include column(3);
@@ -56,19 +65,38 @@
   }
   #about-bio {
     @include column(5, last, $side: right);
+    padding-bottom: 2em;
   }
 } // End of medium
 
 @include mq(large) {
+  #about .wrap > header {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 34.75%;
+    margin-top: -5%;
+    margin-bottom: -2%;
+  }
   #about-aside {
     @include column(4);
   }
   #about-bio {
     @include column(8, last, $side: right);
+    padding-bottom: 3em;
+  }
+  #profile-picture {
+    border-radius: 50%;
+    position: absolute; top: 50%; right: 69%;
+    margin-top: -190px;
+    width: 380px;
+    display: block;
   }
 } // End of large
 
 @include mq(xlarge) {
+  #about .wrap > header {
+    padding-left: 26%;
+  }
   #about-aside {
     @include column(3);
   }
@@ -80,5 +108,13 @@
         margin-right: 0;
       }
     }
+  }
+  #profile-picture {
+    right: 78%;
+    width: 360px;
+    margin-top: -180px;
+
+    width: 340px;
+    margin-top: -170px;
   }
 } // End of xlarge

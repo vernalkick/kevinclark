@@ -1,5 +1,6 @@
 ---
 title: A Million Things
+categories: Announcement
 ---
 
 We are delighted to announce that we’ve reached an incredible milestone today—someone has just bought the millionth copy of Things!*

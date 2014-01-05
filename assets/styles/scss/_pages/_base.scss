@@ -21,18 +21,19 @@ html {
 
 body {
 	background-color: #fff;
-	border: 4px solid $accent;
+	border-top: 10px solid $accent;
 
 	@include mq(small) {
-		border: 6px solid $accent;
+    border-top: none;
+		border-left: 10px solid $accent;
 	}
 
 	@include mq(medium) {
-		border: 8px solid $accent;
+		border-left: 20px solid $accent;
 	}
 
 	@include mq(large) {
-		border: 10px solid $accent;
+		border-left: 30px solid $accent;
 	}
 }
 
@@ -45,6 +46,11 @@ body {
 @viewport { width: device-width; }
 
 /* - 03. Wrapper ----------------------------------------------------------------------- */
+
+#container {
+  overflow: hidden;
+  display: block;
+}
 
 .wrap {
 	margin: 0 auto;
@@ -67,7 +73,6 @@ body {
 
 main {
 	display: block;
-	overflow: hidden;
 }
 
 /* - Page ----------------------------------------------------------------------- */
@@ -77,26 +82,39 @@ main {
     font-size: 1.25em;
     margin-bottom: .5em;
   }
-  > .wrap header {
-    border-bottom: 1px solid #e5e5e5;
+  .wrap > header {
     padding-bottom: 1em;
+    position: relative;
     h1 {
       color: #555;
       font-weight: 300;
-      font-size: 2.25em;
+      font-size: 2.5em;
       margin-bottom: .5em;
     }
     h2 {
       color: $accent;
-      font-size: 1.25em; font-weight: 400; line-height: 1.25em;
+      font-size: 1.25em; font-weight: 400; line-height: 1.4em;
       margin-top: 0;
     }
   }
 }
 
+@include mq(medium) {
+  .page {
+    .wrap > header {
+      h1 {
+        font-size: 3em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+} // End of medium
+
 @include mq(large) {
   .page {
-    > .wrap header {
+    .wrap > header {
       padding-left: 26%;
       h1 {
         font-size: 3.75em;

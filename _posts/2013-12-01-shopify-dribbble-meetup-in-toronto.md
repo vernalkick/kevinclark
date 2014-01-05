@@ -1,6 +1,7 @@
 ---
 title: Shopify × Dribbble Meetup in Toronto
 excerpt: At Shopify we either go big or go home. Well for this (official) Dribbble meetup, we decided to go all in.
+categories: Announcement
 ---
 
 <figure>

@@ -1,88 +1,86 @@
-.article-post-lst {
+#article-lst #main {
+	padding-top: 0;
+}
+.article-category {
 	list-style-type: none;
+	border-top: 1px solid #e5e5e5;
+	padding-top: 2em;
+	padding-right: 14%;
+	width: 100%;
+	h3 {
+		margin-bottom: 1.25em;
+	}
 	li {
-		// border-top: 1px solid #e5e5e5;
-		margin: 0; padding: 0;
-		padding: 1.5em 0;
-		header {
-			h3 {
+		list-style-type: none;
+		margin: 0 0 2em 0; padding: 0;
+			h4 {
 				font-size: 1em;
 				line-height: 1.2em;
 				margin-bottom: .5em;
+				letter-spacing: normal;
+				text-transform: none;
 			}
 			a {
-				//color: #57666d;
+				font-weight: normal;
 			}
-		}
-		.excerpt {
+		p {
 			font-size: .875em;
 			line-height: 1.5em;
-			p { color: #999; margin-bottom: 0; }
+			color: #999; margin-bottom: 0;
 		}
 		time {
 			font-size: .875em;
 			color: #ccc;
 			margin-top: 1em;
 			display: block;
+			display: none;
 		}
 	}
 }
 
-@include mq(medium) {
-	.article-post-lst {
-		li {
-			border: none;
+@include mq(small) {
+	.article-category {
+		ul {
 			@include clearfix;
-			padding: 0;
-			margin-bottom: 1em;
-			header {
-				@include column(3);
-				// border-top: 1px solid #e5e5e5;
-				padding: 1.5em 0;
-			}
-			.excerpt {
-				@include column(5, last);
-				// border-top: 1px solid #e5e5e5;
-				padding: 1.5em 0;
-			}
-			time {
-				display: none;
+			li {
+				@include column(4);
+				&:nth-child(2n+2) { margin-right: 0; }
+				time {
+					opacity: 0;
+					font-size: .75em;
+				}
+				a:hover time {
+					opacity: 1;
+				}
 			}
 		}
+
 	}
+
 } // End of medium
 
 @include mq(large) {
-	.article-year-lst {
-		h1 {
-			margin-left: 26%;
+	.article-category {
+		@include clearfix;
+		h3 {
+			@include column(3);
 		}
-		> li + li {
-			margin-top: 4em;
-		}
-	}
-	.article-post-lst {
-		li {
-			position: relative;
-			header {
-				@include column(4);
-				h3 {
-					font-size: 1.5em;
-					a { font-weight: normal; }
-				}
-			}
-			.excerpt {
-				@include column(8, last);
-				p {
-					@include column(6, $container:8);
-				}
-			}
-			time {
-				position: absolute;
-				right: 0;
-				top: .25em;
-				display: block;
-			}
+		ul {
+			@include column(9, last);
+			li { @include column(4.5, $container:9); }
 		}
 	}
 } // End of large
+
+@include mq(xlarge) {
+	.article-category {
+		h3 {
+		}
+		ul {
+			@include column(9, last);
+			li, li:nth-child(2n+2) { @include column(3, $container:9); margin-bottom: 5%;
+			&:nth-child(3n+3) { margin-right: 0; }
+			}
+		}
+	}
+} // End of xlarge

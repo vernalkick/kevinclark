@@ -1,7 +1,7 @@
 ---
 title: Tasks, Not Apps
 status: live
-categories: Software
+categories: Technology
 ---
 
 <figure class="peek-out">

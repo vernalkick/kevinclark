@@ -45,6 +45,9 @@
 			li {
 				@include column(4);
 				&:nth-child(2n+2) { margin-right: 0; }
+				&:nth-child(2n+1) {
+					clear: left;
+				}
 				time {
 					opacity: 0;
 					font-size: .75em;
@@ -78,8 +81,11 @@
 		}
 		ul {
 			@include column(9, last);
-			li, li:nth-child(2n+2) { @include column(3, $container:9); margin-bottom: 5%;
-			&:nth-child(3n+3) { margin-right: 0; }
+			li { @include column(3, $container:9); margin-bottom: 5%;
+				&:nth-child(2n+1) { clear: none; } // Reset the clear on the second column
+				&:nth-child(2n+2) { @include column(3, $container:9); }
+				&:nth-child(3n+1) { clear: left; } // Clear the float on the first column
+				&:nth-child(3n+3) { margin-right: 0; }
 			}
 		}
 	}

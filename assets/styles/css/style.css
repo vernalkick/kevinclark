@@ -601,9 +601,9 @@ h5 {
 /* - 03. Paragraphs -------------------------------------------------------------------- */
 p {
   margin-bottom: 1.75em;
-  -webkit-hyphens: auto;
+  /*-webkit-hyphens: auto;
   -moz-hyphens: auto;
-  hyphens: auto;
+  hyphens: auto;*/
   line-height: 1.75em;
 }
 
@@ -1542,6 +1542,79 @@ body:before {
   #article-indv-body figure.full img {
     margin-left: -85%;
     width: 270%;
+  }
+
+  /*
+  	#article-indv {
+  		font-size: 18px;
+  		padding-bottom: 4em;
+  		@include column(7);
+  		@include push(left, 2.5);
+  	}
+  
+  	#article-indv-body {
+  
+  		figure {
+  			img {
+  				width: 176.5%;
+  				margin-left: -38.25%;
+  			}
+  		}
+  
+  		// Paragraph
+  
+  		& > p:first-child, & .lead { // Make the first paragraph slightly larger
+  			font-size: 1.25em; line-height: 1.75em;
+  			color: #333;
+  		}
+  	}
+  	*/
+}
+#port-header p {
+  font-size: 1.25em;
+  font-weight: 300;
+  color: #768B94;
+  margin: 0;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+#port-header .btn {
+  font-size: .875em;
+  padding: .6em .75em;
+}
+
+#port-featured-images {
+  background-color: #f1f5f7;
+  padding: 0;
+  margin-top: 10%;
+}
+#port-featured-images img {
+  margin-top: -5%;
+}
+
+@media screen and (min-width: 800px) {
+  #port-header p {
+    font-size: 1.4375em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #port-header p {
+    margin-bottom: 0;
+  }
+  #port-header .wrap {
+    position: relative;
+  }
+  #port-header .heading {
+    width: 82.66667%;
+    float: left;
+  }
+  #port-header .btn {
+    font-size: 1em;
+    padding: .75em 1em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -21px;
   }
 }
 #article-lst #main {

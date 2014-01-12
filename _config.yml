@@ -3,6 +3,7 @@ markdown: redcarpet
 pygments: true
 permalink: /articles/:title/
 jekyll_models: [library]
+portfolio_categories: ["Web", "Identity"]
 site_base: /
 navigation:
 - text: Home
@@ -13,3 +14,7 @@ navigation:
   url: /portfolio/
 - text: About
   url: /about/
+__default_layouts:
+  default: default      # everything that doesn't have another default specified
+  _posts: post-indv     # all posts
+  portfolio: portfolio-indv    # everything in magic/

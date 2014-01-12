@@ -1,0 +1,49 @@
+#port-header {
+  p {
+    font-size: 1.25em;
+    font-weight: 300;
+    color: #768B94;
+    margin: 0;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+
+  }
+  .btn {
+    font-size: .875em;
+    padding: .6em .75em;
+  }
+  //margin-bottom: 2em;
+}
+
+#port-featured-images {
+  background-color: #f1f5f7;
+  padding: 0;
+  margin-top: 10%;
+  img {
+    margin-top: -5%;
+  }
+}
+
+@include mq(medium) {
+  #port-header {
+    p {
+      font-size: 1.4375em;
+    }
+  }
+} // End of medium
+
+@include mq(large) {
+  #port-header {
+    p { margin-bottom: 0; }
+    .wrap { position: relative; }
+    .heading {
+      @include column(10, last);
+    }
+    .btn {
+      font-size: 1em;
+      padding: .75em 1em;
+      position: absolute; right: 0; top: 50%;
+      margin-top: -21px;
+    }
+  }
+} // End of large

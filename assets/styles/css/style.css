@@ -601,9 +601,9 @@ h5 {
 /* - 03. Paragraphs -------------------------------------------------------------------- */
 p {
   margin-bottom: 1.75em;
-  -webkit-hyphens: auto;
+  /*-webkit-hyphens: auto;
   -moz-hyphens: auto;
-  hyphens: auto;
+  hyphens: auto;*/
   line-height: 1.75em;
 }
 
@@ -1543,6 +1543,79 @@ body:before {
     margin-left: -85%;
     width: 270%;
   }
+
+  /*
+  	#article-indv {
+  		font-size: 18px;
+  		padding-bottom: 4em;
+  		@include column(7);
+  		@include push(left, 2.5);
+  	}
+  
+  	#article-indv-body {
+  
+  		figure {
+  			img {
+  				width: 176.5%;
+  				margin-left: -38.25%;
+  			}
+  		}
+  
+  		// Paragraph
+  
+  		& > p:first-child, & .lead { // Make the first paragraph slightly larger
+  			font-size: 1.25em; line-height: 1.75em;
+  			color: #333;
+  		}
+  	}
+  	*/
+}
+#port-header p {
+  font-size: 1.25em;
+  font-weight: 300;
+  color: #768B94;
+  margin: 0;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+#port-header .btn {
+  font-size: .875em;
+  padding: .6em .75em;
+}
+
+#port-featured-images {
+  background-color: #f1f5f7;
+  padding: 0;
+  margin-top: 10%;
+}
+#port-featured-images img {
+  margin-top: -5%;
+}
+
+@media screen and (min-width: 800px) {
+  #port-header p {
+    font-size: 1.4375em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #port-header p {
+    margin-bottom: 0;
+  }
+  #port-header .wrap {
+    position: relative;
+  }
+  #port-header .heading {
+    width: 82.66667%;
+    float: left;
+  }
+  #port-header .btn {
+    font-size: 1em;
+    padding: .75em 1em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -21px;
+  }
 }
 #article-lst #main {
   padding-top: 0;
@@ -1606,6 +1679,9 @@ body:before {
   .article-category ul li:nth-child(2n+2) {
     margin-right: 0;
   }
+  .article-category ul li:nth-child(2n+1) {
+    clear: left;
+  }
   .article-category ul li time {
     opacity: 0;
     font-size: .75em;
@@ -1645,13 +1721,24 @@ body:before {
     width: 74.0%;
     float: left;
   }
-  .article-category ul li, .article-category ul li:nth-child(2n+2) {
+  .article-category ul li {
     width: 29.72973%;
     float: left;
     margin-right: 5.40541%;
     margin-bottom: 5%;
   }
-  .article-category ul li:nth-child(3n+3), .article-category ul li:nth-child(2n+2):nth-child(3n+3) {
+  .article-category ul li:nth-child(2n+1) {
+    clear: none;
+  }
+  .article-category ul li:nth-child(2n+2) {
+    width: 29.72973%;
+    float: left;
+    margin-right: 5.40541%;
+  }
+  .article-category ul li:nth-child(3n+1) {
+    clear: left;
+  }
+  .article-category ul li:nth-child(3n+3) {
     margin-right: 0;
   }
 }

@@ -287,4 +287,30 @@
 
 	}
 
+/*
+	#article-indv {
+		font-size: 18px;
+		padding-bottom: 4em;
+		@include column(7);
+		@include push(left, 2.5);
+	}
+
+	#article-indv-body {
+
+		figure {
+			img {
+				width: 176.5%;
+				margin-left: -38.25%;
+			}
+		}
+
+		// Paragraph
+
+		& > p:first-child, & .lead { // Make the first paragraph slightly larger
+			font-size: 1.25em; line-height: 1.75em;
+			color: #333;
+		}
+	}
+	*/
+
 } // End of x-large

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<header id="port-header">
+  <div class="wrap">
+    <div class="heading">
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.description }}</p>
+    </div>
+    <a href="{{ page.website }}" class="btn light">Visit website</a>
+  </div>
+</header>
+
+<section id="port-featured-images">
+  <div class="wrap">
+    {% for image in page.featured-images %}
+      <img src="{{ image }}" alt="">
+    {% endfor %}
+  </div>
+</section>
+
+<div>
+  {{ page.content }}
+</div>
+
+<footer id="footer" role="contentinfo">
+  <div class="wrap">
+    <p>Writing is hard at first, and hard at the end. <br>It’s painful, difficult, and scary and that’s what makes it awesome.</p>
+    <a href="#" class="btn light">Follow me on Twitter</a>
+  </div>
+</footer>

@@ -300,7 +300,8 @@
 
 		aside {
 			&.right {
-				&.right { float: right; margin: .25em -54% 0 2em; }
+				width: 46%;
+				float: right; margin: .25em -54% 0 0em;
 			}
 		}
 

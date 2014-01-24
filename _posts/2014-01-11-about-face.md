@@ -1,6 +1,5 @@
 ---
 title: About Face
-excerpt:
 ---
 
 <figure class="flush">

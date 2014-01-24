@@ -1221,12 +1221,6 @@ body:before {
   list-style-type: none;
   margin-left: 0;
   margin-bottom: 4em;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  -moz-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-}
-#latest-articles li:hover {
-  -webkit-transform: scale(1.05);
 }
 #latest-articles li header {
   width: auto;

@@ -25,11 +25,17 @@ title: Home
 				<header>
 					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 				</header>
-				<p>{{ post.excerpt }}</p>
-				{% if post.exerpt == ''%}<p>{{ post.content | strip_html | truncatewords:30}}</p>{% endif %}
+        <p>{{ post.content | strip_html | truncatewords:30}}</p>
 			</article>
 		</li>
 		{% endfor %}
 	</ul>
 	</div>
 </section>
+
+<footer id="footer" role="contentinfo">
+  <div class="wrap">
+    <p>Writing is hard at first, and hard at the end. <br>It’s painful, difficult, and scary and that’s what makes it awesome.</p>
+    <a href="#" class="btn light">Follow me on Twitter</a>
+  </div>
+</footer>

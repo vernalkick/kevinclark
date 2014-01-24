@@ -985,26 +985,38 @@ Contents:
 /* - 01. General ----------------------------------------------------------------------- */
 html {
   -webkit-text-size-adjust: 100%;
+  background: #1990c6;
+  background: #1990c6 url("/assets/images/misc/backdrop-vertical.svg") no-repeat left top;
 }
 
 body {
   background-color: #fff;
-  border-top: 10px solid #1990c6;
+  margin-top: 10px;
+}
+body:after {
+  content: "";
+  display: none;
+  width: 30px;
+  height: 1788px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("/assets/images/misc/backdrop-vertical.svg") center top;
 }
 @media screen and (min-width: 600px) {
   body {
-    border-top: none;
-    border-left: 10px solid #1990c6;
+    margin-top: 0;
+    margin-left: 10px;
   }
 }
 @media screen and (min-width: 800px) {
   body {
-    border-left: 20px solid #1990c6;
+    margin-left: 20px;
   }
 }
 @media screen and (min-width: 1000px) {
   body {
-    border-left: 30px solid #1990c6;
+    margin-left: 30px;
   }
 }
 

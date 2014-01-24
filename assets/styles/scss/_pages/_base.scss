@@ -17,23 +17,38 @@ Contents:
 
 html {
 	-webkit-text-size-adjust: 100%;
+  background: $accent;
+  background: $accent url('/assets/images/misc/backdrop-vertical.svg') no-repeat left top;
 }
 
 body {
 	background-color: #fff;
-	border-top: 10px solid $accent;
+	//border-top: 10px solid $accent;
+  //margin-left: 30px;
+  margin-top: 10px;
+
+  &:after {
+    content: "";
+    display: none;
+    width: 30px; height: 1788px;
+    position: absolute; left: 0; top: 0;
+    background: url('/assets/images/misc/backdrop-vertical.svg') center top;
+  }
 
 	@include mq(small) {
-    border-top: none;
-		border-left: 10px solid $accent;
+    // border-top: none;
+		// border-left: 10px solid $accent;
+    margin-top: 0; margin-left: 10px;
 	}
 
 	@include mq(medium) {
-		border-left: 20px solid $accent;
+		// border-left: 20px solid $accent;
+    margin-left: 20px;
 	}
 
 	@include mq(large) {
-		border-left: 30px solid $accent;
+		// border-left: 30px solid $accent;
+    margin-left: 30px;
 	}
 }
 

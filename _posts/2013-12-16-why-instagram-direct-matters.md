@@ -4,12 +4,12 @@ excerpt: "Last week, Kevin Systrom introduced a new key feature in Instagram tha
 category: Technology
 ---
 
-Last week, [Kevin Systrom](http://instagram.com/kevin) introduced a new key feature in [Instagram][1] that lets you send pictures directly to specific users of the service, adding a layer of privacy that's completely new to the service.
-
 <figure>
   <img src="/assets/articles/instagram-direct/instagram-direct.jpg" />
     <figcaption>The <a href="https://itunes.apple.com/fr/app/instagram/id389801252?mt=8">app has been updated</a> with the new feature during the announcement.</figcaption>
 </figure>
+
+Last week, [Kevin Systrom](http://instagram.com/kevin) introduced a new key feature in [Instagram][1] that lets you send pictures directly to specific users of the service, adding a layer of privacy that's completely new to the service.
 
 It is undoubtedly a response to the huge success of Snapchat (which kind of reminds me of [Instagram][1] when it started), but something caught my attention during the presentation:
 

@@ -72,6 +72,21 @@
 			font-size: .875em;
 		}
 
+		// Aside
+
+		aside {
+			h3 {
+				font-size: 1.25em;
+				font-weight: 300;
+				color: #768b94;
+				margin: 0 auto;
+				max-width: 38em;
+				line-height: 1.2em;
+				text-transform: none;
+				letter-spacing: normal;
+			}
+		}
+
 		// Up Next
 
 		.up-next {
@@ -190,6 +205,19 @@
 				width: 180%;
 			}
 		}
+		aside {
+			&.right {
+				float: right;
+				width: 40%;
+				margin-left: 1.75em;
+				margin-right: -17%;
+				margin-top: .25em;
+			}
+				h3 {
+					font-size: 1.4375em;
+					line-height: 1.3em;
+				}
+		}
 	}
 
 } // End of medium
@@ -213,6 +241,11 @@
 
 	#article-indv-body {
 		.note {
+			&.right {
+				margin-right: -27%;
+			}
+		}
+		aside {
 			&.right {
 				margin-right: -27%;
 			}
@@ -263,6 +296,12 @@
 			width: 47%;
 			&.left { float: left; margin: .25em -54% 0 2em; }
 			&.right { float: right; margin: .25em -54% 0 2em; }
+		}
+
+		aside {
+			&.right {
+				&.right { float: right; margin: .25em -54% 0 2em; }
+			}
 		}
 
 		// Figure

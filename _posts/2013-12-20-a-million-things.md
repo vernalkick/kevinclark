@@ -18,6 +18,10 @@ But there is a deeper reason we want to thank all of you and that is for the inc
 
 ### Why We're Doing it
 
+<aside class="right">
+  <h3>Walking into the office that first day was exciting and scary. This is Google! Lars and Jens invented Maps! Free chocolate! This is Google!</h3>
+</aside>
+
 This is the number one reason that keeps us going. We have the highest respect for our users, and in everything we do, we want to make the right decisions in that light.
 
 It hasn’t always been a smooth ride, however. Many of you will remember the struggles we had building our cloud sync solution. We had to embark on two different approaches, and learn the hard way how not to do it, before finally settling on what would become Things Cloud. If we’d known at the beginning how long it was going to take we might have been deterred. But even today, many apps are still struggling to deliver a stable and fast sync, and even Apple has found this to be a hard problem.

@@ -24,12 +24,55 @@
   }
 }
 
+#port-main {
+  section {
+    h2 {
+      font-size: 1.25em;
+      font-weight: 500;
+      color: darken(#768B94, 15%);
+      margin-top: .5em;
+      margin-bottom: .5em;
+    }
+    h3 {
+      font-size: 1em;
+      font-weight: 400;
+      color: #768B94;
+      color: #999;
+      margin: 0;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
 @include mq(medium) {
   #port-header {
     p {
       font-size: 1.4375em;
     }
   }
+
+  .info-left {
+    .info {
+      @include column(4);
+    }
+  }
+
+  .info-right {
+    .info {
+      @include column(4, $side: right);
+    }
+  }
+
+  .info-center {
+    .info {
+      @include column(6);
+      float: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
 } // End of medium
 
 @include mq(large) {

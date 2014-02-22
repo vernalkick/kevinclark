@@ -85,6 +85,23 @@
 				text-transform: none;
 				letter-spacing: normal;
 			}
+			blockquote {
+				border: none;
+				margin: 0; padding: 0;
+				margin-top: 3em;
+				p {
+					font-size: 1.25em;
+					color: #333;
+				}
+				&:before {
+					content: "“";
+					font-size: 4em;
+					font-weight: 400;
+					color: $accent;
+					line-height: .25em;
+					display: block;
+				}
+			}
 		}
 
 		// Up Next

@@ -6,7 +6,11 @@ I came to design via words: a love of reading and writing inspired an attention 
 
 Some time ago, I bemoaned this fact to Cameron Kozcon, who in addition to running FictiveKin and Brooklyn Beta also manages to serve as mentor-in-residence for much of the Brooklyn web community. Like any good friend, he listened as I complained: about the state of writing applications today, why writing was important, how everyone needs an editor. He nodded as I talked, trying to hide his impatience, before saying the one thing I needed to hear.
 
-“Mandy, if you’re the one complaining about this, then you are the one who needs to solve it.”
+<aside class="right">
+  <blockquote>
+    <p>Mandy, if you’re the one complaining about this, then you are the one who needs to solve it.</p>
+  </blockquote>
+</aside>
 
 That was the nudge I needed. Within a few months, Jason and I—having worked side-by-side for years on both A Book Apart and Typekit—were trading notes and sketches. We reached out to Ethan, whom we envied for both his writing and design skills (and, of course, gif curation), and asked if he would join us. Sketches turned into wireframes and then responsive prototypes. We met David, who added data models to our rapidly growing Dropbox folder. The prototype became an alpha; we invited friends and trusted advisors, revised designs and refactored code. Rob joined our ranks, fresh off a stint with Code for America, and went to work building a framework and elegantly solving problems that had previously seemed complex.
 

@@ -998,14 +998,21 @@ nav[role='navigation'] a:hover {
 #footer {
   background-color: #f5f7f7;
   text-align: center;
-  padding: 2em 0;
+  padding: 3em 0;
+}
+#footer h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+#footer h2 a {
+  font-weight: normal;
 }
 #footer p {
   font-size: 1.25em;
   font-weight: 300;
   color: #768b94;
   margin: 0 auto;
-  max-width: 38em;
+  max-width: 28em;
   line-height: 1.2em;
 }
 #footer br {
@@ -1019,6 +1026,9 @@ nav[role='navigation'] a:hover {
 @media screen and (min-width: 800px) {
   #footer {
     padding: 3em 0;
+  }
+  #footer h2 {
+    font-size: 1.65em;
   }
   #footer p {
     font-size: 1.4375em;
@@ -1183,6 +1193,7 @@ main {
 @media screen and (min-width: 1000px) {
   .page .wrap > header {
     padding-left: 26%;
+    padding-bottom: 2em;
   }
   .page .wrap > header h1 {
     font-size: 3.75em;

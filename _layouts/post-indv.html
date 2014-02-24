@@ -16,7 +16,8 @@ layout: default
 
 <footer id="footer" role="contentinfo">
 	<div class="wrap">
-		<p>Writing is hard at first, and hard at the end. <br>It’s painful, difficult, and scary and that’s what makes it awesome.</p>
-		<a href="#" class="btn light">Follow me on Twitter</a>
+		<h2><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h2>
+		<p>{{ page.previous.content | strip_html | truncatewords:20}}</p>
+		<a href="{{ page.previous.url }}" class="btn light">Read now</a>
 	</div>
 </footer>

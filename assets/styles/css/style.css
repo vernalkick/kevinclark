@@ -1251,16 +1251,15 @@ section .wrap > header h2 {
 }
 body:before {
   content: 'Mobile';
-  position: fixed;
   display: inline-block;
-  background: rgba(51, 51, 51, 0.9);
-  padding: .5em 1em;
+  position: fixed;
   bottom: 0;
   right: 0;
+  padding: .5em 1em;
+  background: rgba(51, 51, 51, 0.9);
   color: #fff;
   z-index: 9999999999999;
 }
-
 @media screen and (min-width: 400px) {
   body:before {
     content: 'X-Small';
@@ -1286,6 +1285,7 @@ body:before {
     content: 'X-Large';
   }
 }
+
 /* - Homepage -------------------------------------------------------------------------- */
 /* Hello - Short bio */
 #hello p {

@@ -200,44 +200,18 @@ section .wrap > header h2 {
 }
 
 body:before {
-        content: 'Mobile';
-        position: fixed;
-        display: inline-block;
-        background: rgba(#333, .9);
-        padding: .5em 1em;
-        bottom: 0;
-        right: 0;
-        color: #fff;
-        z-index: 9999999999999;
+  content: 'Mobile';
+  display: inline-block;
+  position: fixed; bottom: 0; right: 0;
+  padding: .5em 1em;
+  background: rgba(#333, .9);
+  color: #fff;
+  z-index: 9999999999999;
+
+    @include mq(xsmall) { content: 'X-Small'; }
+    @include mq(small) { content: 'Small'; }
+    @include mq(medium) { content: 'Medium'; }
+    @include mq(large) { content: 'Large'; }
+    @include mq(xlarge) { content: 'X-Large'; }
+
 }
-
-
-@include mq(xsmall) {
-        body:before {
-                content: 'X-Small';
-        }
-} // End of small
-
-@include mq(small) {
-        body:before {
-                content: 'Small';
-        }
-} // End of small
-
-@include mq(medium) {
-        body:before {
-                content: 'Medium';
-        }
-} // End of medium
-
-@include mq(large) {
-        body:before {
-                content: 'Large';
-        }
-} // End of medium
-
-@include mq(xlarge) {
-        body:before {
-                content: 'X-Large';
-        }
-} // End of medium

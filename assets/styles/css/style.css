@@ -1384,7 +1384,7 @@ body:before {
   list-style-type: none;
   border-top: 1px solid #e5e5e5;
   padding-top: 2em;
-  padding-right: 14%;
+  padding-right: 100%;
   width: 100%;
 }
 .article-category h3 {

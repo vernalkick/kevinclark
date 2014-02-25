@@ -27,6 +27,7 @@ body {
   min-height: 100%;
   position: relative;
   padding-top: 10px;
+
     @include mq(small) {
       padding-top: 0;
     }
@@ -43,13 +44,10 @@ body {
   	}
 
   	@include mq(medium) {
-  		// border-left: 20px solid $accent;
-      // margin-left: 20px;
       width: 20px;
   	}
 
   	@include mq(large) {
-  		// border-left: 30px solid $accent;
       width: 30px;
   	}
   }

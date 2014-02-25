@@ -1,5 +1,5 @@
 #article-lst #main {
-	padding-top: 0;
+	padding-top: 0em;
 }
 .article-category {
 	list-style-type: none;
@@ -43,6 +43,9 @@
 }
 
 @include mq(small) {
+	#article-lst #main {
+		margin-top: 1em;
+	}
 	.article-category {
 		ul {
 			@include clearfix;
@@ -67,6 +70,9 @@
 } // End of medium
 
 @include mq(large) {
+	#article-lst #main {
+		padding-top: 2em;
+	}
 	.article-category {
 		@include clearfix;
 		h3 {
@@ -80,6 +86,9 @@
 } // End of large
 
 @include mq(xlarge) {
+	#article-lst #main {
+		margin-top: 3em;
+	}
 	.article-category {
 		h3 {
 		}

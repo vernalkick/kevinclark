@@ -1377,7 +1377,7 @@ body:before {
   }
 }
 #article-lst #main {
-  padding-top: 0;
+  padding-top: 0em;
 }
 
 .article-category {
@@ -1424,6 +1424,10 @@ body:before {
 }
 
 @media screen and (min-width: 600px) {
+  #article-lst #main {
+    margin-top: 1em;
+  }
+
   .article-category ul {
     *zoom: 1;
   }
@@ -1454,6 +1458,10 @@ body:before {
   }
 }
 @media screen and (min-width: 1000px) {
+  #article-lst #main {
+    padding-top: 2em;
+  }
+
   .article-category {
     *zoom: 1;
   }
@@ -1480,6 +1488,10 @@ body:before {
   }
 }
 @media screen and (min-width: 1200px) {
+  #article-lst #main {
+    margin-top: 3em;
+  }
+
   .article-category ul {
     width: 74.0%;
     float: left;

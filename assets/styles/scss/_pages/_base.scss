@@ -201,7 +201,7 @@ section .wrap > header h2 {
 
 body:before {
   content: 'Mobile';
-  display: inline-block;
+  display: none;
   position: fixed; bottom: 0; right: 0;
   padding: .5em 1em;
   background: rgba(#333, .9);

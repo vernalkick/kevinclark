@@ -1251,7 +1251,7 @@ section .wrap > header h2 {
 }
 body:before {
   content: 'Mobile';
-  display: inline-block;
+  display: none;
   position: fixed;
   bottom: 0;
   right: 0;

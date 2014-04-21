@@ -3,3 +3,6 @@ markdown: redcarpet
 pygments: true
 permalink: /articles/:title/
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
+__default_layouts:
+  default: default      # everything that doesn't have another default specified
+  _posts: article-indv

@@ -34,6 +34,9 @@ module.exports = function(grunt) {
             drafts: true,
             future: true
           }
+        },
+        server: {
+          serve: true
         }
       },
       watch: {

@@ -1,0 +1,169 @@
+// V/H Padding
+
+@mixin padding-h($val) { padding-left: $val; padding-right: $val; }
+@mixin padding-v($val) { padding-top: $val; padding-bottom: $val; }
+
+
+// V/H Margin
+
+@mixin margin-h($val) { margin-left: $val; margin-right: $val; }
+@mixin margin-v($val) { margin-top: $val; margin-bottom: $val; }
+
+
+// V/H Border
+
+@mixin border-h($val) { border-left: $val; border-right: $val; }
+@mixin border-v($val) { border-top: $val; border-bottom: $val; }
+
+
+// Clearfix
+
+@mixin clearfix {
+  zoom: 1;
+  &:after, &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// Transitions
+
+@mixin color-transition {
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+
+// Chevron
+
+@mixin chevron($position: right) {
+  $pseudo: after;
+  $content: ">";
+  $way: 1;
+  $opposite: left;
+
+  @if ($position != right) {
+    $pseudo: before;
+    $content: "<";
+    $way: -1;
+    $opposite: right;
+  }
+
+  &:#{$pseudo} {
+    content: $content;
+    font-family: "Checkout Symbols";
+    display: inline-block;
+    padding-#{$opposite}: .625em;
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover:#{$pseudo} {
+    transform: translateX($way * .5em);
+  }
+
+}
+
+
+// Placeholder
+
+$placeholders: '-webkit-input-placeholder', '-moz-placeholder', '-ms-input-placeholder';
+
+@mixin placeholder {
+  @each $placeholder in $placeholders {
+    @if $placeholder == "-webkit-input-placeholder" {
+      &::#{$placeholder} {@content; }
+    }
+    @else if $placeholder == "-moz-placeholder" {
+      &:#{$placeholder} { @content; }
+      &::#{$placeholder} { @content; }
+    }
+    @else {
+      &:#{$placeholder} { @content; }
+    }
+  }
+}
+
+
+// Alpha
+
+@function alpha-color($solidcolor, $opacity: 1, $bg: #fff) {
+  $alphacolor: rgba($solidcolor, $opacity);
+  @return mix(fade-in($alphacolor, 1), $bg, percentage(opacity($alphacolor)));
+}
+
+@mixin rgba-fallback($property, $color, $opacity, $fallback) {
+  #{$property}: $fallback;
+  @include supported(rgba) { #{$property}: rgba($color, $opacity); }
+}
+
+
+// Truncate
+
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+// Media Queries
+
+@mixin media-upto($end) {
+  @media screen and (max-width: ($end - 1)) {
+    @content;
+  }
+}
+
+@mixin media-between($start, $end) {
+  @media screen and (min-width: $start) and (max-width: ($end - 1)) {
+    @content;
+  }
+}
+
+@mixin media-from($start) {
+  @media screen and (min-width: $start) {
+    @content;
+  }
+}
+
+@mixin vertical-media-upto($end) {
+  @media screen and (max-height: ($end - 1)) {
+    @content;
+  }
+}
+
+@mixin vertical-media-from($start) {
+  @media screen and (min-height: ($start)) {
+    @content;
+  }
+}
+
+
+// Hide text
+
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+// Keyframes
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

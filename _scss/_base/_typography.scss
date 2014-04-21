@@ -1,0 +1,24 @@
+body {
+  font-family: $font;
+  color: #333;
+}
+
+
+// Headings
+
+h1 {
+  color: #333;
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: 400;
+}
+
+
+// Paragraphs
+
+p {
+  color: #555;
+  font-size: .875em;
+  margin: 0;
+  + & { margin-top: 1.5em; }
+}

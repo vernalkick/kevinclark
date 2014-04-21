@@ -1,4 +1,5 @@
 _site
 assets/styles/.sass-cache
+_scss/.sass-cache/
 /.sass-cache/
 *.css.map

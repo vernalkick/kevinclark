@@ -1,0 +1,5 @@
+name: Kevin Clark
+markdown: redcarpet
+pygments: true
+permalink: /articles/:title/
+exclude: ['node_modules', 'Gruntfile.js', 'package.json']

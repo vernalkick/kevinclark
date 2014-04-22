@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* HTML5 display definitions
@@ -227,6 +228,20 @@ h1 {
   font-weight: 400;
 }
 
+h2 {
+  font-size: 1.25em;
+  color: #333;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.125em;
+  color: #333;
+  font-weight: 500;
+  margin: 2.5em 0 1em;
+}
+
 p {
   color: #555;
   font-size: 1.0625em;
@@ -238,7 +253,8 @@ p + p {
 }
 
 ol, ul {
-  padding: 1em 0 1em 2em;
+  padding: 0 0 0 2em;
+  margin: 1.5em 0 1em;
 }
 ol li, ul li {
   color: #555;
@@ -258,8 +274,9 @@ ul {
 blockquote {
   border-left: 3px solid #1990c6;
   margin: 1.5em 0;
-  margin-left: -5.5%;
-  padding-left: 5%;
+  margin-left: -1.5em;
+  padding-left: 1.325em;
+  box-sizing: border-box;
 }
 blockquote p {
   color: #777;
@@ -285,6 +302,18 @@ pre::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 600px) {
+  p {
+    font-size: 1.125em;
+  }
+
+  blockquote {
+    margin-left: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-width: 2px;
+  }
+}
 a {
   color: #1990c6;
   text-decoration: none;
@@ -339,9 +368,70 @@ figcaption {
   margin-top: .5em;
 }
 
+.indv header {
+  margin-bottom: 1.5em;
+}
+.indv .content figure img {
+  margin-left: -9%;
+  width: 118%;
+  max-width: none;
+}
+
+@media screen and (min-width: 600px) {
+  .indv .content figure img {
+    margin-left: -18%;
+    width: 136%;
+    max-width: none;
+  }
+}
+header[role="banner"] {
+  padding-top: 2.5em;
+  padding-bottom: 2em;
+}
+
+.logo {
+  background: url("/assets/logo.svg") no-repeat top center;
+  width: 138px;
+  height: 30px;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+nav[role="navigation"] {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  header[role="banner"] {
+    padding-top: 6em;
+    padding-bottom: 4.5em;
+  }
+}
+body {
+  border-top: 4px solid #1990c6;
+}
+
 .wrap {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 1.5em;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    border-top: none;
+    border-left: 10px solid #1990c6;
+  }
+
+  .wrap {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 36em;
+  }
 }
 
 /*# sourceMappingURL=master.css.map */

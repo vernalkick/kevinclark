@@ -13,6 +13,20 @@ h1 {
   font-weight: 400;
 }
 
+h2 {
+  font-size: 1.25em;
+  color: #333;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.125em;
+  color: #333;
+  font-weight: 500;
+  margin: 2.5em 0 1em;
+}
+
 
 // Paragraphs
 
@@ -27,7 +41,8 @@ p {
 // List
 
 ol, ul {
-  padding: 1em 0 1em 2em;
+  padding: 0 0 0 2em;
+  margin: 1.5em 0 1em;
   li {
     color: #555;
     font-size: 1.0625em;
@@ -49,8 +64,9 @@ ul {
 blockquote {
   border-left: 3px solid $accent;
   margin: 1.5em 0;
-  margin-left: -5.5%;
-  padding-left: 5%;
+  margin-left: -1.5em;
+  padding-left: 1.325em;
+  box-sizing: border-box;
     p {
       color: #777;
     }
@@ -76,4 +92,21 @@ pre {
     &::-webkit-scrollbar-thumb {
         background-color: rgba(#000, .2);
     }
+}
+
+// 600px --------------------------------------------------
+
+@include media-from(600px) {
+
+  p {
+    font-size: 1.125em;
+  }
+
+  blockquote {
+    margin-left: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-width: 2px;
+  }
+
 }

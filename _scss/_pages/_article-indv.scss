@@ -1,0 +1,27 @@
+.indv {
+
+  header {
+    margin-bottom: 1.5em;
+  }
+
+  .content figure img {
+    margin-left: -9%;
+    width: 118%;
+    max-width: none;
+  }
+
+}
+
+// 600px --------------------------------------------------
+
+@include media-from(600px) {
+
+  .indv {
+    .content figure img {
+      margin-left: -18%;
+      width: 136%;
+      max-width: none;
+    }
+  }
+
+}

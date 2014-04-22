@@ -1,0 +1,27 @@
+header[role="banner"] {
+  padding-top: 2.5em;
+  padding-bottom: 2em;
+}
+
+.logo {
+  background: url("/assets/logo.svg") no-repeat top center;
+  width: 138px;
+  height: 30px;
+  display: block;
+  @include hide-text;
+}
+
+nav[role="navigation"] {
+  display: none;
+}
+
+// 600px --------------------------------------------------
+
+@include media-from(600px) {
+
+  header[role="banner"] {
+    padding-top: 6em;
+    padding-bottom: 4.5em;
+  }
+
+}

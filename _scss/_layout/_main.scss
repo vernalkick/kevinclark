@@ -1,4 +1,32 @@
+body {
+  border-top: 4px solid $accent;
+}
+
+// Wrap
+
 .wrap {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 1.5em;
+}
+
+// Main
+
+main {
+  overflow-x: hidden;
+}
+
+// 600px --------------------------------------------------
+
+@include media-from(600px) {
+
+  body {
+    border-top: none;
+    border-left: 10px solid $accent;
+  }
+
+  .wrap {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 36em;
+  }
+
 }

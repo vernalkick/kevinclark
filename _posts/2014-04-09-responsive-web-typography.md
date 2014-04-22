@@ -3,7 +3,9 @@ title: Responsive Web Typography
 link: http://elliotjaystocks.com/blog/responsive-web-typography/
 ---
 
-<img src="http://elliotjaystocks.com/assets/5345c962d6af684c8c0002a5/article_rwt2.png" alt="Article illustration for Advanced web typography: Responsive web typography">
+<figure>
+  <img src="http://elliotjaystocks.com/assets/5345c962d6af684c8c0002a5/article_rwt2.png" alt="Article illustration for Advanced web typography: Responsive web typography">
+</figure>
 
 Responsive Web Design is not merely concerned with layout — done properly, there are a number of considerations one should take into account with typography. After all, <a href="http://ia.net/blog/the-web-is-all-about-typography-period/">the web is 99% typography</a>, right?
 
@@ -45,8 +47,10 @@ Of course, I’ll admit that this is much easier to do on simpler sites like blo
 
 <a href="http://trentwalton.com/2012/06/19/fluid-type/">Trent Walton has a great technique</a> for keeping your eye on an optimum measure that’s especially handy if you prefer hard facts over the ‘feel’ approach: simply place an asterisk at character 45 and character 75, and add in a new breakpoint every time the two asterisks appear on the same line. Sorted!
 
-<figure><img src="http://elliotjaystocks.com/assets/5345b1be4f720a79900003bc/article_trent.png" alt="Trent Walton’s site">
-<figcaption><a href="http://trentwalton.com/2012/06/19/fluid-type/">Trent Walton</a>’s asterisk technique</figcaption></figure>
+<figure>
+  <img src="http://elliotjaystocks.com/assets/5345b1be4f720a79900003bc/article_trent.png" alt="Trent Walton’s site">
+  <figcaption><a href="http://trentwalton.com/2012/06/19/fluid-type/">Trent Walton</a>’s asterisk technique</figcaption>
+</figure>
 
 It’s worth noting that you could just put in a <code>max-width</code> declaration once you’ve got a measure you feel is optimal for large screens, but personally I feel like <code>max-width</code> flies in the face of <span class="caps">RWD</span>: because we don’t know the size of future viewports, we should let things be as open as possible. I admit, though, that this can end up with gigantic text on large monitors (as an experiment, I took this to its logical conclusion with <a href="http://csszengarden.com/217/">my recent <span class="caps">CSS</span> Zen Garden theme</a>), so use your own discretion. Oh, and as an interesting side note in case you live in a cave and missed this last year, Marko Dugonjić conducted <a href="http://webdesign.maratz.com/lab/responsivetypography/">an interesting experiment</a> with font size in relation to the user’s proximity to the screen. <a href="http://vimeo.com/74368443">His talk from last year’s Kerning conference</a> is well worth a watch.
 

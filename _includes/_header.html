@@ -1,0 +1,13 @@
+<header role="header">
+  <div class="wrap">
+    <a href="/" class="logo">Kevin Clark</a>
+    <nav role="navigation">
+    {% assign nav_items = "home, articles, projects, about" | split: ", " %}
+      <ul>
+        {% for item in nav_items %}
+          <li><a href="/{{item}}/">{{ item | capitalize }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

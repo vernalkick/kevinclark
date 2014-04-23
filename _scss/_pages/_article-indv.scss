@@ -17,11 +17,62 @@
 @include media-from(600px) {
 
   .indv {
+
+    header {
+      margin-bottom: 2.5em;
+    }
+
     .content figure img {
-      margin-left: -18%;
-      width: 136%;
+      margin-left: -13%;
+      width: 126%;
       max-width: none;
     }
+  }
+
+}
+
+// 900px --------------------------------------------------
+
+@include media-from(900px) {
+
+  .indv {
+    padding-left: 25%;
+
+      header {
+        margin-bottom: 3.5em;
+      }
+
+      .content figure img {
+        margin-left: -33.5%;
+        width: 133.5%;
+      }
+
+  }
+
+}
+
+// 1000px --------------------------------------------------
+
+@include media-from(1100px) {
+
+  .indv {
+    padding-left: 30%;
+    padding-right: 15%;
+
+      .content figure {
+        position: relative;
+        img {
+          margin-left: -54.5%;
+          width: 154.5%;
+        }
+        figcaption {
+          width: 30%;
+          position: absolute;
+          top: 0;
+          right: -35%;
+        }
+      }
+
   }
 
 }

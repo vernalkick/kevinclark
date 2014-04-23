@@ -98,8 +98,18 @@ pre {
 
 @include media-from(600px) {
 
+  h1 {
+    font-size: 2em;
+  }
+
   p {
     font-size: 1.125em;
+  }
+
+  ol, ul {
+    li {
+      font-size: 1.125em;
+    }
   }
 
   blockquote {

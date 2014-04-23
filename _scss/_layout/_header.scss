@@ -25,3 +25,14 @@ nav[role="navigation"] {
   }
 
 }
+
+// 600px --------------------------------------------------
+
+@include media-from(900px) {
+
+  header[role="banner"] {
+    padding-top: 6em;
+    padding-bottom: 7.5em;
+  }
+
+}

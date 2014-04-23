@@ -30,3 +30,26 @@ main {
   }
 
 }
+
+// 800px --------------------------------------------------
+
+@include media-from(900px) {
+
+  .wrap {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 50em;
+  }
+
+}
+
+
+// 1100px --------------------------------------------------
+
+@include media-from(1100px) {
+
+  .wrap {
+    max-width: 75em;
+  }
+
+}

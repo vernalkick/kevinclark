@@ -3,9 +3,10 @@ title: Responsive Web Typography
 link: http://elliotjaystocks.com/blog/responsive-web-typography/
 ---
 
+<!--
 <figure>
   <img src="http://elliotjaystocks.com/assets/5345c962d6af684c8c0002a5/article_rwt2.png" alt="Article illustration for Advanced web typography: Responsive web typography">
-</figure>
+</figure> -->
 
 Responsive Web Design is not merely concerned with layout — done properly, there are a number of considerations one should take into account with typography. After all, <a href="http://ia.net/blog/the-web-is-all-about-typography-period/">the web is 99% typography</a>, right?
 

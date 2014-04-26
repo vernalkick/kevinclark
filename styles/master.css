@@ -314,6 +314,7 @@ pre::-webkit-scrollbar-thumb {
 
   p {
     font-size: 1.125em;
+    line-height: 1.7em;
   }
 
   ol li, ul li {
@@ -489,6 +490,10 @@ nav[role="navigation"] {
     border-left: 1px solid #e5e5e5;
     padding: 6.5em 2em .5em .75em;
     font-size: .888888889em;
+  }
+  nav[role="navigation"] li a:hover {
+    color: #1990c6;
+    border-color: #ccc;
   }
   nav[role="navigation"] li:last-child a {
     padding-right: 0;

@@ -52,6 +52,10 @@ nav[role="navigation"] {
             border-left: 1px solid #e5e5e5;
             padding: 6.5em 2em .5em .75em;
             font-size: .888888889em;
+              &:hover {
+                color: $accent;
+                border-color: #ccc;
+              }
           }
           &:last-child a {
             padding-right: 0;

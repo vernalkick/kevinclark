@@ -3,11 +3,29 @@
     <a href="/" class="logo">Kevin Clark</a>
     <nav role="navigation">
     {% assign nav_items = "home, articles, projects, about" | split: ", " %}
+    {% assign current-url = page.url | remove:'index.html' | remove: '/' %}
       <ul>
         {% for item in nav_items %}
-          <li><a href="/{{item}}/">{{ item | capitalize }}</a></li>
+
+          {% capture nav_url %}{% if item == 'home' %}/{% else %}/{{ item }}/{% endif %}{% endcapture %}
+          {% capture current_url %}{{ page.url | remove:'index.html' }}{% endcapture %}
+          {% capture title %}{{ item | capitalize }}{% endcapture %}
+          {% capture selected %}
+            {% if nav_url == '/' %}
+              {% if current_url == nav_url %}class="current"{% endif %}
+            {% else %}
+              {% if current_url contains nav_url %}class="current"{% endif %}
+            {% endif %}
+          {% endcapture %}
+
+          <li>
+            <a href="{{ nav_url }}" current="{{ current_url }}" {{ selected }}>{{ title }}</a>
+          </li>
         {% endfor %}
       </ul>
     </nav>
   </div>
 </header>
+
+
+

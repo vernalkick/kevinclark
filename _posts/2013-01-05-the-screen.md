@@ -1,0 +1,23 @@
+---
+title: The Screen
+categories: Design
+---
+<figure>
+	<img src="http://www.math.toronto.edu/drorbn/Gallery/Symmetry/Tilings/So/DSC-S70Pixels.jpg">
+</figure>
+
+The web is still pretty young and for many years, web designers were struggling with publishing.
+
+The magazine (or the book) was the model we tried to emulate. We've been designing for years on these fixed width pages, so obviously, we tried replicating that same experience on the web.
+
+Unfortunately, it’s not that simple. It never is. One can easily set a fixed width to the page container, but the browser will never have a single width. And what happens on smaller screens?
+
+<!--more-->
+
+These new sets of technical and practical constraints (or lack thereof) asked for new skills and a departure from editorial design as we knew it at the time.
+
+No, we can’t apply everything we’ve learned from print to the web without adapting it. That doesn't mean we can’t learn from other mediums. That’s what I like about web design.
+
+## It shares so much from about every other media. We use typesetting ideas from books, storytelling from movies, interactivity from games.
+
+That's what makes the web a truely unique and exciting platform and medium. The best part is that it's not done yet. And we're the ones making it.

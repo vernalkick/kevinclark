@@ -15,9 +15,10 @@ h1 {
 
 h2 {
   font-size: 1.25em;
-  color: #333;
-  font-weight: 400;
+  color: #999;
+  font-weight: 300;
   margin: 0;
+  line-height: 1.4em;
 }
 
 h3 {
@@ -43,12 +44,6 @@ p {
 ol, ul {
   padding: 0 0 0 2em;
   margin: 1.5em 0 1em;
-  li {
-    color: #555;
-    font-size: 1.0625em;
-    line-height: 1.65em;
-    margin-bottom: .5em;
-  }
 }
 
 ol {
@@ -57,6 +52,16 @@ ol {
 
 ul {
   list-style-type: disc;
+}
+
+li {
+  color: #555;
+  font-size: 1.0625em;
+  line-height: 1.65em;
+  margin-bottom: .5em;
+    p {
+      font-size: 1em;
+    }
 }
 
 // Blockquote
@@ -100,6 +105,10 @@ pre {
 
   h1 {
     font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
   }
 
   h3 {

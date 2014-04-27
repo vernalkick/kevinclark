@@ -11,7 +11,7 @@ body {
 // Main
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 // 600px --------------------------------------------------
@@ -29,6 +29,10 @@ main {
     max-width: 36em;
   }
 
+  main {
+    padding-bottom: 2em;
+  }
+
 }
 
 // 800px --------------------------------------------------
@@ -41,6 +45,10 @@ main {
     max-width: 50em;
   }
 
+  main {
+    padding-bottom: 3em;
+  }
+
 }
 
 
@@ -50,6 +58,10 @@ main {
 
   .wrap {
     max-width: 75em;
+  }
+
+  main {
+    padding-bottom: 4em;
   }
 
 }

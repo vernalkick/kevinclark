@@ -56,6 +56,10 @@ nav[role="navigation"] {
                 color: $accent;
                 border-color: #ccc;
               }
+              &.current {
+                font-weight: 500;
+                color: #777;
+              }
           }
           &:last-child a {
             padding-right: 0;

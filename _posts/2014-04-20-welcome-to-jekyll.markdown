@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Jekyller!"
+title: "Welcome to Jekyll!"
 categories: jekyll update
 ---
 

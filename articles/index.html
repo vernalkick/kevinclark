@@ -1,0 +1,32 @@
+---
+title: Articles
+template: default
+---
+
+<header class="list-page-header">
+  <h1>Articles</h1>
+  <h2>There’s just something about writing ideas down that make you think differently. Communicating ideas effectively is also a big part of design. I need to get better at this, but here are a couple of things I’ve been thinking about lately.</h2>
+</header>
+
+<section class="content-list articles">
+  {% for post in site.posts %}
+    {% capture currentyear %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if currentyear != year %}
+      {% unless forloop.first %}</ul></div>{% endunless %}
+      <div class="group">
+        <h3>{{ currentyear }}</h3>
+        <ul>
+        {% capture year %}{{ currentyear }}{% endcapture %}
+    {% endif %}
+      <li>
+        <a href="{{ post.url }}">
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.content | strip_html | truncatewords:30 }}</p>
+        </a>
+      </li>
+  {% endfor %}
+  </div>
+
+</section>
+
+

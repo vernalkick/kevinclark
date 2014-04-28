@@ -12,9 +12,7 @@ The internet forgets stuff. Bytes get deleted, things don’t stay there indefin
 
 But sometimes, you wish you could physically feel it.  What if we could gather all of your followers in the same room? What if we could print every web page ever created?
 
-What if we had a physical social network? An *ink* network*?
-
-## The Ink Network
+What if we had a physical social network? An *ink* network?
 
 You could throw it away somewhere in your house and never look back at it for some time, but it would pop back up whether you wanted it or not. And when it does, you’re forced to stop everything you’re doing, sit back and go through it all over again.
 

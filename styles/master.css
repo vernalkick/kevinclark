@@ -226,6 +226,7 @@ h1 {
   font-size: 1.75em;
   margin: 0;
   font-weight: 400;
+  line-height: 1.4em;
 }
 
 h2 {
@@ -395,8 +396,12 @@ figcaption {
   padding-bottom: 0;
   padding-bottom: 2.5em;
 }
+.list-page-header small {
+  color: #999;
+  display: block;
+  margin-bottom: .5em;
+}
 .list-page-header h1 {
-  font-weight: 300;
   margin-bottom: .5em;
 }
 
@@ -477,10 +482,6 @@ figcaption {
   }
 }
 @media screen and (min-width: 900px) {
-  .list-page-header h1 {
-    font-size: 2.5em;
-  }
-
   .content-list li {
     width: 30%;
     margin-top: 5%;
@@ -507,9 +508,6 @@ figcaption {
 @media screen and (min-width: 1100px) {
   .list-page-header {
     padding-left: 25%;
-  }
-  .list-page-header h1 {
-    font-size: 3em;
   }
 
   .content-list {
@@ -722,6 +720,90 @@ main {
 
   main {
     padding-bottom: 4em;
+  }
+}
+#footer {
+  overflow: hidden;
+}
+#footer .inner {
+  border-top: 1px solid #e5e5e5;
+  margin-right: -100%;
+  padding: 2em 100% 1em 0;
+}
+#footer p {
+  font-size: .75em;
+  color: #bababa;
+}
+#footer p br {
+  display: none;
+}
+#footer a {
+  color: #bababa;
+}
+#footer:hover a {
+  color: #1990c6;
+}
+
+.social-links {
+  list-style-type: none;
+  margin: 1em 0 0 0;
+  padding: 0;
+  zoom: 1;
+}
+.social-links:after, .social-links:before {
+  content: "";
+  display: table;
+}
+.social-links:after {
+  clear: both;
+}
+.social-links li {
+  float: left;
+}
+.social-links li + li:before {
+  content: "/";
+  float: left;
+  font-size: 20px;
+  font-weight: 300;
+  color: #ccc;
+  padding: 0 .25em;
+}
+.social-links a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #e5e5e5;
+}
+
+@media screen and (min-width: 600px) {
+  #footer .inner {
+    padding-bottom: 2em;
+  }
+}
+@media screen and (min-width: 900px) {
+  #footer .inner {
+    zoom: 1;
+    padding-bottom: 4em;
+  }
+  #footer .inner:after, #footer .inner:before {
+    content: "";
+    display: table;
+  }
+  #footer .inner:after {
+    clear: both;
+  }
+  #footer p {
+    float: left;
+  }
+  #footer p br {
+    display: block;
+  }
+  #footer .social-links {
+    float: right;
+    margin-top: .5em;
   }
 }
 

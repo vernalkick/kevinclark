@@ -29,7 +29,7 @@
         content: "/";
         float: left;
         font: { size: 20px; weight: 300; }
-        color: #ccc;
+        color: #e5e5e5;
         padding: 0 .25em;
       }
     }
@@ -37,7 +37,13 @@
       display: block;
       width: 30px; height: 30px;
       @include hide-text;
-      background: #e5e5e5;
+      opacity: .15;
+    }
+    .twitter {
+      background: url('/assets/twitter.svg') no-repeat center 3px;
+    }
+    .dribbble {
+      background: url('/assets/dribbble.svg') no-repeat center 2px;
     }
 }
 

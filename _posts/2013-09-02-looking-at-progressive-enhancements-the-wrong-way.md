@@ -13,7 +13,7 @@ categories: Development Opinion
 [Tom Dale][tom] recently wrote a toughtful [counter argument][against pe] to [Dan Mall][dan]'s [Sigh, JavaScript][sigh][^footnote]. You should read the whole piece, but basically, Dale argues that progressive enhancement is dead and that websites should only focus on using bleeding edge technologies to create the best experience for most users, even if that means than those who use older browsers or are on a poor connection just can't use your site:
 
 > Embracing JavaScript from the beginning will let you build faster apps that provide UIs that just weren’t possible before. For example, think back to the first time you used Google Maps after assuming MapQuest was the best we could do. Remember that feeling of, “Holy crap, I didn’t know this was possible in the browser”? That’s what you should be aiming for.
-
+>
 > Don’t limit your UI by shackling yourself to outmoded mantras, because your competitors aren’t.
 
 <!--more-->

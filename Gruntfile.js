@@ -52,7 +52,7 @@ module.exports = function(grunt) {
       },
       concurrent: {
         target: {
-          tasks: ['jekyll', 'watch'],
+          tasks: ['jekyll:dev', 'watch'],
           options: {
             logConcurrentOutput: true
           }
@@ -67,7 +67,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    //grunt.registerTask('default', ['jekyll:dist', 'sass']);
     grunt.registerTask('dev', ['sass:dev', 'concurrent:target']);
     grunt.registerTask('prod', ['sass:dist', 'jekyll:dist', 'clean']);
 

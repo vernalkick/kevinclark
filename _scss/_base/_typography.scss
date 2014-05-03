@@ -11,7 +11,7 @@ h1 {
   font-size: 1.75em;
   margin: 0;
   font-weight: 400;
-  line-height: 1.4em;
+  line-height: 1.2em;
 }
 
 h2 {
@@ -100,12 +100,50 @@ pre {
     }
 }
 
+hr {
+  width: 3em;
+  height: 2px;
+  background-color: #e5e5e5;
+  margin: 2em 0;
+  display: block;
+  border: none;
+}
+
+// Footnotes
+
+.footnotes {
+  &:before {
+    content: "";
+    display: none;
+    width: 4em;
+    height: 2px;
+    background-color: #e5e5e5;
+    margin-top: 2.5em;
+  }
+  ol {
+    margin: 2.5em  0 1.5em;
+    padding-left: 1.5em;
+  }
+  li {
+    color: #999;
+    font-size: .875em;
+    margin-bottom: 0;
+  }
+  li + li {
+    margin-top: .5em;
+  }
+  p {
+    color: #999;
+  }
+}
+
 // 600px --------------------------------------------------
 
 @include media-from(600px) {
 
   h1 {
     font-size: 2em;
+    line-height: 1.4em;
   }
 
   h2 {
@@ -113,7 +151,7 @@ pre {
   }
 
   h3 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-weight: normal;
   }
 
@@ -133,6 +171,11 @@ pre {
     padding-left: 2em;
     padding-right: 2em;
     border-width: 2px;
+  }
+
+  hr {
+    width: 5em;
+    margin: 3em 0;
   }
 
 }

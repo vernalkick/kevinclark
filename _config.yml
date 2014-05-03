@@ -1,5 +1,5 @@
 name: Kevin Clark
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 permalink: /articles/:title/
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']

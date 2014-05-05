@@ -1,7 +1,9 @@
 <header role="banner">
   <div class="wrap">
     <a href="/" class="logo">Kevin Clark</a>
+    <a href="#" class="open-nav">Menu</a>
     <nav role="navigation">
+      <a href="#" class="close-nav">Close</a>
     {% assign nav_items = "home, articles, projects, about" | split: ", " %}
     {% assign current-url = page.url | remove:'index.html' | remove: '/' %}
       <ul>

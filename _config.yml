@@ -10,3 +10,5 @@ dribbble_set:
   user: 'vernalkick'
   shots_per_page: 24
   page: 1
+kramdown:
+  input: GFM

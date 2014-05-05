@@ -14,7 +14,66 @@ header[role="banner"] {
 }
 
 nav[role="navigation"] {
-  display: none;
+  background: #272E30;
+  position: fixed;
+  left: 100%; top: -0.25em; bottom: 0;
+  width: 16em;
+  padding: 3.25em 0 1em 2em;
+  display: block;
+  &:before {
+    content: "Navigation";
+    color: rgba(#fff, .3);
+    display: inline-block;
+    float: left;
+    text-transform: uppercase;
+    font-size: .75em;
+    font-weight: 500;
+    letter-spacing: .1em;
+    margin-top: .25em;
+  }
+    ul {
+      padding: 0;
+      margin: 0;
+      clear: both;
+    }
+    li {
+      list-style-type: none;
+      a {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        display: block;
+        color: rgba(#fff, .4);
+        padding: .5em 1em 1.5em 0;
+          &.current {
+            font-weight: 500;
+            color: #fff;
+          }
+      }
+    }
+}
+
+.open-nav {
+  background: url("/assets/menu.svg") no-repeat center center;
+  width: 25px; height: 29px;
+  @include hide-text;
+  display: block;
+  float: right;
+}
+
+.close-nav {
+  background: url("/assets/close.svg") no-repeat top center;
+  width: 19px; height: 19px;
+  @include hide-text;
+  display: block;
+  float: right;
+  margin: 0 2em 2em 0;
+}
+
+.nav-visible {
+  -webkit-transform: translate(-18em);
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
 }
 
 // 600px --------------------------------------------------
@@ -26,11 +85,23 @@ nav[role="navigation"] {
     padding-bottom: 4.5em;
   }
 
+  nav[role="navigation"] {
+    padding-top: 6.5em;
+  }
+
 }
 
 // 600px --------------------------------------------------
 
 @include media-from(900px) {
+
+  .nav-visible {
+    -webkit-transform: translate(0);
+    overflow-y: auto;
+    width: auto;
+    height: auto;
+    position: relative;
+  }
 
   header[role="banner"] {
     padding-top: 6em;
@@ -40,6 +111,14 @@ nav[role="navigation"] {
   nav[role="navigation"] {
     display: block;
     float: right;
+    width: auto;
+    position: relative;
+    top: auto; left: auto; bottom: auto;
+    background: transparent;
+    padding: 0;
+      &:before {
+        display: none;
+      }
       ul {
         list-style-type: none;
         margin: 0; padding: 0;
@@ -51,7 +130,9 @@ nav[role="navigation"] {
             color: #999;
             border-left: 1px solid #e5e5e5;
             padding: 6.5em 2em .5em .75em;
+            border-top: none;
             font-size: .888888889em;
+            display: inline;
               &:hover {
                 color: $accent;
                 border-color: #ccc;
@@ -66,6 +147,8 @@ nav[role="navigation"] {
           }
       }
   }
+
+  .open-nav, .close-nav { display: none; }
 
 }
 

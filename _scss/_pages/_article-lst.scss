@@ -8,6 +8,7 @@
     }
     h1 {
       margin-bottom: .5em;
+        br { display: none; }
     }
 }
 .content-list {
@@ -49,6 +50,7 @@
 
     .list-page-header {
       padding-bottom: 4em;
+        h1 br { display: block; }
     }
 
     .content-list {

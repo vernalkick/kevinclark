@@ -665,6 +665,19 @@ figcaption {
   max-width: none;
 }
 
+.content aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.content aside li > a {
+  font-size: .875em;
+}
+.content aside p {
+  font-size: .875em;
+  color: #999;
+}
+
 header[role="banner"] {
   padding-top: 2.5em;
   padding-bottom: 2em;

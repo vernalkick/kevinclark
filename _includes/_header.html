@@ -4,7 +4,7 @@
     <a href="#" class="open-nav">Menu</a>
     <nav role="navigation">
       <a href="#" class="close-nav">Close</a>
-    {% assign nav_items = "home, articles, projects, about" | split: ", " %}
+    {% assign nav_items = "home, articles, portfolio, about" | split: ", " %}
     {% assign current-url = page.url | remove:'index.html' | remove: '/' %}
       <ul>
         {% for item in nav_items %}

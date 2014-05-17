@@ -14,7 +14,7 @@ Last week, [Kevin Systrom](http://instagram.com/kevin) introduced a new key feat
 It is undoubtedly a response to the huge success of Snapchat (which kind of reminds me of [Instagram][1] when it started), but something caught my attention during the presentation:
 
 > What a lot of people associate with us is beautiful photography. And a new way to communicate and share in the real world doesn’t exactly strike a chord with beautiful photography. They seem a little disparate. But what I want to do today is talk about how they’re not so different. And in fact how they’re really close. For us communication is really core.
-
+>
 > It’s not about photography necessarily. If we were about photography we’d be built into cameras, but we’re not built in to cameras, we’re built into phones.
 
 <p class="note right"><a href="http://dustincurtis.com/">Dustin Curtis</a> <a href="http://dcurt.is/the-life-of-dustin-curtis">has been thinking about this idea</a> for a while now. Interesting to see Instagram moving in that direction.</p>

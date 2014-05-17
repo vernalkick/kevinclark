@@ -3,14 +3,52 @@
     list-style-type: none;
     margin: 0; padding: 0;
   }
+
   li {
     > a {
       font-size: .875em;
     }
   }
+
   p {
     font-size: .875em;
     color: #999;
+
+      & + a {
+        margin-top: 1.5em;
+        display: block;
+      }
+  }
+
+
+}
+
+@include media-from(600px) {
+  .content aside {
+    -webkit-column-count: 2;
+    li {
+    }
+    h3 {
+      font-size: 1.125em;
+    }
+  }
+}
+
+@include media-from(900px) {
+  /*.content aside {
+    float: left;
+    margin-left: -33.5%;
+    width: 43%;
+    margin-right: 6%;
+  }*/
+}
+
+@include media-from(1100px) {
+
+  .content aside {
+    -webkit-columns: auto;
+    margin-left: -54.5%;
+    width: 43%;
   }
 
 }

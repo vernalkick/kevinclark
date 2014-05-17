@@ -1,6 +1,7 @@
 body {
   font-family: $font;
   color: #333;
+  -webkit-text-size-adjust: none;
 }
 
 
@@ -37,14 +38,14 @@ p {
   font-size: 1.0625em;
   line-height: 1.65em;
   margin: 0;
-  + p { margin-top: 1.5em; }
+  margin-bottom: 2em;
 }
 
 // List
 
 ol, ul {
   padding: 0 0 0 2em;
-  margin: 1.5em 0 1em;
+  margin: 1.5em 0 0;
 }
 
 ol {
@@ -59,7 +60,7 @@ li {
   color: #555;
   font-size: 1.0625em;
   line-height: 1.65em;
-  margin-bottom: .5em;
+  margin-bottom: 1.5em;
     p {
       font-size: 1em;
     }
@@ -87,23 +88,20 @@ code {
 }
 
 pre {
-  box-shadow: 0 1px 0 #e5e5e5 inset,  0 -1px 0 #e5e5e5 inset;
-  padding: 1.5em 0;
-  margin: 1.5em 0;
-  -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar {
-        height: 1px;
-        margin-bottom: -1px;
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: rgba(#000, .2);
-    }
+  padding: 2em 0;
+  margin: 2em 0;
+  margin-left: -100%;
+  padding-left: 100%;
+  margin-right: -100%;
+  padding-right: 100%;
+  background-color: rgba(#46A800, .02);
+  line-height: 1.4em;
 }
 
 hr {
   width: 3em;
   height: 2px;
-  background-color: #e5e5e5;
+  background-color: $border-color;
   margin: 2em 0;
   display: block;
   border: none;
@@ -117,7 +115,7 @@ hr {
     display: none;
     width: 4em;
     height: 2px;
-    background-color: #e5e5e5;
+    background-color: $border-color;
     margin-top: 2.5em;
   }
   ol {
@@ -176,6 +174,12 @@ hr {
   hr {
     width: 5em;
     margin: 3em 0;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    @include padding-v(2em);
+    -webkit-overflow-scrolling: touch;
   }
 
 }

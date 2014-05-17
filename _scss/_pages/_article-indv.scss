@@ -2,6 +2,7 @@
 
   header {
     margin-bottom: 1.5em;
+    margin-top: 1em;
 
       small {
         color: #999;
@@ -37,6 +38,9 @@
 
     .content figure {
       margin: 2em 0;
+        &:first-child {
+          margin-top: 0;
+        }
 
         img {
           margin-left: -13%;
@@ -59,11 +63,32 @@
         margin-bottom: 3.5em;
       }
 
-      .content figure img {
-        margin-left: -33.5%;
-        width: 133.5%;
-      }
+      .content {
+        figure:first-child {
+          margin-top: 0;
+        }
 
+        figure {
+
+         img {
+            margin-left: -33.5%;
+            width: 133.5%;
+          }
+
+        &.left {
+          float: left;
+          width: 74%;
+          float: left;
+          margin: .25em 2em 2em -33.25%;
+
+            img {
+              margin-left: 0;
+              width: 100%;
+            }
+        }
+
+      }
+}
   }
 
 }
@@ -90,6 +115,17 @@
           top: 0;
           right: -35%;
           margin-top: 0;
+        }
+
+        &.left {
+          width: 100%;
+          margin-left: -54.5%;
+          figcaption {
+            width: auto;
+            position: relative;
+            top: auto; right: auto;
+            margin-top: 1.5em;
+          }
         }
       }
 

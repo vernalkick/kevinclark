@@ -4,26 +4,25 @@ title: Home
 ---
 
 <div id="home">
-<header class="list-page-header">
-  <small>Hello</small>
-  <h1>My name is Kevin Clark. <br>I’m a product designer at Shopify.</h1>
-  <a href="#">Follow me on Twitter</a>
-</header>
+  <header class="list-page-header">
+    <small>Hello</small>
+    <h1>My name is Kevin Clark. <br>I’m a product designer at Shopify.</h1>
+    <a href="#">Follow me on Twitter</a>
+  </header>
 
-
-<section class="content-list articles">
-  <div class="group">
-    <h3>Recent articles</h3>
-    <ul>
-      {% for post in site.posts | limit: 3 %}
-      <li>
-        <a href="{{ post.url }}">
-          <h4>{{ post.title }}</h4>
-          <p>{{ post.content | strip_html | truncatewords:30 }}</p>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+  <section class="content-list articles">
+    <div class="group">
+      <h3>Recent articles</h3>
+      <ul>
+        {% for post in site.posts | limit: 4 %}
+        <li>
+          <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.content | strip_html | truncatewords:30 }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
 </div>

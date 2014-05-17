@@ -219,6 +219,7 @@ td, th {
 body {
   font-family: "Ratio", "Helvetica Neue", sans-serif;
   color: #333;
+  -webkit-text-size-adjust: none;
 }
 
 h1 {
@@ -249,14 +250,12 @@ p {
   font-size: 1.0625em;
   line-height: 1.65em;
   margin: 0;
-}
-p + p {
-  margin-top: 1.5em;
+  margin-bottom: 2em;
 }
 
 ol, ul {
   padding: 0 0 0 2em;
-  margin: 1.5em 0 1em;
+  margin: 1.5em 0 0;
 }
 
 ol {
@@ -271,7 +270,7 @@ li {
   color: #555;
   font-size: 1.0625em;
   line-height: 1.65em;
-  margin-bottom: .5em;
+  margin-bottom: 1.5em;
 }
 li p {
   font-size: 1em;
@@ -295,23 +294,20 @@ code {
 }
 
 pre {
-  box-shadow: 0 1px 0 #e5e5e5 inset,  0 -1px 0 #e5e5e5 inset;
-  padding: 1.5em 0;
-  margin: 1.5em 0;
-  -webkit-overflow-scrolling: touch;
-}
-pre::-webkit-scrollbar {
-  height: 1px;
-  margin-bottom: -1px;
-}
-pre::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2em 0;
+  margin: 2em 0;
+  margin-left: -100%;
+  padding-left: 100%;
+  margin-right: -100%;
+  padding-right: 100%;
+  background-color: rgba(70, 168, 0, 0.02);
+  line-height: 1.4em;
 }
 
 hr {
   width: 3em;
   height: 2px;
-  background-color: #e5e5e5;
+  background-color: #edecec;
   margin: 2em 0;
   display: block;
   border: none;
@@ -322,7 +318,7 @@ hr {
   display: none;
   width: 4em;
   height: 2px;
-  background-color: #e5e5e5;
+  background-color: #edecec;
   margin-top: 2.5em;
 }
 .footnotes ol {
@@ -375,6 +371,13 @@ hr {
   hr {
     width: 5em;
     margin: 3em 0;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    -webkit-overflow-scrolling: touch;
   }
 }
 a {
@@ -432,6 +435,20 @@ figcaption {
   line-height: 1.4em;
 }
 
+#home .content-list.articles li:last-child {
+  display: none;
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  #home .content-list.articles li:last-child {
+    display: block;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #home .content-list.articles p {
+    margin-bottom: 0;
+  }
+}
 .list-page-header {
   padding-bottom: 0;
   padding-bottom: 2.5em;
@@ -449,7 +466,7 @@ figcaption {
 }
 
 .content-list {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #edecec;
   padding-right: 1.5em;
   margin-right: -1.5em;
 }
@@ -578,6 +595,7 @@ figcaption {
 }
 .indv header {
   margin-bottom: 1.5em;
+  margin-top: 1em;
 }
 .indv header small {
   color: #999;
@@ -603,6 +621,9 @@ figcaption {
   .indv .content figure {
     margin: 2em 0;
   }
+  .indv .content figure:first-child {
+    margin-top: 0;
+  }
   .indv .content figure img {
     margin-left: -13%;
     width: 126%;
@@ -616,9 +637,22 @@ figcaption {
   .indv header {
     margin-bottom: 3.5em;
   }
+  .indv .content figure:first-child {
+    margin-top: 0;
+  }
   .indv .content figure img {
     margin-left: -33.5%;
     width: 133.5%;
+  }
+  .indv .content figure.left {
+    float: left;
+    width: 74%;
+    float: left;
+    margin: .25em 2em 2em -33.25%;
+  }
+  .indv .content figure.left img {
+    margin-left: 0;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -639,6 +673,17 @@ figcaption {
     top: 0;
     right: -35%;
     margin-top: 0;
+  }
+  .indv .content figure.left {
+    width: 100%;
+    margin-left: -54.5%;
+  }
+  .indv .content figure.left figcaption {
+    width: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 1.5em;
   }
 }
 .dribbble_gallery {
@@ -677,7 +722,34 @@ figcaption {
   font-size: .875em;
   color: #999;
 }
+.content aside p + a {
+  margin-top: 1.5em;
+  display: block;
+}
 
+@media screen and (min-width: 600px) {
+  .content aside {
+    -webkit-column-count: 2;
+  }
+  .content aside h3 {
+    font-size: 1.125em;
+  }
+}
+@media screen and (min-width: 900px) {
+  /*.content aside {
+    float: left;
+    margin-left: -33.5%;
+    width: 43%;
+    margin-right: 6%;
+  }*/
+}
+@media screen and (min-width: 1100px) {
+  .content aside {
+    -webkit-columns: auto;
+    margin-left: -54.5%;
+    width: 43%;
+  }
+}
 header[role="banner"] {
   padding-top: 2.5em;
   padding-bottom: 2em;
@@ -822,7 +894,7 @@ nav[role="navigation"] li a.current {
   }
   nav[role="navigation"] li a {
     color: #999;
-    border-left: 1px solid #e5e5e5;
+    border-left: 1px solid #edecec;
     padding: 6.5em 2.5em .5em 1em;
     border-top: none;
     font-size: .888888889em;
@@ -911,7 +983,7 @@ main {
   overflow: hidden;
 }
 #footer .inner {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #edecec;
   margin-right: -100%;
   padding: 2em 100% 1em 0;
 }
@@ -950,7 +1022,7 @@ main {
   float: left;
   font-size: 20px;
   font-weight: 300;
-  color: #e5e5e5;
+  color: #edecec;
   padding: 0 .25em;
 }
 .social-links a {

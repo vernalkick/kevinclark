@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -245,6 +246,20 @@ h3 {
   margin: 2.5em 0 1em;
 }
 
+h4 {
+  font-weight: 500;
+  margin: 4em 0 1.5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+h5 {
+  font-weight: 500;
+  margin: 0;
+  font-size: .875em;
+}
+
 p {
   color: #555;
   font-size: 1.0625em;
@@ -277,14 +292,21 @@ li p {
 }
 
 blockquote {
-  border-left: 3px solid #1990c6;
   margin: 1.5em 0;
-  margin-left: -1.5em;
-  padding-left: 1.325em;
-  box-sizing: border-box;
+  margin-left: 2em;
 }
 blockquote p {
   color: #777;
+  font-style: italic;
+}
+blockquote p:first-child {
+  text-indent: -0.4em;
+}
+blockquote p:first-child:before {
+  content: "“";
+}
+blockquote p:last-child:after {
+  content: "”";
 }
 
 code {
@@ -300,7 +322,7 @@ pre {
   padding-left: 100%;
   margin-right: -100%;
   padding-right: 100%;
-  background-color: rgba(70, 168, 0, 0.02);
+  background-color: #fafafa;
   line-height: 1.4em;
 }
 
@@ -363,7 +385,7 @@ hr {
 
   blockquote {
     margin-left: 0;
-    padding-left: 2em;
+    padding-left: 4em;
     padding-right: 2em;
     border-width: 2px;
   }
@@ -490,6 +512,8 @@ figcaption {
   font-size: 1.15em;
   font-weight: 500;
   margin: 0 0 .5em 0;
+  text-transform: none;
+  letter-spacing: normal;
 }
 .content-list p {
   color: #999;
@@ -721,6 +745,7 @@ figcaption {
 .content aside p {
   font-size: .875em;
   color: #999;
+  margin-bottom: 2.5em;
 }
 .content aside p + a {
   margin-top: 1.5em;
@@ -728,11 +753,8 @@ figcaption {
 }
 
 @media screen and (min-width: 600px) {
-  .content aside {
-    -webkit-column-count: 2;
-  }
-  .content aside h3 {
-    font-size: 1.125em;
+  .bleed-right img {
+    width: 157% !important;
   }
 }
 @media screen and (min-width: 900px) {
@@ -745,9 +767,17 @@ figcaption {
 }
 @media screen and (min-width: 1100px) {
   .content aside {
-    -webkit-columns: auto;
     margin-left: -54.5%;
-    width: 43%;
+    width: 35%;
+    float: left;
+  }
+
+  .bleed-right {
+    margin: 4em 0 !important;
+  }
+
+  .bleed-right img {
+    width: 205% !important;
   }
 }
 header[role="banner"] {
@@ -930,7 +960,7 @@ nav[role="navigation"] li a.current {
 }
 body {
   min-height: 100%;
-  border-top: 4px solid #1990c6;
+  border-left: 4px solid #1990c6;
   transition: -webkit-transform .3s ease-in-out;
 }
 

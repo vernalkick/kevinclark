@@ -30,6 +30,20 @@ h3 {
   margin: 2.5em 0 1em;
 }
 
+h4 {
+  font-weight: 500;
+  margin: 4em 0 1.5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+h5 {
+  font-weight: 500;
+  margin: 0;
+  font-size: .875em;
+}
+
 
 // Paragraphs
 
@@ -69,13 +83,20 @@ li {
 // Blockquote
 
 blockquote {
-  border-left: 3px solid $accent;
   margin: 1.5em 0;
-  margin-left: -1.5em;
-  padding-left: 1.325em;
-  box-sizing: border-box;
+  margin-left: 2em;
     p {
       color: #777;
+      font-style: italic;
+      &:first-child {
+        text-indent: -0.4em;
+      }
+      &:first-child:before {
+        content: "“";
+      }
+      &:last-child:after {
+        content: "”"
+      }
     }
 }
 
@@ -94,7 +115,7 @@ pre {
   padding-left: 100%;
   margin-right: -100%;
   padding-right: 100%;
-  background-color: rgba(#46A800, .02);
+  background-color: #fafafa;
   line-height: 1.4em;
 }
 
@@ -166,7 +187,7 @@ hr {
 
   blockquote {
     margin-left: 0;
-    padding-left: 2em;
+    padding-left: 4em;
     padding-right: 2em;
     border-width: 2px;
   }

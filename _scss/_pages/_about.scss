@@ -13,6 +13,7 @@
   p {
     font-size: .875em;
     color: #999;
+    margin-bottom: 2.5em;
 
       & + a {
         margin-top: 1.5em;
@@ -24,13 +25,8 @@
 }
 
 @include media-from(600px) {
-  .content aside {
-    -webkit-column-count: 2;
-    li {
-    }
-    h3 {
-      font-size: 1.125em;
-    }
+  .bleed-right img {
+    width: 157% !important;
   }
 }
 
@@ -41,14 +37,22 @@
     width: 43%;
     margin-right: 6%;
   }*/
+
 }
 
 @include media-from(1100px) {
 
   .content aside {
-    -webkit-columns: auto;
     margin-left: -54.5%;
-    width: 43%;
+    width: 35%;
+    float: left;
+  }
+
+  .bleed-right {
+    margin: 4em 0 !important;
+  }
+  .bleed-right img {
+    width: 205% !important;
   }
 
 }

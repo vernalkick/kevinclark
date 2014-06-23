@@ -375,7 +375,7 @@ hr {
   }
 
   p {
-    font-size: 1.125em;
+    font-size: 1.25em;
     line-height: 1.7em;
   }
 
@@ -388,6 +388,9 @@ hr {
     padding-left: 4em;
     padding-right: 2em;
     border-width: 2px;
+  }
+  blockquote p {
+    font-size: 1.125em;
   }
 
   hr {
@@ -627,7 +630,7 @@ figcaption {
   margin-bottom: .5em;
 }
 .indv .content figure img {
-  margin-left: -9%;
+  margin-left: -10%;
   width: 118%;
   max-width: none;
 }
@@ -966,6 +969,7 @@ body {
 
 .wrap {
   margin: 0 1.5em;
+  margin-left: 2em;
 }
 
 main {

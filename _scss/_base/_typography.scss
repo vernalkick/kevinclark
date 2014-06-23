@@ -175,7 +175,7 @@ hr {
   }
 
   p {
-    font-size: 1.125em;
+    font-size: 1.25em;
     line-height: 1.7em;
   }
 
@@ -190,6 +190,9 @@ hr {
     padding-left: 4em;
     padding-right: 2em;
     border-width: 2px;
+      p {
+        font-size: 1.125em;
+      }
   }
 
   hr {

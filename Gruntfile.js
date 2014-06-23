@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       jekyll: {
         dist: {
           options: {
-
+            dest: '/var/www/prod'
           }
         },
         dev: {

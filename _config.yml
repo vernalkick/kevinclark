@@ -1,6 +1,6 @@
 name: Kevin Clark
 markdown: kramdown
-pygments: true
+highlighter: pygments
 permalink: /articles/:title/
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 __default_layouts:

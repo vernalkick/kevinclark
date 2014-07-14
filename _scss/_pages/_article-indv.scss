@@ -2,18 +2,16 @@
 
   header {
     margin-bottom: 1.5em;
-    margin-top: 1em;
 
       small {
         color: #999;
         display: block;
-        margin-bottom: .5em;
       }
   }
 
   .content figure img {
     margin-left: -10%;
-    width: 118%;
+    width: 122%;
     max-width: none;
   }
 
@@ -33,7 +31,11 @@
   .indv {
 
     header {
+      margin-top: 1em;
       margin-bottom: 2.5em;
+        small {
+          margin-bottom: .5em;
+        }
     }
 
     .content figure {

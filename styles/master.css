@@ -622,16 +622,14 @@ figcaption {
 }
 .indv header {
   margin-bottom: 1.5em;
-  margin-top: 1em;
 }
 .indv header small {
   color: #999;
   display: block;
-  margin-bottom: .5em;
 }
 .indv .content figure img {
   margin-left: -10%;
-  width: 118%;
+  width: 122%;
   max-width: none;
 }
 .indv time {
@@ -643,7 +641,11 @@ figcaption {
 
 @media screen and (min-width: 600px) {
   .indv header {
+    margin-top: 1em;
     margin-bottom: 2.5em;
+  }
+  .indv header small {
+    margin-bottom: .5em;
   }
   .indv .content figure {
     margin: 2em 0;
@@ -963,13 +965,12 @@ nav[role="navigation"] li a.current {
 }
 body {
   min-height: 100%;
-  border-left: 4px solid #1990c6;
+  border-top: 4px solid #1990c6;
   transition: -webkit-transform .3s ease-in-out;
 }
 
 .wrap {
   margin: 0 1.5em;
-  margin-left: 2em;
 }
 
 main {

@@ -1,6 +1,11 @@
 {
   "name": "kevinclark",
   "version": "0.1.0",
+  "description": "The personal website of Kevin Clark",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vernalkick/kevinclark.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-sass": "~0.7.3",

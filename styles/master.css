@@ -327,7 +327,7 @@ pre {
 }
 
 hr {
-  width: 3em;
+  width: 5em;
   height: 2px;
   background-color: #edecec;
   margin: 2em 0;
@@ -337,11 +337,12 @@ hr {
 
 .footnotes:before {
   content: "";
-  display: none;
-  width: 4em;
+  width: 5em;
   height: 2px;
   background-color: #edecec;
-  margin-top: 2.5em;
+  margin: 2em 0;
+  display: block;
+  border: none;
 }
 .footnotes ol {
   margin: 2.5em  0 1.5em;
@@ -380,7 +381,7 @@ hr {
   }
 
   ol li, ul li {
-    font-size: 1.125em;
+    font-size: 1.25em;
   }
 
   blockquote {
@@ -394,7 +395,6 @@ hr {
   }
 
   hr {
-    width: 5em;
     margin: 3em 0;
   }
 
@@ -403,6 +403,10 @@ hr {
     padding-top: 2em;
     padding-bottom: 2em;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .footnotes:before {
+    margin: 3em 0;
   }
 }
 a {
@@ -460,6 +464,11 @@ figcaption {
   line-height: 1.4em;
 }
 
+@media screen and (max-width: 599px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+}
 #home .content-list.articles li:last-child {
   display: none;
 }
@@ -626,6 +635,7 @@ figcaption {
 .indv header small {
   color: #999;
   display: block;
+  font-size: .875em;
 }
 .indv .content figure img {
   margin-left: -10%;
@@ -645,7 +655,7 @@ figcaption {
     margin-bottom: 2.5em;
   }
   .indv header small {
-    margin-bottom: .5em;
+    margin-bottom: .25em;
   }
   .indv .content figure {
     margin: 2em 0;

@@ -140,7 +140,7 @@ hr {
     border: none;
   }
   ol {
-    margin: 2.5em  0 1.5em;
+    margin: 2.5em 0 1.5em;
     padding-left: 1.5em;
   }
   li {
@@ -206,6 +206,9 @@ hr {
   }
 
   .footnotes {
+    li {
+      font-size: 1em;
+    }
     &:before {
       margin: 3em 0;
     }

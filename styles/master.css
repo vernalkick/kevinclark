@@ -345,7 +345,7 @@ hr {
   border: none;
 }
 .footnotes ol {
-  margin: 2.5em  0 1.5em;
+  margin: 2.5em 0 1.5em;
   padding-left: 1.5em;
 }
 .footnotes li {
@@ -405,6 +405,9 @@ hr {
     -webkit-overflow-scrolling: touch;
   }
 
+  .footnotes li {
+    font-size: 1em;
+  }
   .footnotes:before {
     margin: 3em 0;
   }
@@ -651,11 +654,7 @@ figcaption {
 
 @media screen and (min-width: 600px) {
   .indv header {
-    margin-top: 1em;
     margin-bottom: 2.5em;
-  }
-  .indv header small {
-    margin-bottom: .25em;
   }
   .indv .content figure {
     margin: 2em 0;

@@ -709,13 +709,6 @@ figcaption {
     margin-left: -54.5%;
     width: 154.5%;
   }
-  .indv .content figure figcaption {
-    width: 30%;
-    position: absolute;
-    top: 0;
-    right: -35%;
-    margin-top: 0;
-  }
   .indv .content figure.left {
     width: 100%;
     margin-left: -50%;

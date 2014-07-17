@@ -240,10 +240,10 @@ h2 {
 }
 
 h3 {
-  font-size: 1.125em;
+  font-size: 1.25em;
   color: #333;
   font-weight: 500;
-  margin: 2.5em 0 1em;
+  margin: 1.5em 0 1.5em;
 }
 
 h4 {
@@ -514,11 +514,14 @@ figcaption {
 }
 .content-list li {
   font-size: .875em;
-  margin-top: 2em;
-  margin-bottom: 0;
+  margin: 3em 0;
+  margin-bottom: 2em;
 }
 .content-list li:first-child {
   margin: 0;
+}
+.content-list a {
+  display: block;
 }
 .content-list h3 {
   font-weight: normal;
@@ -532,6 +535,7 @@ figcaption {
 }
 .content-list p {
   color: #999;
+  margin: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -714,7 +718,7 @@ figcaption {
   }
   .indv .content figure.left {
     width: 100%;
-    margin-left: -54.5%;
+    margin-left: -50%;
   }
   .indv .content figure.left figcaption {
     width: auto;

@@ -1,4 +1,9 @@
 name: Kevin Clark
+url: http://kevinclark.ca
+description: "Pixels, shapes and words"
+author: Kevin Clark
+rss_path: /rss
+rss_name: index.xml
 markdown: kramdown
 highlighter: pygments
 permalink: /articles/:title/

@@ -5,7 +5,6 @@ author: Kevin Clark
 rss_path: /rss
 rss_name: index.xml
 markdown: kramdown
-highlighter: pygments
 permalink: /articles/:title/
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 __default_layouts:
@@ -17,3 +16,9 @@ dribbble_set:
   page: 1
 kramdown:
   input: GFM
+  use_coderay: true
+  coderay:
+      coderay_line_numbers:      nil
+      coderay_tab_width:         2
+      coderay_bold_every:        false
+      coderay_css:               class

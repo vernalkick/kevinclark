@@ -111,6 +111,8 @@ $placeholders: '-webkit-input-placeholder', '-moz-placeholder', '-ms-input-place
 
 // Media Queries
 
+$current-media-query: default;
+
 @mixin media-upto($end) {
   @media screen and (max-width: ($end - 1)) {
     @content;
@@ -124,9 +126,17 @@ $placeholders: '-webkit-input-placeholder', '-moz-placeholder', '-ms-input-place
 }
 
 @mixin media-from($start) {
-  @media screen and (min-width: $start) {
-    @content;
+  $current-media-query: $start !global;
+
+  @if $start == default {
+    @content
+  } @else {
+    @media all and (min-width: $start) {
+      @content;
+    }
   }
+
+  $current-media-query: default !global; // Reset the current media query when you're done with it.
 }
 
 @mixin vertical-media-upto($end) {

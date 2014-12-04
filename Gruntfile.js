@@ -13,8 +13,7 @@ module.exports = function(grunt) {
         },
         dev: {
           options: {
-            style: 'expanded',
-            sourcemap: true
+            style: 'expanded'
           },
           files: {
             'styles/master.css': '_scss/master.scss'

@@ -1,81 +1,62 @@
-#footer {
-  overflow: hidden;
-  .inner {
-    border-top: 1px solid $border-color;
-    margin-right: -100%;
-    padding: 2em 100% 1em 0;
-  }
-  p {
-    font-size: .8em;
-    color: #bababa;
-    br { display: none; }
-  }
-  a {
-    color: #bababa;
-  }
-  &:hover a {
-    color: $accent;
-  }
-}
+// VARIABLES
+// -----------------------------------------------------------------------------
 
-.social-links {
-  list-style-type: none;
-  margin: 1em 0 0 0;
-  padding: 0;
+$footer--padding: (default: 2em, 600px: 3em, 900px: 4em);
+
+
+
+// FOOTER
+// -----------------------------------------------------------------------------
+
+.footer {
+  background: #f6f6f6;
+  @include var(padding, $footer--padding 0);
   @include clearfix;
-    li {
-      float: left;
-      + li:before {
-        content: "/";
-        float: left;
-        font: { size: 20px; weight: 300; }
-        color: $border-color;
-        padding: 0 .25em;
-      }
-    }
-    a {
-      display: block;
-      width: 30px; height: 30px;
-      @include hide-text;
-      opacity: .15;
-    }
-    .twitter {
-      background: url('/assets/twitter.svg') no-repeat center 3px;
-    }
-    .dribbble {
-      background: url('/assets/dribbble.svg') no-repeat center 2px;
-    }
-}
 
-// 600px --------------------------------------------------
-
-@include media-from(600px) {
-
-  #footer {
-    .inner {
-      padding-bottom: 2em;
-    }
+  p {
+    font-size: .75em;
+    margin-bottom: 1em;
   }
 
+  p, p:not(:hover) a { color: #999; }
+
+  br { display: none; }
 }
 
-// 900px --------------------------------------------------
+
+// SOCIAL LINKS
+
+.social-link {
+  display: inline-block;
+  width: 20px; height: 20px;
+  opacity: .15;
+  background: no-repeat center center;
+  @include hide-text;
+
+  & + & { margin-left: .25em; }
+}
+
+// Apply the background image of each social network
+@each $network in twitter, dribbble {
+  .social-link--#{$network} {
+    background-image: url('/assets/#{$network}.svg');
+  }
+}
+
+
+// 900px - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @include media-from(900px) {
 
-  #footer {
-    .inner {
-      @include clearfix;
-      padding-bottom: 4em;
-    }
-    p {
-      float: left;
-        br { display: block; }
-    }
-    .social-links {
-      float: right;
-      margin-top: .5em;
-    }
+  .footer br { display: block; }
+
+  .footer p {
+    float: left;
+    margin: 0;
   }
 
+  .social-links {
+    float: right;
+    margin-top: .65em;
+  }
 }

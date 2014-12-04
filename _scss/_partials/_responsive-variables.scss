@@ -1,0 +1,102 @@
+
+// RESPONSIVE VARIABLES
+// -----------------------------------------------------------------------
+
+// Takes in a variable and checks if it contains only one variable or multiple
+@function is-multiple-vars($vars) {
+  @return if(type-of(nth($vars, 1)) == map, true, false);
+}
+
+// Do whatever you need with the responsive variable (loop through all breakpoints)
+@function extend-var($variable) {
+  $extended-variable: $variable;
+
+  @if type-of($variable) == map {
+    $media-query: value-that-fits(breakpoint-list($variable), $current-media-query);
+    $extended-variable: map-get($variable, $media-query);
+  }
+
+  @return $extended-variable;
+}
+
+// Find the closest value
+@function value-that-fits($list-of-values, $value-to-match) {
+  $value-that-fits: false;
+
+  @if index($list-of-values, $value-to-match) {
+    $value-that-fits: $value-to-match;
+  } @else {
+    @each $value in $list-of-values {
+      @if type-of($value) == number and $value < $value-to-match {
+        $value-that-fits: $value;
+      }
+    }
+  }
+
+  @return $value-that-fits;
+}
+
+// Take one or many variables, extend them and return them as a string
+@function extend($variable-param) {
+  $extended-variable: false;
+
+  @if is-multiple-vars($variable-param) {
+    $extended-variable: ();
+
+    @each $single-variable in $variable-param {
+      $extended-variable: append($extended-variable, extend-var($single-variable), space);
+    }
+  } @else {
+    $extended-variable: extend-var($variable-param);
+  }
+
+  @return $extended-variable;
+}
+
+// Output the desired declaration
+@mixin output-declaration($property, $variable) {
+  #{$property}: extend($variable);
+}
+
+// Output a list of unique values from a list
+@function unique-value-list($list) {
+  $unique-value-list: ();
+
+  @each $value in $list {
+    @if index($unique-value-list, $value) == null {
+      $unique-value-list: append($unique-value-list, $value);
+    }
+  }
+
+  @return nth($unique-value-list, 1);
+}
+
+// Output a list of breakpoints from a list of variables
+@function breakpoint-list($variables) {
+  $breakpoint-list: ();
+
+  @if is-multiple-vars($variables) {
+    $variable-breakpoint-list: ();
+
+    @each $variable in $variables {
+      @if type-of($variable) == map {
+        $variable-breakpoint-list: append($variable-breakpoint-list, map-keys($variable));
+      }
+    }
+
+    $breakpoint-list: unique-value-list($variable-breakpoint-list);
+  } @else {
+    $breakpoint-list: map-keys($variables);
+  }
+
+  @return $breakpoint-list;
+}
+
+// Use the extended variable with a defined property
+@mixin var($property, $variable) {
+  @each $breakpoint in breakpoint-list($variable) {
+    @include media-from($breakpoint) {
+      @include output-declaration($property, $variable);
+    }
+  }
+}

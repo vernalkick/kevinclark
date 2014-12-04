@@ -1,13 +1,12 @@
 ---
 layout: default
 ---
-<article class="indv">
-  <header>
-    {% if page.link %}<small><a href="{{ page.link }}">{{ page.link | domain_name }}</a></small>{% endif %}
+<article class="post">
+  <header class="post__header">
     <h1>{{ page.title | widont }}</h1>
+    <time datetime="{{ site.time | date_to_xmlschema }}" pubdate>{{ page.date | date: "%A, %-d %B %Y" }}</time>
   </header>
-  <div class="content">
+  <div class="post__content">
     {{ content }}
   </div>
-  <!-- <time datetime="{{ site.time | date_to_xmlschema }}" pubdate>&mdash; Published {{ page.date | timeago: 1 }}</time> -->
 </article>

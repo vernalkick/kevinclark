@@ -10,6 +10,16 @@ I normally just roll my eyes at any article about "the fold," but [this one caug
 
 As expected, almost everyone scrolled, no matter which design they were served. The trendy arrow pointing down did show a slight increase, but it's safe to say that it's not doing much for usability. As time goes on, it's going to be harder and harder for people to make the argument for shoving everything in a carousel before *the fold*. *Finally*.
 
+#### Update
+
+Luke Wroblewski shared a few other interesting data points backing this up.
+
+<blockquote class="twitter-tweet" lang="en"><p>There is no fold. [part 1] <a href="http://t.co/OlcR1tWy7l">pic.twitter.com/OlcR1tWy7l</a></p>&mdash; Luke Wroblewski (@lukew) <a href="https://twitter.com/lukew/status/541986091960528896">December 8, 2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p>There is no fold. [part 2] <a href="http://t.co/zdhLXJoHjb">pic.twitter.com/zdhLXJoHjb</a></p>&mdash; Luke Wroblewski (@lukew) <a href="https://twitter.com/lukew/status/541986175414575104">December 8, 2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p>There is no fold [part 3]. <a href="http://t.co/tlPBLAg1Cn">pic.twitter.com/tlPBLAg1Cn</a></p>&mdash; Luke Wroblewski (@lukew) <a href="https://twitter.com/lukew/status/541986443598393345">December 8, 2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 [^1]: It's not a particularly large test group, but we're not going after scientific results here.
 
 [article]: http://www.hugeinc.com/ideas/perspective/everybody-scrolls

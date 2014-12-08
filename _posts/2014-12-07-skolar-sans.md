@@ -1,0 +1,16 @@
+---
+title: Skolar Sans
+tags: Typography
+date: 2014-12-07 20:27:39 +05:00
+---
+
+{% image /assets/articles/skolar-sans/skolar-sans.jpg %}
+
+[Rosetta][rosetta] recently released [a *sans* version of the beautiful Skolar][skolar-sans]. It follows the proportions of its predecessor but with a more modern twist that you expect from sans serifs.
+
+It has lots of personality, it's packed with open type features and it's screen-optimized. I can't wait to use it on a project.
+
+[The font is currently 30% off, *a bargain*.][skolar-sans]
+
+[rosetta]: https://www.rosettatype.com
+[skolar-sans]: https://www.rosettatype.com/SkolarSans

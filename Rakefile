@@ -4,22 +4,6 @@ require 'date'
 
 task :default => :deploy
 
-desc "build the site with jekyll"
-task :build do
-  sh "jekyll build -s ./_source ./website"
-end
-
-desc "testing"
-task :test do
-  sh "git push origin master"
-  sh "git push prod master"
-end
-
-desc "clean"
-task :clean do
-  rm_rf 'website/*'
-end
-
 desc "add changes to git repo"
 task :add do
   sh "git add ."
@@ -32,12 +16,12 @@ end
 
 desc "push to git repo"
 task :push do
-  # ensure_committed
   sh "git push origin master"
+  sh "git push prod master"
 end
 
-desc "build site, upload to NearlyFreeSpeech, then deploy to github"
-task :deploy => [ :add, :build, :upload, :sitemap, :ping, :push ] do
+desc "add files, push live"
+task :deploy => [ :add, :push ] do
   sh "working..."
 end
 
@@ -65,11 +49,6 @@ task :linked do
   file = File.join(File.dirname(__FILE__), '_posts', slug + '.md')
   create_link_post(file, title, link)
   open_in_editor(file)
-end
-
-desc 'List all draft posts'
-task :drafts do
-  puts `find ./_source/_posts -type f -exec grep -H 'published: false' {} \\;`
 end
 
 # Helper method for :draft and :post, that required a TITLE environment
@@ -105,6 +84,7 @@ def create_blank_post(path, title)
     ---
     title: #{title}
     tags:
+    date: #{DateTime.now.strftime("%Y-%m-%d %H:%M:%S %:z")}
     ---
 
     EOS
@@ -123,6 +103,7 @@ def create_link_post(path, title, link)
     title: #{title}
     link: #{link}
     tags:
+    date: #{DateTime.now.strftime("%Y-%m-%d %H:%M:%S %:z")}
     ---
 
     EOS
@@ -132,5 +113,4 @@ end
 # Helper method to open a file in the default text editor.
 def open_in_editor(file)
   system ("open -a 'Sublime Text' #{file}")
-  #sh "subl #{file}"
 end

@@ -9,6 +9,12 @@ task :build do
   sh "jekyll build -s ./_source ./website"
 end
 
+desc "testing"
+task :test do
+  sh "git push origin master"
+  sh "git push prod master"
+end
+
 desc "clean"
 task :clean do
   rm_rf 'website/*'

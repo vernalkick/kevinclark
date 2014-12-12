@@ -14,4 +14,6 @@
     return false;
   });
 
+  $(".post__content").fitVids();
+
 }).call(this);

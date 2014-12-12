@@ -64,20 +64,25 @@ $post-header__margin: (default: 1.5em, 600px: 2.5em, 900px: 3.5em);
 // POST CONTENT
 // -----------------------------------------------------------------------------
 
-.post__content img {
-  margin-left: -10%;
-  max-width: none;
-  width: 122%;
+.post__content {
+  img, .fluid-width-video-wrapper {
+    margin-left: -10%;
+    max-width: none;
+    width: 122%;
+  }
 }
+
 
 
 // 600px -----------------------------------------------------------------------
 
 @include media-from(600px) {
 
-  .post__content img {
-    width: 113%;
-    margin-left: 0;
+  .post__content {
+    img, .fluid-width-video-wrapper {
+      width: 113%;
+      margin-left: 0;
+    }
   }
 
 }
@@ -86,14 +91,19 @@ $post-header__margin: (default: 1.5em, 600px: 2.5em, 900px: 3.5em);
 // 900px -----------------------------------------------------------------------
 
 @include media-from(900px) {
-  .post__content img { width: 133.5%; }
+  .post__content {
+    img, .fluid-width-video-wrapper { width: 133.5%; }
+  }
+
 }
 
 
 // 1000px ----------------------------------------------------------------------
 
 @include media-from(1100px) {
-  .post__content img { width: 125%; }
+  .post__content {
+    img, .fluid-width-video-wrapper { width: 125%; }
+  }
 }
 
 

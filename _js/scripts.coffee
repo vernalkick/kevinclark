@@ -14,6 +14,7 @@ nav_toggles.click ->
     body.addClass("nav-visible")
   return false
 
+$(".post__content").fitVids()
 
 # Typer
 

@@ -1110,25 +1110,25 @@ ol.CodeRay li {
     margin-top: 1.35em;
   }
 }
-.post__content img {
+.post__content img, .post__content .fluid-width-video-wrapper {
   margin-left: -10%;
   max-width: none;
   width: 122%;
 }
 
 @media all and (min-width: 600px) {
-  .post__content img {
+  .post__content img, .post__content .fluid-width-video-wrapper {
     width: 113%;
     margin-left: 0;
   }
 }
 @media all and (min-width: 900px) {
-  .post__content img {
+  .post__content img, .post__content .fluid-width-video-wrapper {
     width: 133.5%;
   }
 }
 @media all and (min-width: 1100px) {
-  .post__content img {
+  .post__content img, .post__content .fluid-width-video-wrapper {
     width: 125%;
   }
 }

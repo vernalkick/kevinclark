@@ -483,6 +483,18 @@ figcaption {
   line-height: 1.4em;
 }
 
+.fluid-width-video-wrapper {
+  padding-top: 56.25%;
+  position: relative;
+}
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 599px) {
   .hidden-on-mobile {
     display: none;

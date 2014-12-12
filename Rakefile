@@ -14,6 +14,43 @@ task :add do
   sh "git commit -m '#{message}'"
 end
 
+task :test do
+  fileContent = ''
+  path = ENV['path']
+
+  File.open(path, "r") do |f|
+    f.each_line do |line|
+      fileContent += line
+    end
+  end
+
+  charLimit = 140
+  urlLength = 22
+
+  title = fileContent[/title: (.*)/, 1]
+  image = fileContent[/(http:\/\/.*\.(jpg|gif|png))/, 1]
+  slug = path[/\d{4}-\d{2}-\d{2}-(.*)\./, 1]
+  url = "http://kevinclark.ca/articles/#{slug}/"
+
+  availableLength = charLimit - urlLength
+
+  #truncatedTitle = title.truncate(availableLength + 1)
+
+  if image && title.length < availableLength - urlLength
+    puts "#{title} #{url} #{image}"
+  elsif title.length < availableLength
+    puts "#{title} #{url}"
+  else
+    puts "#{truncate(title, availableLength)} #{url}"
+  end
+end
+
+def truncate(string, length)
+  # length = length - 1
+  # return string unless string.length > length
+  string[0...length - 1].rstrip + "…"
+end
+
 desc "push to git repo"
 task :push do
   sh "git push origin master"

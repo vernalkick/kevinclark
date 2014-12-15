@@ -92,15 +92,21 @@ blockquote {
   margin: 1.5em 0;
   margin-left: 2em;
 
-    p {
-      color: #777;
-      font-style: italic;
-      font-size: .875em;
+  p {
+    color: #777;
+    font-style: italic;
+    font-size: .875em;
 
-      &:first-child { text-indent: -0.4em; }
-      &:first-child:before {content: "“"; }
-      &:last-child:after {content: "”" }
-    }
+    &:first-child { text-indent: -0.4em; }
+    &:first-child:before {content: "“"; }
+    &:last-child:after {content: "”" }
+  }
+
+  li {
+    color: #777;
+    font-style: italic;
+    font-size: .875em;
+  }
 }
 
 // Code
@@ -202,7 +208,7 @@ hr {
     padding-left: 4em;
     padding-right: 2em;
     border-width: 2px;
-      p {
+      p, li {
         font-size: 1.125em;
       }
   }

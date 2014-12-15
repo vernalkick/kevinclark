@@ -315,6 +315,11 @@ blockquote p:first-child:before {
 blockquote p:last-child:after {
   content: "”";
 }
+blockquote li {
+  color: #777;
+  font-style: italic;
+  font-size: .875em;
+}
 
 code {
   font-family: Menlo, Monaco, Andale Mono, Courier New, monospace;
@@ -406,7 +411,7 @@ hr {
     padding-right: 2em;
     border-width: 2px;
   }
-  blockquote p {
+  blockquote p, blockquote li {
     font-size: 1.125em;
   }
 

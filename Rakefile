@@ -1,8 +1,33 @@
 require 'date'
-
-# Adapted from # https://github.com/jberkel/zegoggl.es/blob/master/Rakefile
+require 'filewatcher'
 
 task :default => :deploy
+
+task :generate do
+  puts "## Generating site with Jekyll"
+  sh "jekyll build"
+  sh "sass --style compressed assets/stylesheets/master.scss:_site/assets/stylesheets/master.css"
+  sh "coffee --compile --output _site/assets/javascripts/ assets/javascripts/"
+  sh "find _site -name '*.scss' -delete"
+  sh "find _site -name '*.coffee' -delete"
+end
+
+task :watch do
+
+  jekyll = Process.spawn("jekyll serve")
+  filewatch = Process.spawn("filewatcher _site 'sass --style compressed assets/stylesheets/master.scss:_site/assets/stylesheets/master.css'")
+  sass = Process.spawn("sass --watch assets/stylesheets/master.scss:_site/assets/stylesheets/master.css")
+  coffee = Process.spawn("coffee --watch --compile --output _site/assets/javascripts/ assets/javascripts/")
+
+  processes = [jekyll, sass, coffee, filewatch]
+
+  trap("INT") {
+    processes.each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+
+  processes.each { |pid| Process.wait(pid) }
+end
 
 desc "add changes to git repo"
 task :add do

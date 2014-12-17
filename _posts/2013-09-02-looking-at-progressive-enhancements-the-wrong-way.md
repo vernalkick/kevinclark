@@ -6,7 +6,7 @@ categories: Development Opinion
 ---
 
 <figure>
-	<img src="/assets/articles/looking-at-progressive-enhancements-the-wrong-way/browsers.jpg" alt="">
+	<img src="/assets/images/articles/looking-at-progressive-enhancements-the-wrong-way/browsers.jpg" alt="">
 	<figcaption>A few websites that don't work at all with Javascript disabled. From left to right: <a href="http://basecamp.com">Basecamp</a>, <a href="http://newcorsa.co.uk/">Corsa Colours</a>, <a href="http://www.mcdonalds.co.uk/ukhome/promotions/favourites.html">McDonnalds</a>, <a href="http://www.toolofna.com/">Tool</a>, <a href="http://www.squarespace.com/">Squarespace</a>.</figcaption>
 </figure>
 

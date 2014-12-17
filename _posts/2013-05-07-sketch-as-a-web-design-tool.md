@@ -5,7 +5,7 @@ categories: 'Workflow'
 ---
 
 <figure>
-	<img src="/assets/articles/sketch/sketch.jpg" alt="Sketch">
+	<img src="/assets/images/articles/sketch/sketch.jpg" alt="Sketch">
 	<figcaption>How could you not like an app with an icon this gorgeous?</figcaption>
 </figure>
 

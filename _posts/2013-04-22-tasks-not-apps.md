@@ -4,7 +4,7 @@ status: live
 categories: Technology
 ---
 
-{% image /assets/articles/tasks-not-apps/chatheads.jpg "Facebook’s ChatHeads in action." %}
+{% image /assets/images/articles/tasks-not-apps/chatheads.jpg "Facebook’s ChatHeads in action." %}
 
 We've arrived at a point with iOS where we're wondering... what's next? All the low hanging fruits seem to have been adressed and we're starting to wonder how we can evolve the current mobile operating systems to a whole new level. Where should iOS go *next*?
 

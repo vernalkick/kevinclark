@@ -4,7 +4,7 @@ tags: Typography
 date: 2014-12-07 20:27:39 +05:00
 ---
 
-{% image /assets/articles/skolar-sans/skolar-sans.jpg %}
+{% image /assets/images/articles/skolar-sans/skolar-sans.jpg %}
 
 [Rosetta][rosetta] recently released [a *sans* version of the beautiful Skolar][skolar-sans]. It follows the proportions of its predecessor but with a more modern twist that you expect from sans serifs.
 

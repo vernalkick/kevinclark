@@ -12,6 +12,11 @@ task :generate do
   sh "find _site -name '*.coffee' -delete"
 end
 
+task :generatetest do
+  puts "## Generating site with Jekyll"
+  sh "jekyll serve"
+end
+
 task :watch do
 
   jekyll = Process.spawn("jekyll serve")

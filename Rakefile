@@ -1,20 +1,32 @@
 require 'date'
 require 'filewatcher'
+require 'listen'
 
 task :default => :deploy
 
 task :generate do
-  puts "## Generating site with Jekyll"
-  sh "jekyll build"
-  sh "sass --style compressed assets/stylesheets/master.scss:_site/assets/stylesheets/master.css"
-  sh "coffee --compile --output _site/assets/javascripts/ assets/javascripts/"
-  sh "find _site -name '*.scss' -delete"
-  sh "find _site -name '*.coffee' -delete"
+  generate
 end
 
 task :generatetest do
-  puts "## Generating site with Jekyll"
-  sh "jekyll serve"
+  generate
+
+  listener = Listen.to('.', ignore: [%r{_site}]) do |modified, added, removed|
+    generate
+  end
+
+  listener.start
+
+  trap("INT") do
+    Thread.new {
+      listener.stop
+      puts "     Halting auto-regeneration."
+      exit 0
+    }.join
+  end
+
+  sleep
+
 end
 
 task :watch do
@@ -73,6 +85,15 @@ task :test do
   else
     puts "#{truncate(title, availableLength)} #{url}"
   end
+end
+
+def generate
+  puts "## Generating site with Jekyll"
+  sh "jekyll build"
+  sh "sass --style compressed assets/stylesheets/master.scss:_site/assets/stylesheets/master.css"
+  sh "coffee --compile --output _site/assets/javascripts/ assets/javascripts/"
+  sh "find _site -name '*.scss' -delete"
+  sh "find _site -name '*.coffee' -delete"
 end
 
 def truncate(string, length)

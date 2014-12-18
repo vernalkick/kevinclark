@@ -1,6 +1,3 @@
----
-# Coffescript file
----
 
 # Variables
 

@@ -22,5 +22,5 @@ kramdown:
   coderay:
       coderay_line_numbers:      nil
       coderay_tab_width:         2
-      coderay_bold_every:        false
+      coderay_bold_every:        0
       coderay_css:               class

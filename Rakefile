@@ -1,5 +1,4 @@
 require 'date'
-require 'filewatcher'
 require 'listen'
 
 task :default => :deploy
@@ -8,7 +7,7 @@ task :generate do
   generate
 end
 
-task :generatetest do
+task :watch do
   generate
 
   listener = Listen.to('.', ignore: [%r{_site}]) do |modified, added, removed|
@@ -20,7 +19,6 @@ task :generatetest do
   trap("INT") do
     Thread.new {
       listener.stop
-      puts "     Halting auto-regeneration."
       exit 0
     }.join
   end
@@ -29,22 +27,6 @@ task :generatetest do
 
 end
 
-task :watch do
-
-  jekyll = Process.spawn("jekyll serve")
-  filewatch = Process.spawn("filewatcher _site 'sass --style compressed assets/stylesheets/master.scss:_site/assets/stylesheets/master.css'")
-  sass = Process.spawn("sass --watch assets/stylesheets/master.scss:_site/assets/stylesheets/master.css")
-  coffee = Process.spawn("coffee --watch --compile --output _site/assets/javascripts/ assets/javascripts/")
-
-  processes = [jekyll, sass, coffee, filewatch]
-
-  trap("INT") {
-    processes.each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    exit 0
-  }
-
-  processes.each { |pid| Process.wait(pid) }
-end
 
 desc "add changes to git repo"
 task :add do
@@ -94,6 +76,7 @@ def generate
   sh "coffee --compile --output _site/assets/javascripts/ assets/javascripts/"
   sh "find _site -name '*.scss' -delete"
   sh "find _site -name '*.coffee' -delete"
+  sh "find _site -name '*.map' -delete"
 end
 
 def truncate(string, length)

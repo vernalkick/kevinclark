@@ -1,8 +1,32 @@
 require 'date'
-
-# Adapted from # https://github.com/jberkel/zegoggl.es/blob/master/Rakefile
+require 'listen'
 
 task :default => :deploy
+
+task :generate do
+  generate
+end
+
+task :watch do
+  generate
+
+  listener = Listen.to('.', ignore: [%r{_site}]) do |modified, added, removed|
+    generate
+  end
+
+  listener.start
+
+  trap("INT") do
+    Thread.new {
+      listener.stop
+      exit 0
+    }.join
+  end
+
+  sleep
+
+end
+
 
 desc "add changes to git repo"
 task :add do
@@ -43,6 +67,16 @@ task :test do
   else
     puts "#{truncate(title, availableLength)} #{url}"
   end
+end
+
+def generate
+  puts "## Generating site with Jekyll"
+  sh "jekyll build"
+  sh "sass --style compressed assets/stylesheets/master.scss:_site/assets/stylesheets/master.css"
+  sh "coffee --compile --output _site/assets/javascripts/ assets/javascripts/"
+  sh "find _site -name '*.scss' -delete"
+  sh "find _site -name '*.coffee' -delete"
+  sh "find _site -name '*.map' -delete"
 end
 
 def truncate(string, length)

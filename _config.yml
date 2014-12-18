@@ -6,6 +6,8 @@ rss_path: /rss
 rss_name: index.xml
 markdown: kramdown
 permalink: /articles/:title/
+sass:
+  sass_dir: assets/stylesheets
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 __default_layouts:
   default: default      # everything that doesn't have another default specified
@@ -20,5 +22,5 @@ kramdown:
   coderay:
       coderay_line_numbers:      nil
       coderay_tab_width:         2
-      coderay_bold_every:        false
+      coderay_bold_every:        0
       coderay_css:               class

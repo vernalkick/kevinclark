@@ -5,7 +5,7 @@ categories: Writing
 ---
 
 <figure>
-	<img src="/assets/articles/the-idea-file/the-idea-file.jpg" alt="">
+	<img src="/assets/images/articles/the-idea-file/the-idea-file.jpg" alt="">
 </figure>
 
 I've been slowly trying to get back to writing after a hectic past couple of weeks, and getting back in the groove hasn't been as easy as I thought.

@@ -6,7 +6,7 @@ categories:
 ---
 
 <figure>
-	<img src="/assets/articles/responsive-layouts/layouts.png" alt="">
+	<img src="/assets/images/articles/responsive-layouts/layouts.png" alt="">
 </figure>
 
 [Responsive Web Design][responsive-book] is what everybody’s talking about now. It arrived like a revelation at a time when designers didn’t know what to make of the slew of new devices gaining traction in the market. When I first read [Ethan’s article][responsive-article], everything made so much sense. The way we did things previously was definitely a hack and looking back, it just felt silly. So, we’ve pretty much all embraced the multi-device reality and changed our whole process to create websites that adapt to the device they're viewed on.

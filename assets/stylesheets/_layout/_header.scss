@@ -5,7 +5,7 @@ header[role="banner"] {
 }
 
 .logo {
-  background: url("/assets/logo.svg") no-repeat top center;
+  background: url("/assets/images/logo.svg") no-repeat top center;
   width: 138px;
   height: 30px;
   display: block;
@@ -52,7 +52,7 @@ nav[role="navigation"] {
 }
 
 .open-nav {
-  background: url("/assets/menu.svg") no-repeat center center;
+  background: url("/assets/images/menu.svg") no-repeat center center;
   width: 25px; height: 29px;
   @include hide-text;
   display: block;
@@ -60,7 +60,7 @@ nav[role="navigation"] {
 }
 
 .close-nav {
-  background: url("/assets/close.svg") no-repeat top center;
+  background: url("/assets/images/close.svg") no-repeat top center;
   width: 19px; height: 19px;
   @include hide-text;
   display: block;

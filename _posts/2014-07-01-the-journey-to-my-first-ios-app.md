@@ -3,7 +3,7 @@ title: The Journey to my First iOS App
 tags: Objective-C Development iOS
 ---
 
-{% image /assets/articles/the-journey-to-my-first-ios-app/tipsy.jpg %}
+{% image /assets/images/articles/the-journey-to-my-first-ios-app/tipsy.jpg %}
 
 I work on the web day in, day out. I know the medium very well: its capabilities, its limitations, its opportunities and for a long time, mobile app design, didn't sit right with me. The shadows, the textures, the principles just wasn't my style. But that was before iOS 7. Say what you want about it, iOS 7  brought mobile app design much closer to what everyone else was doing on the web — including myself. Suddenly, designing for iOS became a lot more interesting for me.
 

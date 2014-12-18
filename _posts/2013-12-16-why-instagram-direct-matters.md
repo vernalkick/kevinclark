@@ -5,7 +5,7 @@ category: Technology
 ---
 
 <!-- <figure>
-  <img src="/assets/articles/instagram-direct/instagram-direct.jpg" />
+  <img src="/assets/images/articles/instagram-direct/instagram-direct.jpg" />
     <figcaption>The <a href="https://itunes.apple.com/fr/app/instagram/id389801252?mt=8">app has been updated</a> with the new feature during the announcement.</figcaption>
 </figure> -->
 
@@ -17,7 +17,7 @@ It is undoubtedly a response to the huge success of Snapchat (which kind of remi
 >
 > It’s not about photography necessarily. If we were about photography we’d be built into cameras, but we’re not built in to cameras, we’re built into phones.
 
-{% image left /assets/articles/instagram-direct/instagram-direct.jpg %}
+{% image left /assets/images/articles/instagram-direct/instagram-direct.jpg %}
 
 I’ve seen myself times and times again, refraining from posting an image on [Instagram][1] because it wasn’t visually interesting enough or because the lighting wasn’t perfect. I think [Instagram][1] became a victim of the incredible pace at which camera technology in smartphones improves year over year. They imagined a future where cameras became phones, not phones becoming cameras and I feel like they were genuinely surprised by how people used their app to make art.
 

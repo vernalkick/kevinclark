@@ -1,0 +1,24 @@
+---
+title: Articles
+description: >
+  There’s just something about writing ideas down that make you think differently. Communicating ideas effectively is also a big part of design. I need to get better at this, but here are a couple of things I’ve been thinking about lately.
+layout: list
+---
+
+<section class="content-list articles">
+  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+  <div class="group">
+    <h3><%= year %></h3>
+    <ul>
+      <% articles.each do |article| %>
+        <li>
+          <a href="<%= article.url %>">
+            <h4><%= article.title %></h4>
+            <p><%= article.summary %></p>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+</section>

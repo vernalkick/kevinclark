@@ -1,0 +1,62 @@
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+$footer--padding: (default: 2em, 600px: 3em, 900px: 4em);
+
+
+
+// FOOTER
+// -----------------------------------------------------------------------------
+
+.footer {
+  background: #f6f6f6;
+  @include var(padding, $footer--padding 0);
+  @include clearfix;
+
+  p {
+    font-size: .75em;
+    margin-bottom: 1em;
+  }
+
+  p, p:not(:hover) a { color: #999; }
+
+  br { display: none; }
+}
+
+
+// SOCIAL LINKS
+
+.social-link {
+  display: inline-block;
+  width: 20px; height: 20px;
+  opacity: .15;
+  background: no-repeat center center;
+  @include hide-text;
+
+  & + & { margin-left: .25em; }
+}
+
+// Apply the background image of each social network
+@each $network in twitter, dribbble {
+  .social-link--#{$network} {
+    background-image: image-url('#{$network}.svg');
+  }
+}
+
+
+// 900px - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@include media-from(900px) {
+
+  .footer br { display: block; }
+
+  .footer p {
+    float: left;
+    margin: 0;
+  }
+
+  .social-links {
+    float: right;
+    margin-top: .65em;
+  }
+}

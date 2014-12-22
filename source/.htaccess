@@ -1,1 +1,2 @@
 Redirect 301 /rss/index.xml /feed.xml
+Redirect 301 /rss /feed.xml

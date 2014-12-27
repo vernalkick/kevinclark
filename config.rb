@@ -27,6 +27,8 @@ set :markdown, :smartypants => true
 page "/feed.xml", layout: false
 page "/webhook.rb", layout: false
 
+Time.zone = "America/Montreal"
+
 
 # Helpers
 # ------------------------------------------------------------------------------

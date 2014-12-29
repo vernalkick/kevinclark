@@ -1,10 +1,10 @@
 [
   <% blog.articles.each do |article| %>
     {
-      "title": "<%= article.title %>",
+      "title": <%= article.title.to_json %>,
       "date": "<%= article.date %>",
-      "published": false,
-      "content": <%= article.body %>
+      "published": <%= article.data.published || "false" %>,
+      "content": <%= article.summary.to_json %>
     }<%= "," unless article == blog.articles.last %>
   <% end %>
 ]

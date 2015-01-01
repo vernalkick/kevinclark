@@ -46,7 +46,7 @@ helpers do
     }
 
     if url =~ types[:image]
-      content = "<img src='#{url}' alt='#{escape_html(caption) || 'Post image'}' />"
+      content = "<img src='#{url}' alt='#{escape_html(caption) || "Post image"}' />"
     elsif url =~ types[:video]
       content =  "<div class='fluid-width-video-wrapper'>"
       content += "<iframe src='//www.youtube.com/embed/#{$1}' allowfullscreen></iframe>"

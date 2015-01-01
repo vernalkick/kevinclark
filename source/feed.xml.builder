@@ -2,7 +2,7 @@ xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   site_url = "http://kevinclark.ca/"
   xml.title "Kevin Clark"
-  xml.subtitle " I’m a Product Designer at Shopify, run the Montreal Dribbble meetups and make apps in my spare time. I live and work in the beautiful city of Montreal."
+  xml.subtitle "I’m a Product Designer at Shopify, run the Montreal Dribbble meetups and make apps in my spare time. I live and work in the beautiful city of Montreal."
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, current_page.path), "rel" => "self"

@@ -15,3 +15,13 @@ Well, that's exactly what I ended up doing. So here's the full workflow.
 The iOS app uses Github's content API, which gives you a fairly easy way of reading and updating files from any Github repository.
 
 I wrote the app completely in Swift (of course) in about three days. There's still a bunch of things I want to improve, but I got pretty far. It allows me to post new articles, edit existing ones, preview drafts and has markdown syntax highlighting.
+
+## Webhooks
+
+At this point I was able to edit the repository from the app, but I needed a way to tell the server to pull the the repo and build the site. The "easiest" solution was to use Webhooks. I ended up putting a tiny PHP file on my server that deploys the site when it's pinged. I spent way too much time understanding how this all works together. If you're planning on doing something similar, check out this great article by [NAME](), it helped me out a lot.
+
+---
+
+I'm still not fully done, but I think it's safe to say that my Christmas vacation project was a success! I'm super happy with the results and it'll hopefully help me write more on my site.
+
+I'm going to try to open source what I can from it, even though it's really reliant on a particular setup. Let me know if that's something you'd find helpful.

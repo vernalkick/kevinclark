@@ -6,10 +6,10 @@ activate :blog do |blog|
   blog.sources = "articles/{year}-{month}-{day}-{title}.html"
   blog.layout = "article"
   blog.default_extension = ".md.erb"
-  blog.summary_generator = Proc.new do |n|
-    rendered = n.render layout: false, keep_separator: true
+  blog.summary_length = 30
+  blog.summary_generator = Proc.new do |resource, rendered, length, ellipsis|
     rendered = rendered.gsub(%r{</?[^>]+?>}, '')
-    rendered = truncate_words(rendered, length: 30)
+    rendered = truncate_words(rendered, length: length)
     rendered
   end
 end
@@ -25,7 +25,6 @@ activate :directory_indexes
 set :markdown, :smartypants => true
 
 page "/feed.xml", layout: false
-page "/webhook.rb", layout: false
 
 Time.zone = "America/New_York"
 
@@ -36,7 +35,6 @@ Time.zone = "America/New_York"
 helpers do
   def navigation_link(link_title, link_path)
     page_path = '/' + current_page.destination_path.gsub(/(index\.html|\/.*)/, '')
-    current_path = true if current_path == page_path
 
     "<a href='#{link_path}' #{"class='current'" if link_path == page_path}>#{link_title}</a>"
   end

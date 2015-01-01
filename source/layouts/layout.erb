@@ -7,7 +7,12 @@
 
     <!-- SEO magic -->
     <title><%= "#{current_page.data.title} — " if current_page.data.title %>Kevin Clark</title>
-    <meta name="description" content="My description">
+    <meta name="description" content="Kevin Clark is a product designer living in Montreal.">
+    <meta name="author" content="Kevin Clark">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon.png">
 
     <!-- Mobile optimizations -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +22,9 @@
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+    <!-- Additional content -->
+    <%= yield_content :head %>
   </head>
 
   <body>

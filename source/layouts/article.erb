@@ -1,3 +1,10 @@
+<% content_for :head do %>
+  <meta name="twitter:site" content="@vernalkick">
+  <meta name="twitter:creator" content="@vernalkick">
+  <meta name="twitter:title" content="<%= current_page.data.title %>">
+  <meta name="twitter:description" content="<%= current_page.summary %>">
+<% end %>
+
 <% wrap_layout :layout do %>
   <article class="post">
     <header class="post__header">

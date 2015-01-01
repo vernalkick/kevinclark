@@ -23,8 +23,12 @@
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
-    <!-- Additional content -->
-    <%= yield_content :head %>
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@vernalkick">
+    <meta name="twitter:creator" content="@vernalkick">
+    <meta name="twitter:title" content="<%= is_blog_article? ? current_page.data.title : 'Kevin Clark' %>">
+    <meta name="twitter:description" content="<%= is_blog_article? ? current_page.summary : 'I’m a Product Designer at Shopify, run the Montreal Dribbble meetups and make apps in my spare time. I live and work in the beautiful city of Montreal.' %>">
   </head>
 
   <body>

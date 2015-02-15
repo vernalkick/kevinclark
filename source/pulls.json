@@ -2,5 +2,9 @@
   {
     "version": "0",
     "link": "http://google.ca"
+  },
+  {
+    "version": "0.5",
+    "link": "http://newversion.com"
   }
 ]

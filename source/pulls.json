@@ -6,5 +6,9 @@
   {
     "version": "0.5",
     "link": "http://newversion.com"
+  },
+  {
+    "version": "1.2",
+    "link": "http://anothertest.com"
   }
 ]

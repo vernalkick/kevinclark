@@ -1,13 +1,15 @@
 <% wrap_layout :layout do %>
-  <article class="post">
-    <header class="post__header">
-      <h1><%= current_page.data.title %></h1>
-      <% if current_page.data.date %>
-        <time datetime="<%= current_page.date %>" pubdate><%= current_page.date.strftime("%A, %-d %B %Y") %></time>
-      <% end %>
-    </header>
-    <div class="post__content">
-      <%= yield %>
-    </div>
-  </article>
+  <div class="wrap">
+    <article class="post">
+      <header class="post__header">
+        <h1><%= current_page.data.title %></h1>
+        <% if current_page.data.date %>
+          <time datetime="<%= current_page.date %>" pubdate><%= current_page.date.strftime("%A, %-d %B %Y") %></time>
+        <% end %>
+      </header>
+      <div class="post__content">
+        <%= yield %>
+      </div>
+    </article>
+  </div>
 <% end %>

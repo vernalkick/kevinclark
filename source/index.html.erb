@@ -1,23 +1,25 @@
 <div id="home">
-  <header class="list-page-header">
-    <small>Hello!</small>
-    <h1>My name is Kevin Clark. I’m a Product Designer at Shopify<span class="hidden-on-mobile">, run the Montreal Dribbble meetups and make apps in my spare time. I live and work in the beautiful city of Montreal</span>.</h1>
-    <a href="http://twitter.com/vernalkick">Follow me on Twitter</a>
-  </header>
+  <div class="wrap">
+    <header class="list-page-header">
+      <small>Hello!</small>
+      <h1>My name is Kevin Clark. I’m a Product Designer at Shopify<span class="hidden-on-mobile">, run the Montreal Dribbble meetups and make apps in my spare time. I live and work in the beautiful city of Montreal</span>.</h1>
+      <a href="http://twitter.com/vernalkick">Follow me on Twitter</a>
+    </header>
 
-  <section class="content-list articles">
-    <div class="group">
-      <h3>Recent articles</h3>
-      <ul>
-        <% blog.articles[0..3].each do |article| %>
-          <li>
-            <a href="<%= article.url %>">
-              <h4><%= article.title %></h4>
-              <p><%= article.summary %></p>
-            </a>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </section>
+    <section class="content-list articles">
+      <div class="group">
+        <h3>Recent articles</h3>
+        <ul>
+          <% blog.articles[0..3].each do |article| %>
+            <li>
+              <a href="<%= article.url %>">
+                <h4><%= article.title %></h4>
+                <p><%= article.summary %></p>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </section>
+  </div>
 </div>

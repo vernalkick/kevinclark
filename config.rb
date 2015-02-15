@@ -25,6 +25,7 @@ activate :directory_indexes
 set :markdown, :smartypants => true
 
 page "/feed.xml", layout: false
+page "/portfolio/*", layout: "project"
 
 Time.zone = "America/New_York"
 

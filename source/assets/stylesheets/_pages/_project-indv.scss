@@ -1,0 +1,82 @@
+// =============================================================================
+// PROJECT PAGE
+// =============================================================================
+
+
+// HEADER
+// -----------------------------------------------------------------------------
+
+.project-header {
+  margin-bottom: 2em;
+
+  @include media-from(600px) {
+    display: table;
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  @include media-from(800px) {
+    margin-bottom: 5em;
+  }
+}
+
+.project-header__title {
+  @include media-from(600px) {
+    display: table-cell;
+
+  }
+  @include media-from(800px) {
+    max-width: 8em;
+  }
+}
+
+.project-header__title h1 {
+  line-height: 1em;
+  margin: .25em 0;
+}
+
+.project-header__link {
+  @include media-from(600px) {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 20px;
+    padding-left: 1em;
+    white-space: nowrap;
+  }
+}
+
+
+// HERO
+// -----------------------------------------------------------------------------
+
+.project-hero {
+  background-color: #f2f2f2;
+  margin-bottom: 2em;
+}
+
+// =============================================================================
+// SIDEBAR
+// =============================================================================
+
+.sidebar {
+  width: 25%;
+  float: left;
+}
+
+.sidebar p {
+  font-size: 16px;
+  color: #999;
+}
+
+.sidebar h5 {
+  font-size: 16px;
+  color: #777;
+}
+
+.project-content__main-column {
+  float: right;
+  width: 57%;
+  padding-right: 8.75%;
+  padding-left: 8.75%;
+}

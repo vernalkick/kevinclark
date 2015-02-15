@@ -1,0 +1,65 @@
+<% wrap_layout :layout do %>
+
+  <div class="project-page">
+
+  <div class="wrap">
+    <div class="project-header">
+      <div class="project-header__title">
+        <% if current_page.data.company %>
+          <a href="<%= current_page.data.company.url %>" class="project-header__company-name">
+            <%= current_page.data.company.name %>
+          </a>
+        <% end %>
+        <h1><%= current_page.data.title %></h1>
+      </div>
+      <% if current_page.data.project_url %>
+        <a href="<%= current_page.data.project_url %>" class="project-header__link">View Project</a>
+      <% end %>
+    </div> <%# /.project-header %>
+  </div>
+
+  <% if current_page.data.hero_url %>
+    <div class="project-hero">
+      <div class="wrap">
+        <img src="<%= current_page.data.hero_url %>" class="project-hero__image">
+      </div>
+    </div>
+  <% end %>
+
+    <div class="project-content article-content article-content--with-sidebar">
+      <div class="wrap">
+        <div class="project-content__main-column">
+          <%= yield %>
+        </div>
+        <div class="sidebar">
+          <% if current_page.data.description %>
+            <div class="sidebar__item">
+              <h5>Project</h5>
+              <p><%= current_page.data.description %></p>
+            </div>
+          <% end %>
+          <% if current_page.data.role %>
+            <div class="sidebar__item">
+              <h5>Role</h5>
+              <p><%= current_page.data.role %></p>
+            </div>
+          <% end %>
+          <% if current_page.data.press %>
+            <div class="sidebar__item">
+              <h5>In the press</h5>
+              <ul class="sidebar__link-list">
+                <% current_page.data.press.each do |press| %>
+                  <li class="sidebar__link-list__item">
+                    <a href="<%= press.link %>" class="outside-link"><%= press.title %></a>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div> <%# /.project-page %>
+
+<% end %>

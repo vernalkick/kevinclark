@@ -15,6 +15,11 @@ a {
   @include chevron(left);
 }
 
+.outside-link:after {
+  content: " ⬈";
+  font-size: .875em;
+}
+
 .link, .btn.link, input[type="submit"].link {
   background-color: transparent;
   padding: 0;

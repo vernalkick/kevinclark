@@ -1,0 +1,19 @@
+// =============================================================================
+// STYLES
+// =============================================================================
+
+// Helpers
+@import 'helpers/media-queries';
+@import 'helpers/mixins';
+
+// Reset
+@import 'base/reset';
+
+// Base styles
+@import 'base/colors';
+@import 'base/animations';
+@import 'base/typography';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';

@@ -1,0 +1,68 @@
+ // =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+$font-size--large: 36px;
+$font-size--medium: 20px;
+$font-size--base: 16px;
+$font-size--small: 14px;
+
+$font-family--base: "Ratio", sans-serif;
+
+// MIXINS
+// -----------------------------------------------------------------------------
+
+body {
+  font-family: $font-family--base;
+  -webkit-text-size-adjust: none;
+  color: $color--grey-darker;
+}
+
+
+// PARAGRAPH LEVEL
+// -----------------------------------------------------------------------------
+
+p {
+  font-size: $font-size--base;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// LINKS
+// -----------------------------------------------------------------------------
+
+a {
+  color: $color--accent;
+  transition: $duration color ease-in-out;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: darken($color--accent, 15%);
+  }
+}
+
+// HEADERS
+// -----------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5 , h6 {
+  margin: 2em 0 .5em;
+
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
+}
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}

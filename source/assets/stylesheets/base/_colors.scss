@@ -1,0 +1,49 @@
+// =============================================================================
+// COLORS
+// =============================================================================
+
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+// Sky
+$color--sky--light: #e5e5e5;
+$color--sky--dark: #ccc;
+
+// Grey
+$color--grey-lighter: #999;
+$color--grey-light: #777;
+$color--grey-dark: #555;
+$color--grey-darker: #333;
+
+// Accent
+$color--accent: #1985C6;
+
+
+// RGBa FALLBACKS
+// -----------------------------------------------------------------------------
+
+@function rgba-to-hex($solid-color, $opacity: 1, $background: #fff) {
+  $alphacolor: rgba($solid-color, $opacity);
+  @return mix(fade-in($alphacolor, 1), $background, percentage(opacity($alphacolor)));
+}
+
+@mixin rgba-with-fallback($property, $solid-color, $opacity, $background: #fff) {
+  #{$property}: rgba-to-hex($solid-color, $opacity, $background);
+
+  .rgba & {
+    #{$property}: rgba($solid-color, $opacity);
+  }
+}
+
+
+// COLOR BRIGHTNESS
+// Based on https://meta.discourse.org/t/programmatically-adjusting-color-variables-with-sass/18332
+// -----------------------------------------------------------------------------
+
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+@function dark($color) {
+  @return if(brightness($color) < 65%, true, false);
+}

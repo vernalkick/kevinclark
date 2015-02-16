@@ -1,13 +1,21 @@
-<footer class="footer">
+<footer class="page-footer">
   <div class="wrap">
     <p>
       Copyright © <%= DateTime.now.strftime "%Y" %> <a href="/">Kevin Clark</a>. All rights reserved.
       Powered by <a href="https://middlemanapp.com/">Middleman</a> and hosted by <a href="http://fliphost.net/">FlipHost</a>. The code is on <a href="https://github.com/">Github</a>.<br/>
       If you’d like to keep up with new content, you should subscribe to my <a href="/feed.xml">RSS feed</a>.
     </p>
-    <div class="social-links">
-      <a href="https://twitter.com/vernalkick" class="social-link social-link--twitter">Twitter</a>
-      <a href="http://dribbble.com/vernalkick" class="social-link social-link--dribbble">Dribbble</a>
-    </div>
+    <ul class="social-link-list">
+      <li class="social-link-list__item">
+        <a href="https://twitter.com/vernalkick" class="social-link social-link--twitter">
+          <span class="visually-hidden">Twitter</span>
+        </a>
+      </li>
+      <li class="social-link-list__item">
+        <a href="http://dribbble.com/vernalkick" class="social-link social-link--dribbble">
+          <span class="visually-hidden">Dribbble</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </footer>

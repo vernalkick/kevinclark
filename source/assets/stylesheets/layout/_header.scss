@@ -1,3 +1,102 @@
 // =============================================================================
 // HEADER
 // =============================================================================
+
+$header--padding: 7rem;
+
+.page-header {
+  padding: 2rem 0;
+
+  @include media($media-query--tablet-up) {
+    padding: $header--padding 0;
+  }
+}
+
+// LOGO
+// -----------------------------------------------------------------------------
+
+.logo {
+  float: left;
+}
+
+.logo svg:hover {
+  fill: $color--accent;
+}
+
+
+// NAVIGATION
+// -----------------------------------------------------------------------------
+
+.page-header__open-nav,
+.page-navigation__close-nav {
+  display: none;
+}
+
+.page-navigation-list {
+  margin: 0.5em 0 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+
+  @include media($media-query--tablet-up) {
+    margin-top: -$header--padding;
+  }
+}
+
+.page-navigation-list__item {
+  display: inline-block;
+  @include margin-vertical(0);
+
+  & + & {
+    margin-left: 1em;
+  }
+
+  @include media($media-query--tablet) {
+    &:first-child {
+      display: none;
+    }
+  }
+
+  @include media($media-query--tablet-up) {
+    & + & {
+      margin-left: 2em;
+    }
+  }
+
+  @include media($media-query--desktop) {
+    & + & {
+      margin-left: 3em;
+    }
+  }
+}
+
+.page-navigation-list__item a {
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 1px;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    bottom: 100%;
+    background: $color--accent;
+    background: #999;
+    transition: all .2s ease-in-out;
+  }
+
+  @include media($media-query--tablet-up) {
+    border-left: 1px solid #e5e5e5;
+    padding-top: $header--padding;
+    display: block;
+    padding-left: 1em;
+    padding-bottom: .25em;
+    font-size: 0.9em;
+
+    &:hover:after {
+      bottom: 0;
+      // background: darken($color--accent, 15%);
+    }
+  }
+}

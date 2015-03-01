@@ -1,13 +1,33 @@
 <% wrap_layout :layout do %>
-  <article class="post">
-    <header class="post__header">
-      <h1><%= current_page.data.title %></h1>
-      <% if current_page.data.date %>
-        <time datetime="<%= current_page.date %>" pubdate><%= current_page.date.strftime("%A, %-d %B %Y") %></time>
-      <% end %>
-    </header>
-    <div class="post__content">
-      <%= yield %>
+  <div class="article-layout">
+    <div class="article-layout__main">
+      <article class="post">
+        <header class="post__header">
+          <h1><%= typography current_page.data.title %></h1>
+        </header>
+        <div class="post__content">
+          <%= yield %>
+        </div>
+      </article>
     </div>
-  </article>
+    <aside class="article-layout__sidebar">
+      <p>
+        This post was published
+        <% if current_page.data.date %>
+          on <time datetime="<%= current_page.date %>" pubdate><%= current_page.date.strftime("%A, %-d %B %Y") %></time>
+        <% end %>
+        by Kevin Clark. Filed under Design, Front-End and Framer.
+      </p>
+      <ul>
+        <li>
+          <a href="#">The Specificity Graph</a>
+          <time>29 October, 2014</time>
+        </li>
+        <li>
+          <a href="#">CSS Wizardry Ltd.: Year 1 in review</a>
+          <time>29 October, 2014</time>
+        </li>
+      </ul>
+    </aside>
+  </div>
 <% end %>

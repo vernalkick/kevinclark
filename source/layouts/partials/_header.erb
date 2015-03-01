@@ -1,14 +1,17 @@
 <header role="banner" class="page-header">
   <div class="wrap">
-    <a href="/" class="logo">Kevin Clark</a>
+    <a href="/" class="logo">
+      <%= embed_svg 'logo' %>
+      <span class="visually-hidden">Kevin Clark</span>
+    </a>
     <a href="#" class="page-header__open-nav">Menu</a>
     <nav class="page-navigation">
       <a href="#" class="page-navigation__close-nav">Close</a>
-      <ul>
-        <li><%= navigation_link "Home", "/" %></li>
-        <li><%= navigation_link "Articles", "/articles" %></li>
-        <li><%= navigation_link "Portfolio", "/portfolio" %></li>
-        <li><%= navigation_link "About", "/about" %></li>
+      <ul class="page-navigation-list">
+        <li class="page-navigation-list__item"><%= navigation_link "Home", "/" %></li>
+        <li class="page-navigation-list__item"><%= navigation_link "Articles", "/articles" %></li>
+        <li class="page-navigation-list__item"><%= navigation_link "Portfolio", "/portfolio" %></li>
+        <li class="page-navigation-list__item"><%= navigation_link "About", "/about" %></li>
       </ul>
     </nav>
   </div>

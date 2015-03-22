@@ -17,7 +17,7 @@
   @include media("(min-width: 1200px)") {
     float: right;
     padding-right: 12%;
-    width: 56%;
+    width: 58%;
   }
 }
 
@@ -76,6 +76,23 @@
   @include media($media-query--desktop-large) {
     width: 121.5%;
   }
+}
+
+figure {
+  margin-bottom: 2rem;
+}
+
+figcaption {
+  color: #999;
+  font-size: 1rem;
+  margin-top: .5em;
+}
+
+.figure--half-right {
+  margin-left: 2rem;
+  width: 55%;
+  float: right;
+  margin-right: -9%;
 }
 
 .flush-right {

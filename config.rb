@@ -59,6 +59,8 @@ helpers do
       video: /https?:\/\/.*youtube\.com.+?v=(\S+)/
     }
 
+    classes = options[:class]
+
     if url =~ types[:image]
       content = "<img src='#{url}' alt='#{escape_html(caption) || "Post image"}' />"
     elsif url =~ types[:video]
@@ -67,7 +69,7 @@ helpers do
       content += "</div>"
     end
 
-    markup =  "<figure>"
+    markup =  "<figure class='#{classes}'>"
     markup += content if content
     markup += "<figcaption>#{caption}</figcaption>" if caption
     markup += "</figure>"

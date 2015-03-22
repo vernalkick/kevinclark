@@ -31,6 +31,7 @@ body {
 
 p {
   line-height: 1.5em;
+  hyphens: auto;
   @include margin-vertical(1.5em);
 
   &:first-child { margin-top: 0; }

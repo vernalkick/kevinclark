@@ -1,0 +1,43 @@
+// =============================================================================
+// MEDIA QUERIES
+// =============================================================================
+
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+$legacy: false !default;
+
+// Breakpoints
+$breakpoint--medium: 750px;
+$breakpoint--large: 1000px;
+$breakpoint--xlarge: 1200px;
+
+// Mobile media-query
+$media-query--mobile: "(max-width: #{$breakpoint--medium - 1})";
+
+// Tablet media-query
+$media-query--tablet-down: "(max-width: #{$breakpoint--large - 1})";
+$media-query--tablet: "(min-width: #{$breakpoint--medium}) and (max-width: #{$breakpoint--large - 1})";
+$media-query--tablet-up: "(min-width: #{$breakpoint--medium})";
+
+// Desktop media-query
+$media-query--desktop: "(min-width: #{$breakpoint--large})";
+$media-query--desktop-large: "(min-width: #{$breakpoint--xlarge})";
+
+// MEDIA QUERY
+// -----------------------------------------------------------------------------
+
+@mixin media($query) {
+  @if $legacy {
+    @if
+    $query != $media-query--mobile or
+    $query != $media-query--tablet-down or
+    $query != $media-query--tablet {
+      @content;
+    }
+  } @else {
+    @media #{$query} {
+      @content;
+    }
+  }
+}

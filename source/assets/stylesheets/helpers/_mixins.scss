@@ -1,0 +1,87 @@
+// =============================================================================
+// MISC MIXINS
+// =============================================================================
+
+// CLEARFIX
+// -----------------------------------------------------------------------------
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:after, &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+// SANDWICH STYLES
+// -----------------------------------------------------------------------------
+
+@mixin sandwich($property, $value) {
+  #{$property}-top: #{$value};
+
+  &:first-child {
+    #{$property}-top: if(type-of($value) == number, 0, none);
+  }
+}
+
+
+// VERTICAL / HORIZONTAL ONLY
+// -----------------------------------------------------------------------------
+
+@mixin padding-vertical($value) {
+  padding: { top: $value; bottom: $value; }
+}
+
+@mixin padding-horizontal($value) {
+  padding: { left: $value; right: $value; }
+}
+
+@mixin margin-vertical($value) {
+  margin: { top: $value; bottom: $value; }
+}
+
+@mixin margin-horizontal($value) {
+  margin: { left: $value; right: $value; }
+}
+
+
+// OPACITY
+// -----------------------------------------------------------------------------
+
+@mixin opacity($value) {
+  $ie-value: $value * 100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="#{$ie-value}")";
+  filter: alpha(opacity=$ie-value);
+  visibility: if($value > 0, visible, hidden);
+}
+
+
+// VISUALLY HIDDEN
+// -----------------------------------------------------------------------------
+
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin show-visually-hidden {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}

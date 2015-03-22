@@ -39,11 +39,27 @@ helpers do
     "<a href='#{link_path}' #{"class='current'" if link_path == page_path}>#{link_title}</a>"
   end
 
+  def embed_svg(filename, options={})
+    file = File.read("source/assets/images/#{filename}.svg")
+    doc = Nokogiri::HTML::DocumentFragment.parse file
+    svg = doc.at_css 'svg'
+    if options[:class].present?
+      svg['class'] = options[:class]
+    end
+    doc.to_html.html_safe
+   end
+
+   def typography(string)
+    Typogruby.improve string
+   end
+
   def figure(url, caption = nil, options={})
     types = {
       image: /.*\.(png|gif|jpe?g|svg)/,
       video: /https?:\/\/.*youtube\.com.+?v=(\S+)/
     }
+
+    classes = options[:class]
 
     if url =~ types[:image]
       content = "<img src='#{url}' alt='#{escape_html(caption) || "Post image"}' />"
@@ -53,7 +69,7 @@ helpers do
       content += "</div>"
     end
 
-    markup =  "<figure>"
+    markup =  "<figure class='#{classes}'>"
     markup += content if content
     markup += "<figcaption>#{caption}</figcaption>" if caption
     markup += "</figure>"

@@ -1,0 +1,103 @@
+// =============================================================================
+// ARTICLE
+// =============================================================================
+
+.article-layout {
+  @include clearfix;
+}
+
+.article-layout__main,
+.article-layout__sidebar {
+  @include media($media-query--desktop) {
+    width: 80%;
+  }
+}
+
+.article-layout__main {
+  @include media("(min-width: 1200px)") {
+    float: right;
+    padding-right: 12%;
+    width: 58%;
+  }
+}
+
+.article-layout__sidebar {
+  font-size: 0.875em;
+
+  @include media("(min-width: 1200px)") {
+    font-size: 0.8em;
+    width: 22%;
+    float: left;
+  }
+}
+
+// POST HEADER
+// -----------------------------------------------------------------------------
+
+.post__header {
+  margin-bottom: 0.5em;
+
+  @include media($media-query--tablet-up) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+
+.article-layout__sidebar {
+  color: #999;
+  margin-top: 2rem;
+}
+
+.article-layout__sidebar ul {
+  list-style-type: none;
+  padding: 0; margin: 0;
+}
+
+.article-layout__sidebar li > a {
+  display: block;
+}
+
+.post__content figure img {
+  max-width: none;
+
+  @include media($media-query--mobile) {
+    margin-left: -1.5rem;
+    width: calc(100% + 1.5rem * 2);
+  }
+
+  @include media($media-query--tablet-up) {
+    width: 100%;
+  }
+
+  @include media($media-query--desktop) {
+    width: 125%;
+  }
+
+  @include media($media-query--desktop-large) {
+    width: 121.5%;
+  }
+}
+
+figure {
+  margin-bottom: 2rem;
+}
+
+figcaption {
+  color: #999;
+  font-size: 1rem;
+  margin-top: .5em;
+}
+
+.figure--half-right {
+  margin-left: 2rem;
+  width: 55%;
+  float: right;
+  margin-right: -9%;
+}
+
+.flush-right {
+  width: 65%;
+  float: right;
+  margin-right: -21.5%;
+  margin-left: 2rem;
+}

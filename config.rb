@@ -53,7 +53,7 @@ helpers do
       content += "</div>"
     end
 
-    markup =  "<figure>"
+    markup =  "<figure class='#{options[:class]}'>"
     markup += content if content
     markup += "<figcaption>#{caption}</figcaption>" if caption
     markup += "</figure>"

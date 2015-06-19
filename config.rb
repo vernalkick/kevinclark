@@ -45,12 +45,12 @@ helpers do
       video: /https?:\/\/.*youtube\.com.+?v=(\S+)/
     }
 
-    if url =~ types[:image]
-      content = "<img src='#{url}' alt='#{escape_html(caption) || "Post image"}' />"
-    elsif url =~ types[:video]
+    if url =~ types[:video]
       content =  "<div class='fluid-width-video-wrapper'>"
       content += "<iframe src='//www.youtube.com/embed/#{$1}' allowfullscreen></iframe>"
       content += "</div>"
+    else
+      content = "<img src='#{url}' alt='#{escape_html(caption) || "Post image"}' />"
     end
 
     markup =  "<figure class='#{options[:class]}'>"
